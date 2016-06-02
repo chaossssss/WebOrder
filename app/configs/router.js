@@ -111,5 +111,5 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     controller: 'HomeNotFoundCtrl'
   });
 
-  $urlRouterProvider.otherwise('/notFound');
+  $urlRouterProvider.otherwise('/abstract/aside');
 });
