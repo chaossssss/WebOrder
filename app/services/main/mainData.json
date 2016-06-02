@@ -1,0 +1,1098 @@
+{
+    "Meta": {
+        "ErrorCode": "0",
+        "ErrorMsg": "success"
+    },
+    "Body": {
+        "Workers": [
+            
+            
+            {
+                "IsCall": "1",
+                "Id": "33",
+                "Photos": [
+                    {
+                        "SmallPic": "../../images/main/smallPic1.png",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "13958129940",
+                "Name": "陈利军",
+                "Gender": "0",
+                "Age": "43岁",
+                "JobNumber": "GR-HZ000037",
+                "Wage": "面议",
+                "Distance": "0.5297km",
+                "NativePlace": "四川省",
+                "WorkingYears": "从业15年",
+                "Education": "高中",
+                "Hobby": "",
+                "Stature": "170cm",
+                "Weight": "75kg",
+                "BloodType": "不明",
+                "Constellation": "天蝎座",
+                "Signature": "工作认真负责",
+                "Address": "浙江省杭州市拱墅区沈半路56号",
+                "ServiceTime": "自由",
+                "ServiceScope": "10公里范围内",
+                "Intro": "整体服务质量优秀，工作效率较快，服务态度良好",
+                "PraiseCount": "0",
+                "IsPraise": "0",
+                "FavoriteCount": "0",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [
+                    {
+                        "Name": "实名认证",
+                        "Description": "实名认证",
+                        "Image": ""
+                    },
+                    {
+                        "Name": "维修电工操作证",
+                        "Description": "维修电工操作证",
+                        "Image": ""
+                    }
+                ],
+                "MandarinAbility": "流畅",
+                "WorkExperience": "",
+                "Latitude": "30.32078",
+                "Longitude": "120.1653",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "灯饰安装",
+                        "Id": "13"
+                    },
+                    "ServiceTypeList": [
+                        "灯饰安装",
+                        "卫浴安装",
+                        "家电安装",
+                        "家电维修"
+                    ]
+                }
+            },
+            {
+                "IsCall": "1",
+                "Id": "373",
+                "Photos": [
+                    {
+                        "SmallPic": "../../images/main/smallPic1.png",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "13071888172",
+                "Name": "郑初娣",
+                "Gender": "1",
+                "Age": "45岁",
+                "JobNumber": "GR-HZ000237",
+                "Wage": "30-35元/小时",
+                "Distance": "1.2062km",
+                "NativePlace": "浙江省",
+                "WorkingYears": "从业1年",
+                "Education": "初中",
+                "Hobby": "",
+                "Stature": "156cm",
+                "Weight": "114kg",
+                "BloodType": "A型",
+                "Constellation": "天蝎座",
+                "Signature": "没有什么是金科玉律，坚持才是不二法门。\r\n",
+                "Address": "浙江省杭州市拱墅区蔡马",
+                "ServiceTime": "提前安排",
+                "ServiceScope": "10公里范围内",
+                "Intro": "人品端正、做事塌实、行为规范。",
+                "PraiseCount": "0",
+                "IsPraise": "0",
+                "FavoriteCount": "0",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [],
+                "MandarinAbility": "流畅",
+                "WorkExperience": "",
+                "Latitude": "30.33116",
+                "Longitude": "120.1631",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "小时工",
+                        "Id": "5"
+                    },
+                    "ServiceTypeList": [
+                        "小时工",
+                        "做饭"
+                    ]
+                }
+            },
+            {
+                "IsCall": "1",
+                "Id": "373",
+                "Photos": [
+                    {
+                        "SmallPic": "../../images/main/smallPic1.png",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "13071888172",
+                "Name": "郑初娣",
+                "Gender": "1",
+                "Age": "45岁",
+                "JobNumber": "GR-HZ000237",
+                "Wage": "30-35元/小时",
+                "Distance": "1.2062km",
+                "NativePlace": "浙江省",
+                "WorkingYears": "从业1年",
+                "Education": "初中",
+                "Hobby": "",
+                "Stature": "156cm",
+                "Weight": "114kg",
+                "BloodType": "A型",
+                "Constellation": "天蝎座",
+                "Signature": "没有什么是金科玉律，坚持才是不二法门。\r\n",
+                "Address": "浙江省杭州市拱墅区蔡马",
+                "ServiceTime": "提前安排",
+                "ServiceScope": "10公里范围内",
+                "Intro": "人品端正、做事塌实、行为规范。",
+                "PraiseCount": "0",
+                "IsPraise": "0",
+                "FavoriteCount": "0",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [],
+                "MandarinAbility": "流畅",
+                "WorkExperience": "",
+                "Latitude": "30.33116",
+                "Longitude": "120.1631",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "小时工",
+                        "Id": "5"
+                    },
+                    "ServiceTypeList": [
+                        "小时工",
+                        "做饭"
+                    ]
+                }
+            },
+            {
+                "IsCall": "1",
+                "Id": "144",
+                "Photos": [
+                    {
+                        "SmallPic": "../../images/main/smallPic1.png",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "18058394505",
+                "Name": "范超容",
+                "Gender": "1",
+                "Age": "36岁",
+                "JobNumber": "GR-HZ000162",
+                "Wage": "35/小时",
+                "Distance": "1.3467km",
+                "NativePlace": "浙江省",
+                "WorkingYears": "从业2年",
+                "Education": "初中",
+                "Hobby": "做家务",
+                "Stature": "160cm",
+                "Weight": "63kg",
+                "BloodType": "A型",
+                "Constellation": "天蝎座",
+                "Signature": "对于这里的风景，你应该心存感激感激它曾带给你的快乐和美好。",
+                "Address": "浙江省杭州市拱墅区大关小区",
+                "ServiceTime": "全天",
+                "ServiceScope": "10公里范围内",
+                "Intro": "工作热情高;人品端正、德行优良、自身修养较高、对待客户诚信。",
+                "PraiseCount": "0",
+                "IsPraise": "0",
+                "FavoriteCount": "0",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [
+                    {
+                        "Name": "健康证",
+                        "Description": "健康证认证",
+                        "Image": ""
+                    }
+                ],
+                "MandarinAbility": "流畅",
+                "WorkExperience": "",
+                "Latitude": "30.30978",
+                "Longitude": "120.1658",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "小时工",
+                        "Id": "5"
+                    },
+                    "ServiceTypeList": [
+                        "小时工"
+                    ]
+                }
+            },
+            {
+                "IsCall": "1",
+                "Id": "151",
+                "Photos": [
+                    {
+                        "SmallPic": "../../images/main/smallPic1.png",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "13028035728",
+                "Name": "谢宗淑",
+                "Gender": "1",
+                "Age": "44岁",
+                "JobNumber": "GR-HZ000169",
+                "Wage": "35/小时，40/小时（含擦窗户）",
+                "Distance": "1.4049km",
+                "NativePlace": "四川省",
+                "WorkingYears": "从业13年",
+                "Education": "小学",
+                "Hobby": "跳广场舞",
+                "Stature": "165cm",
+                "Weight": "65kg",
+                "BloodType": "不明",
+                "Constellation": "狮子座",
+                "Signature": "你改变不了环境，但可以改变自己。",
+                "Address": "浙江省杭州市拱墅区拱宸桥",
+                "ServiceTime": "提前一天预约",
+                "ServiceScope": "10公里范围内",
+                "Intro": "工作热情高;人品端正、德行优良、自身修养较高、对待客户诚信。\r\n（可以接送小孩 )",
+                "PraiseCount": "0",
+                "IsPraise": "0",
+                "FavoriteCount": "0",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [
+                    {
+                        "Name": "健康证",
+                        "Description": "健康证认证",
+                        "Image": ""
+                    }
+                ],
+                "MandarinAbility": "流畅",
+                "WorkExperience": "",
+                "Latitude": "30.32438",
+                "Longitude": "120.1458",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "小时工",
+                        "Id": "5"
+                    },
+                    "ServiceTypeList": [
+                        "小时工"
+                    ]
+                }
+            }
+        ],
+        "Business": [
+            {
+                "IsCall": "1",
+                "Id": "3",
+                "Photos": [
+                    {
+                        "SmallPic": "../../images/main/smallPic2.png",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "15669907002",
+                "Name": "爱之初鲜花婚庆",
+                "Address": "绍兴路417号",
+                "Distance": "1.4935km",
+                "Property": "个体工商户",
+                "EstablishedTime": "2014年04月",
+                "MainBusiness": null,
+                "Area": "60m²",
+                "Scale": "10万元",
+                "StaffNumber": "2",
+                "TexId": null,
+                "LicenseId": null,
+                "ServiceTime": "8:00-23:00",
+                "ServiceScope": "全城",
+                "Intro": "本店主营销售各类鲜花、婚庆、开业庆典布置等",
+                "PraiseCount": "0",
+                "IsPraise": "0",
+                "FavoriteCount": "1",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [],
+                "Latitude": "30.30984",
+                "Longitude": "120.1689",
+                "Signature": "",
+                "Number": "SH-HZ000003",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "废品回收",
+                        "Id": "31"
+                    },
+                    "ServiceTypeList": [
+                        "废品回收"
+                    ]
+                },
+                "EstablishedTimeShort": "成立于2014年"
+            }
+        ],
+        "OtherWorkers": [
+            {
+                "IsCall": "1",
+                "Id": "33",
+                "Photos": [
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "13958129940",
+                "Name": "陈利军",
+                "Gender": "0",
+                "Age": "43岁",
+                "JobNumber": "GR-HZ000037",
+                "Wage": "面议",
+                "Distance": "0.5297km",
+                "NativePlace": "四川省",
+                "WorkingYears": "从业15年",
+                "Education": "高中",
+                "Hobby": "",
+                "Stature": "170cm",
+                "Weight": "75kg",
+                "BloodType": "不明",
+                "Constellation": "天蝎座",
+                "Signature": "工作认真负责",
+                "Address": "浙江省杭州市拱墅区沈半路56号",
+                "ServiceTime": "自由",
+                "ServiceScope": "10公里范围内",
+                "Intro": "整体服务质量优秀，工作效率较快，服务态度良好",
+                "PraiseCount": "0",
+                "IsPraise": "0",
+                "FavoriteCount": "0",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [
+                    {
+                        "Name": "实名认证",
+                        "Description": "实名认证",
+                        "Image": ""
+                    },
+                    {
+                        "Name": "维修电工操作证",
+                        "Description": "维修电工操作证",
+                        "Image": ""
+                    }
+                ],
+                "MandarinAbility": "流畅",
+                "WorkExperience": "",
+                "Latitude": "30.32078",
+                "Longitude": "120.1653",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "灯饰安装",
+                        "Id": "13"
+                    },
+                    "ServiceTypeList": [
+                        "灯饰安装",
+                        "卫浴安装",
+                        "家电安装",
+                        "家电维修"
+                    ]
+                }
+            },
+            {
+                "IsCall": "1",
+                "Id": "33",
+                "Photos": [
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "13958129940",
+                "Name": "陈利军",
+                "Gender": "0",
+                "Age": "43岁",
+                "JobNumber": "GR-HZ000037",
+                "Wage": "面议",
+                "Distance": "0.5297km",
+                "NativePlace": "四川省",
+                "WorkingYears": "从业15年",
+                "Education": "高中",
+                "Hobby": "",
+                "Stature": "170cm",
+                "Weight": "75kg",
+                "BloodType": "不明",
+                "Constellation": "天蝎座",
+                "Signature": "工作认真负责",
+                "Address": "浙江省杭州市拱墅区沈半路56号",
+                "ServiceTime": "自由",
+                "ServiceScope": "10公里范围内",
+                "Intro": "整体服务质量优秀，工作效率较快，服务态度良好",
+                "PraiseCount": "0",
+                "IsPraise": "0",
+                "FavoriteCount": "0",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [
+                    {
+                        "Name": "实名认证",
+                        "Description": "实名认证",
+                        "Image": ""
+                    },
+                    {
+                        "Name": "维修电工操作证",
+                        "Description": "维修电工操作证",
+                        "Image": ""
+                    }
+                ],
+                "MandarinAbility": "流畅",
+                "WorkExperience": "",
+                "Latitude": "30.32078",
+                "Longitude": "120.1653",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "灯饰安装",
+                        "Id": "13"
+                    },
+                    "ServiceTypeList": [
+                        "灯饰安装",
+                        "卫浴安装",
+                        "家电安装",
+                        "家电维修"
+                    ]
+                }
+            },
+            {
+                "IsCall": "1",
+                "Id": "33",
+                "Photos": [
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "13958129940",
+                "Name": "陈利军",
+                "Gender": "0",
+                "Age": "43岁",
+                "JobNumber": "GR-HZ000037",
+                "Wage": "面议",
+                "Distance": "0.5297km",
+                "NativePlace": "四川省",
+                "WorkingYears": "从业15年",
+                "Education": "高中",
+                "Hobby": "",
+                "Stature": "170cm",
+                "Weight": "75kg",
+                "BloodType": "不明",
+                "Constellation": "天蝎座",
+                "Signature": "工作认真负责",
+                "Address": "浙江省杭州市拱墅区沈半路56号",
+                "ServiceTime": "自由",
+                "ServiceScope": "10公里范围内",
+                "Intro": "整体服务质量优秀，工作效率较快，服务态度良好",
+                "PraiseCount": "0",
+                "IsPraise": "0",
+                "FavoriteCount": "0",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [
+                    {
+                        "Name": "实名认证",
+                        "Description": "实名认证",
+                        "Image": ""
+                    },
+                    {
+                        "Name": "维修电工操作证",
+                        "Description": "维修电工操作证",
+                        "Image": ""
+                    }
+                ],
+                "MandarinAbility": "流畅",
+                "WorkExperience": "",
+                "Latitude": "30.32078",
+                "Longitude": "120.1653",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "灯饰安装",
+                        "Id": "13"
+                    },
+                    "ServiceTypeList": [
+                        "灯饰安装",
+                        "卫浴安装",
+                        "家电安装",
+                        "家电维修"
+                    ]
+                }
+            },
+            {
+                "IsCall": "1",
+                "Id": "146",
+                "Photos": [
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "15868410984",
+                "Name": "尚桂荣",
+                "Gender": "1",
+                "Age": "54岁",
+                "JobNumber": "GR-HZ000163",
+                "Wage": "35/小时，40/小时（含擦窗户）",
+                "Distance": "0.5175km",
+                "NativePlace": "辽宁省",
+                "WorkingYears": "从业12年",
+                "Education": "小学",
+                "Hobby": "跳广场舞",
+                "Stature": "157cm",
+                "Weight": "55kg",
+                "BloodType": "O型",
+                "Constellation": "射手座",
+                "Signature": "不管昨天、今天、明天，能豁然开朗就是美好的一天……",
+                "Address": "浙江省杭州市拱墅区九十六亩头附近",
+                "ServiceTime": "自由，需提前预定",
+                "ServiceScope": "10公里范围内",
+                "Intro": "工作踏实、专注、有责任心。",
+                "PraiseCount": "0",
+                "IsPraise": "0",
+                "FavoriteCount": "1",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [],
+                "MandarinAbility": "流畅",
+                "WorkExperience": "",
+                "Latitude": "30.32529",
+                "Longitude": "120.1607",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "小时工",
+                        "Id": "5"
+                    },
+                    "ServiceTypeList": [
+                        "小时工"
+                    ]
+                }
+            },
+            {
+                "IsCall": "1",
+                "Id": "42",
+                "Photos": [
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "15858236401",
+                "Name": "孙葵花",
+                "Gender": "1",
+                "Age": "48岁",
+                "JobNumber": "GR-HZ000057",
+                "Wage": "30",
+                "Distance": "1.9754km",
+                "NativePlace": "江西省",
+                "WorkingYears": "从业1年",
+                "Education": "小学",
+                "Hobby": "做家务",
+                "Stature": "156cm",
+                "Weight": "60kg",
+                "BloodType": "不明",
+                "Constellation": "巨蟹座",
+                "Signature": "性格开朗热心，做事积极",
+                "Address": "浙江省杭州市上城区东新路苏泊尔发展大厦",
+                "ServiceTime": "全天",
+                "ServiceScope": "10公里范围内",
+                "Intro": "整体服务质量优秀，工作效率较快，服务态度良好",
+                "PraiseCount": "0",
+                "IsPraise": "0",
+                "FavoriteCount": "0",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [
+                    {
+                        "Name": "实名认证",
+                        "Description": "实名认证",
+                        "Image": ""
+                    }
+                ],
+                "MandarinAbility": "流畅",
+                "WorkExperience": "助家生活",
+                "Latitude": "30.32395",
+                "Longitude": "120.18",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "小时工",
+                        "Id": "5"
+                    },
+                    "ServiceTypeList": [
+                        "小时工"
+                    ]
+                }
+            }
+        ],
+        "OtherBusiness": [
+            {
+                "IsCall": "1",
+                "Id": "2",
+                "Photos": [
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "15158151058",
+                "Name": "杭州市拱墅区龙辉家政服务部",
+                "Address": "大关南八苑8号",
+                "Distance": "1.7316km",
+                "Property": "个体工商户",
+                "EstablishedTime": "2013年12月",
+                "MainBusiness": null,
+                "Area": "100m²",
+                "Scale": "100万元",
+                "StaffNumber": "108",
+                "TexId": null,
+                "LicenseId": null,
+                "ServiceTime": "全天",
+                "ServiceScope": "全城",
+                "Intro": "杭州龙辉家政是一家开荒保洁、地毯清洗、地板清洗打蜡、石材翻新、晶面处理，室内外墙清洗、管道疏通、空调、油烟机等家电清洗等多元化清洁公司.",
+                "PraiseCount": "1",
+                "IsPraise": "0",
+                "FavoriteCount": "3",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [],
+                "Latitude": "30.30714",
+                "Longitude": "120.1686",
+                "Signature": null,
+                "Number": "SH-HZ000002",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "小时工",
+                        "Id": "5"
+                    },
+                    "ServiceTypeList": [
+                        "小时工",
+                        "保姆",
+                        "月嫂",
+                        "家电清洗",
+                        "家电维修"
+                    ]
+                },
+                "EstablishedTimeShort": "成立于2013年"
+            },
+            {
+                "IsCall": "1",
+                "Id": "2",
+                "Photos": [
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "15158151058",
+                "Name": "杭州市拱墅区龙辉家政服务部",
+                "Address": "大关南八苑8号",
+                "Distance": "1.7316km",
+                "Property": "个体工商户",
+                "EstablishedTime": "2013年12月",
+                "MainBusiness": null,
+                "Area": "100m²",
+                "Scale": "100万元",
+                "StaffNumber": "108",
+                "TexId": null,
+                "LicenseId": null,
+                "ServiceTime": "全天",
+                "ServiceScope": "全城",
+                "Intro": "杭州龙辉家政是一家开荒保洁、地毯清洗、地板清洗打蜡、石材翻新、晶面处理，室内外墙清洗、管道疏通、空调、油烟机等家电清洗等多元化清洁公司.",
+                "PraiseCount": "1",
+                "IsPraise": "0",
+                "FavoriteCount": "3",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [],
+                "Latitude": "30.30714",
+                "Longitude": "120.1686",
+                "Signature": null,
+                "Number": "SH-HZ000002",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "小时工",
+                        "Id": "5"
+                    },
+                    "ServiceTypeList": [
+                        "小时工",
+                        "保姆",
+                        "月嫂",
+                        "家电清洗",
+                        "家电维修"
+                    ]
+                },
+                "EstablishedTimeShort": "成立于2013年"
+            },
+            {
+                "IsCall": "1",
+                "Id": "2",
+                "Photos": [
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "15158151058",
+                "Name": "杭州市拱墅区龙辉家政服务部",
+                "Address": "大关南八苑8号",
+                "Distance": "1.7316km",
+                "Property": "个体工商户",
+                "EstablishedTime": "2013年12月",
+                "MainBusiness": null,
+                "Area": "100m²",
+                "Scale": "100万元",
+                "StaffNumber": "108",
+                "TexId": null,
+                "LicenseId": null,
+                "ServiceTime": "全天",
+                "ServiceScope": "全城",
+                "Intro": "杭州龙辉家政是一家开荒保洁、地毯清洗、地板清洗打蜡、石材翻新、晶面处理，室内外墙清洗、管道疏通、空调、油烟机等家电清洗等多元化清洁公司.",
+                "PraiseCount": "1",
+                "IsPraise": "0",
+                "FavoriteCount": "3",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [],
+                "Latitude": "30.30714",
+                "Longitude": "120.1686",
+                "Signature": null,
+                "Number": "SH-HZ000002",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "小时工",
+                        "Id": "5"
+                    },
+                    "ServiceTypeList": [
+                        "小时工",
+                        "保姆",
+                        "月嫂",
+                        "家电清洗",
+                        "家电维修"
+                    ]
+                },
+                "EstablishedTimeShort": "成立于2013年"
+            },
+            {
+                "IsCall": "1",
+                "Id": "2",
+                "Photos": [
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "15158151058",
+                "Name": "杭州市拱墅区龙辉家政服务部",
+                "Address": "大关南八苑8号",
+                "Distance": "1.7316km",
+                "Property": "个体工商户",
+                "EstablishedTime": "2013年12月",
+                "MainBusiness": null,
+                "Area": "100m²",
+                "Scale": "100万元",
+                "StaffNumber": "108",
+                "TexId": null,
+                "LicenseId": null,
+                "ServiceTime": "全天",
+                "ServiceScope": "全城",
+                "Intro": "杭州龙辉家政是一家开荒保洁、地毯清洗、地板清洗打蜡、石材翻新、晶面处理，室内外墙清洗、管道疏通、空调、油烟机等家电清洗等多元化清洁公司.",
+                "PraiseCount": "1",
+                "IsPraise": "0",
+                "FavoriteCount": "3",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [],
+                "Latitude": "30.30714",
+                "Longitude": "120.1686",
+                "Signature": null,
+                "Number": "SH-HZ000002",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "小时工",
+                        "Id": "5"
+                    },
+                    "ServiceTypeList": [
+                        "小时工",
+                        "保姆",
+                        "月嫂",
+                        "家电清洗",
+                        "家电维修"
+                    ]
+                },
+                "EstablishedTimeShort": "成立于2013年"
+            },
+            {
+                "IsCall": "1",
+                "Id": "2",
+                "Photos": [
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    },
+                    {
+                        "SmallPic": "",
+                        "HqPic": ""
+                    }
+                ],
+                "PhoneNumber": "15158151058",
+                "Name": "杭州市拱墅区龙辉家政服务部",
+                "Address": "大关南八苑8号",
+                "Distance": "1.7316km",
+                "Property": "个体工商户",
+                "EstablishedTime": "2013年12月",
+                "MainBusiness": null,
+                "Area": "100m²",
+                "Scale": "100万元",
+                "StaffNumber": "108",
+                "TexId": null,
+                "LicenseId": null,
+                "ServiceTime": "全天",
+                "ServiceScope": "全城",
+                "Intro": "杭州龙辉家政是一家开荒保洁、地毯清洗、地板清洗打蜡、石材翻新、晶面处理，室内外墙清洗、管道疏通、空调、油烟机等家电清洗等多元化清洁公司.",
+                "PraiseCount": "1",
+                "IsPraise": "0",
+                "FavoriteCount": "3",
+                "IsFavorite": "0",
+                "OrderCount": "已接0单",
+                "OrderRank": "0",
+                "PhoneCount": "已接0通",
+                "PhoneRank": "0",
+                "Grade": "评价0分",
+                "Grade2": "0.0",
+                "GradeRank": "0",
+                "SystemCertification": [],
+                "Latitude": "30.30714",
+                "Longitude": "120.1686",
+                "Signature": null,
+                "Number": "SH-HZ000002",
+                "Services": {
+                    "DefaultServiceType": {
+                        "Name": "小时工",
+                        "Id": "5"
+                    },
+                    "ServiceTypeList": [
+                        "小时工",
+                        "保姆",
+                        "月嫂",
+                        "家电清洗",
+                        "家电维修"
+                    ]
+                },
+                "EstablishedTimeShort": "成立于2013年"
+            }
+        ]
+    }
+}

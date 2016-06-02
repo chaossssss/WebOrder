@@ -1,1 +1,132 @@
-<h1>这里是地图页面</h1>
+<style>
+	/*富marker标注样式*/
+    .outBorder {          
+        position:absolute;       
+        height:76px;
+        width:64px;
+        background:url(../../images/main/bubble.svg) no-repeat left top;
+        text-align:center;
+    }    
+    .imgInfo {
+        width:60px;
+        height:60px;
+        margin:2px;
+        padding:0px;
+        border-radius:8px;
+    }     
+    /*.textInfo {
+        font-size: 12px;
+        width:60px;
+        margin:0 2px;
+        padding:1px;
+        opacity:0.5;
+        position:absolute;
+        bottom:17%;
+        background-color:#fff;
+        border-bottom-left-radius:4px;
+        border-bottom-right-radius:4px;
+	}   */
+	/*图文结合的信息窗口*/
+	.infoWindow {
+		position: relative;
+		/*padding: 10px;*/
+		font-size: 12px;
+		width: 320px;
+		height: 140px;
+		/*border:1px solid rgb(50,190,255);*/
+		/*border-radius: 4px;*/
+	}
+	.infoWindow img {
+		position: absolute;
+		width:90px;
+		height:90px;
+	}
+	.infoWindow .content {
+		padding-left: 100px;
+		border-bottom: 1px solid rgb(235,235,235);
+		background-color: rgb(245,245,245);
+	}
+	.infoWindow button {
+		display: block;
+		width: 100%;
+		color:rgb(25,182,255);
+		border:none;
+	}
+	.content .firstFontColor {
+		display: inline-block;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 120px;
+	}
+	.firstLine {
+		margin-bottom: 3px;
+	}
+	.secondLine {
+		margin-bottom: 3px;
+		display: inline-block;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 200px;
+	}
+	.thirdLine {
+		margin-bottom: 3px;
+		display: inline-block;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 200px;
+	}
+	.iconUpColor {
+		color: rgb(50,190,255);
+	}
+	.iconStarColor {
+		color:rgb(255,179,0);
+	}
+	.iconHeartColor {
+		color: rgb(251,113,145);
+	}
+	.iconListColor {
+		color: rgb(255,186,0);
+	}
+	.firstFontColor {
+		color: rgb(66,66,66);
+	}
+	.secondFontColor {
+		color: rgb(153,153,153);
+	}
+	.ml {
+		margin-left: 16px;
+	}
+	/*.BMap_pop .BMap_top {
+		border:1px solid red;
+	}*/
+</style>
+<!-- <div class="infoWindow">
+	<img src="../../images/main/bigPic2.png" alt="">
+	<div class="content">
+		<p class="firstLine">
+			<span class="firstFontColor">神马艾玛保洁保洁</span>
+			<span class="secondFontColor" style="float: right;">距离1.9km</span>
+		</p>
+		<p class="secondLine secondFontColor" style="clear:right;">成立于1990年</p>
+		<p class="thirdLine">
+			<i class="glyphicon glyphicon-list iconListColor"></i>
+			<span class="secondFontColor">小时工,保姆,月嫂</span>
+		</p>
+		<p class="fourLine">
+			<i class="glyphicon glyphicon-thumbs-up iconUpColor"></i>
+			<span>9999</span>
+			<i class="glyphicon glyphicon-star-empty iconStarColor ml"></i>
+			<span>9999</span>
+			<i class="glyphicon glyphicon-heart-empty iconHeartColor ml"></i>
+			<span>9999</span>
+		</p>
+	</div>
+	<button class="btn btn-default">立即下单</button>
+</div> -->
+
+<div id="allmap" style="width:100%;height:100%;">
+    	
+</div> 
