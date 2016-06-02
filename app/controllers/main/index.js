@@ -102,7 +102,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
     }
     var opts = {
     	width : 320,
-    	height : 160
+    	height : 0
     }
 
     var sContent = '<div class="infoWindow" id="imgDemo">'
@@ -163,22 +163,12 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
     	var BMap_pop = $(".BMap_pop");
 		console.log(BMap_pop);
 		//左上角
-		BMap_pop.children("div").first().children("div").css({
+		BMap_pop.children("div").eq(0).children("div").css({
 			"border-top":"1px solid rgb(50,190,255)",
 			"border-left":"1px solid rgb(50,190,255)",
 			"border-radius":"6px",
 			"background-color":"rgb(245,245,245)"
 		});
-		//顶部
-		// $(".BMap_pop .BMap_top").css({
-		// 		"border-top-color":"rgb(50,190,255)!important",
-		// 	"background-color":"rgb(245,245,245)!important"
-		// })
-		// BMap_pop.children("div").eq(1).css({
-		// 	"border-top-color":"rgb(50,190,255)!important",
-		// 	"background-color":"rgb(245,245,245)!important",
-		// 	"width":"1000px"
-		// });
 		//右上角
 		BMap_pop.children("div").eq(2).children("div").css({
 			"border-top-color":"rgb(50,190,255)",

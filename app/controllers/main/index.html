@@ -51,6 +51,7 @@
 		width: 100%;
 		color:rgb(25,182,255);
 		border:none;
+		outline: none;
 	}
 	.content .firstFontColor {
 		display: inline-block;
@@ -99,9 +100,19 @@
 	.ml {
 		margin-left: 16px;
 	}
-	/*.BMap_pop .BMap_top {
-		border:1px solid red;
-	}*/
+	/*BMap图文结合地图上的信息框样式*/
+	.BMap_pop .BMap_top{
+		border-top:1px solid rgb(50,190,255);
+		background-color:rgb(245,245,245);
+	}
+	.BMap_pop .BMap_center{
+		border-right: 1px solid rgb(50,190,255);
+		border-left: 1px solid rgb(50,190,255);
+		background-color:rgb(245,245,245);
+	}
+	.BMap_pop .BMap_bottom{
+		border-bottom: 1px solid rgb(50,190,255);
+	}
 </style>
 <!-- <div class="infoWindow">
 	<img src="../../images/main/bigPic2.png" alt="">
