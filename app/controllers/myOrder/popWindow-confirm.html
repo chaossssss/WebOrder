@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<style type="text/css">
+  .ngdialog.ngdialog-theme-default .ngdialog-content{
+    line-height: 390px;
+    width: 480px;
+    background: rgba(255,255,255,0.5);
+  }
+	.popDiv{height: 150px!important;width: 450px!important;background-color: #fff;border-top: 5px solid #32beff;border-top-left-radius: 4px;border-top-right-radius: 4px;}
+	.popDiv button{width:100px;height: 30px;line-height: 30px;position: absolute;border: none;bottom: 50px;color: #fff;border-radius: 4px;}
+	.popConfirm{left: 100px;background-color: #32beff;cursor: pointer;}
+	.popCancel{left: 270px;background-color: #cccccc;cursor: pointer;}
+  .popText{position: absolute;left: 130px;top:60px;line-height:0;}
+</style>
+<body>
+  <div class="popDiv">   
+   <button type="button" class="popConfirm" onclick="alert('确定');">确定</button>
+   <button type="button" class="popCancel" onclick="alert('取消');">取消</button>
+   <p class="popText">是否确认工人(商户)已服务完成？</p>
+  </div>
+  <script type="text/javascript">
+  $(function(){
+  	$('.ngdialog-close').remove();
+  })
+  </script>
+</body>
+</html>

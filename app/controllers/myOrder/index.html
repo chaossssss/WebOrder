@@ -1,1 +1,254 @@
-<h1>这里是订单</h1>
+<style type="text/css">
+	.glyphicon{
+		cursor: pointer;
+	}
+	.myOrderBox{
+		background: #4e595f;
+		width: 940px;
+		height: 40px;
+		top: -258px;
+		position: absolute;
+		left: 570px;
+		padding: 0;
+		border-radius: 4px;
+	}
+	.myOrderList{margin-bottom:10px;}
+	.myOrderUl{margin:0;padding: 0;}
+	.myOrderUl li:nth-child(1){
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+	}
+	.myOrderUl li{
+		width: 100px;
+		height: 40px;
+		line-height: 40px; 
+		color: #fff;
+		cursor: pointer;		
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	.myOrderUl li:hover{background: #33beff;}
+	.myOrderActive{background: #33beff;}
+	.searchBox{
+		width: 300px;
+		height: 40px;
+		float: right;
+	}
+	.searchBox input{
+		width: 0px;
+		height: 26px;
+		border:none;
+		border-radius: 10px;
+		margin-top: 7px;
+		padding-left: 10px;
+		outline:none;	
+		float: right;
+		margin-right: 20px;	
+	}
+	.searchBox img{
+		cursor: pointer;
+		position: absolute;
+		right: 12px;
+		top: 5px;
+	}
+	.myOrderBody{
+		width: 940px;
+		height: auto;
+		position: absolute;
+		top: -200px;		
+		left: 570px;
+		padding: 0;
+		border-radius: 4px;
+		
+	}
+	.myOrderHead{
+		width:940px;
+		height: 134px;
+		border:1px solid #dcf0f9;
+	}
+	.myOrderId{
+		width: inherit;
+		height: 40px;
+		background: #dcf0f9;
+		line-height: 40px;
+	}
+	.myOrderId p{
+		float: left;
+		margin-left: 20px;
+		margin-bottom: 0px;
+	}
+	.myOrderDetail ul li:nth-child(1){
+		width: 27%;
+	}
+	.myOrderDetail{
+		clear: both;
+		width: 940px;
+		height:94px;
+		padding: 0;
+		margin: 0;
+	}
+	.myOrderDetail ul li{
+		margin:0;
+		padding:0;
+		float: left;
+		list-style: none;
+		height: 95px;
+		border-right: 1px solid #dcf0f9;
+		text-align: center;
+		line-height: 94px;
+	}
+	.myOrderDetail ul li:nth-child(1){
+		width: 258px;
+		text-align: left;
+		line-height: 0px;
+	}
+	.myOrderDetail ul li:nth-child(1) img{
+		width: 60px;
+		height: 60px;
+		border:1px solid #ccc;
+		float: left;
+		margin: 17px 0 0 20px;
+		margin-right: 10px;
+	}
+	.myOrderDetail ul li:nth-child(2),.myOrderDetail ul li:nth-child(3),.myOrderDetail ul li:nth-child(4){
+		width: 147px;
+	}
+	.myOrderDetail ul li:nth-child(3){
+		padding-top: 40px;
+	}
+	.myOrderDetail ul li:nth-child(3) p{
+		line-height: 10px;
+	}
+	.myOrderDetail ul li:nth-child(5){
+		width: 240px;
+	}
+	.myOrderDetail ul{
+		margin:0;
+		padding:0;
+	}
+	p.UserName{
+		margin-top: 20px;
+		line-height: 16px;
+	}
+	.queren{
+		padding: 6px 24px;
+		outline: none;
+	}
+	.myOrderContent{
+		background: #f5f5f5;
+		padding: 15px;
+	}
+	.myOrderContent p:nth-child(2){
+		color: #999999;
+		line-height: 24px;
+	}
+	.myOrderContent img{
+		width: 58px;
+		height: 58px;
+		border:1px solid #dcdcde;
+		margin-right: 10px;
+	}
+	.ngdialog.ngdialog-theme-default .ngdialog-content{
+		line-height: 390px;
+		width: 560px;
+		opacity: 0.5px!important;
+		 background: rgba(255,255,255,0.5);
+	}
+	html.ngdialog-open,
+	body.ngdialog-open {
+	  overflow:visible ;
+	}
+</style>
+<nav class="navbar  navbar-static-top">
+  <div class="container myOrderBox">
+    <ul class="nav navbar-nav myOrderUl">
+    	<li>所有订单</li>
+    	<li>代付款</li>
+    	<li>待确认</li>
+    	<li>待评价</li>
+    </ul>
+    <div class="searchBox">
+    	<img src="images/myOrder/search.png" alt="">
+    	<input type="text" name="" value="">   	
+    </div>    
+  </div>
+  <div class="container myOrderBody">
+	<div class="myOrderList">
+		<div class="myOrderHead">
+			<div class="myOrderId"><p>订单号: 33032151214514</p><p>下单时间: 2016-02-30 14:40</p></div>
+			<div class="myOrderDetail">
+				<ul>
+					<li><img src="images/headerImg/headPic.png" alt=""><p class="UserName">李易峰</p></li>
+					<li><p>小时工</p></li>
+					<li><p>订单金额：50元</p></li>
+					<li>已接单<span class="glyphicon glyphicon-menu-down" ng-click="toggleOrder()"></span></li>
+					<li><button type="button" class="btn btn-warning queren" ng-click="openUseExternalTemplate()">确认完成</button></li>
+				</ul>
+			</div>
+		</div>
+		<div class="myOrderContent" ng-if="flag">
+			<p>服务内容:</p>
+			<p>服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容</p>
+			<img src="images/dsds.png" alt="">
+			<img src="images/dsds.png" alt="">
+			<img src="images/dsds.png" alt="">
+		</div>
+	</div>
+	<div class="myOrderList">
+		<div class="myOrderHead">
+			<div class="myOrderId"><p>订单号: 33032151214514</p><p>下单时间: 2016-02-30 14:40</p></div>
+			<div class="myOrderDetail">
+				<ul>
+					<li><img src="images/headerImg/headPic.png" alt=""><p class="UserName">李易峰</p></li>
+					<li><p>小时工</p></li>
+					<li><p>订单金额：50元</p><p style="color:red;">(代付款)</p></li>
+					<li>已接单<span class="glyphicon glyphicon-menu-down" ng-click="toggleOrder($index)"></span></li>
+					<li><button type="button" class="btn btn-success queren" ng-click='openUseExternalTemplate1()'>支付</button></li>
+				</ul>
+			</div>
+		</div>
+		<div class="myOrderContent" ng-if="flag">
+			<p>服务内容:</p>
+			<p>服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容</p>
+			<img src="images/dsds.png" alt="">
+			<img src="images/dsds.png" alt="">
+			<img src="images/dsds.png" alt="">
+		</div>
+	</div>
+	<div class="myOrderList">
+		<div class="myOrderHead">
+			<div class="myOrderId"><p>订单号: 33032151214514</p><p>下单时间: 2016-02-30 14:40</p></div>
+			<div class="myOrderDetail">
+				<ul>
+					<li><img src="images/headerImg/headPic.png" alt=""><p class="UserName">李易峰</p></li>
+					<li><p>小时工</p></li>
+					<li><p>订单金额：50元</p><p style="color:red;"></p></li>
+					<li>服务完成<span class="glyphicon glyphicon-menu-down" ng-click="toggleOrder($index)"></span></li>
+					<li><button type="button" class="btn btn-info queren" ng-click="openUseExternalTemplate2()">评论</button></li>
+				</ul>
+			</div>
+		</div>
+		<div class="myOrderContent" ng-if="flag">
+			<p>服务内容:</p>
+			<p>服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容服务内容</p>
+			<img src="images/dsds.png" alt="">
+			<img src="images/dsds.png" alt="">
+			<img src="images/dsds.png" alt="">
+		</div>
+	</div>
+  </div>
+</nav>
+<script type="text/javascript">
+$(function(){
+	$('.myOrderUl li').click(function(){
+		$(this).addClass('myOrderActive').siblings().removeClass('myOrderActive');		
+	})
+	$('.searchBox img').hover(function(){
+		$(".searchBox input").animate({
+		    width: "200px",
+		  }, 200 );
+	})
+
+})	
+</script>
