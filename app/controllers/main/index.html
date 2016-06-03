@@ -47,11 +47,13 @@
 		background-color: rgb(245,245,245);
 	}
 	.infoWindow button {
+		position: absolute;
 		display: block;
 		width: 100%;
 		color:rgb(25,182,255);
 		border:none;
 		outline: none;
+		z-index: 1000;
 	}
 	.content .firstFontColor {
 		display: inline-block;
@@ -112,8 +114,394 @@
 	}
 	.BMap_pop .BMap_bottom{
 		border-bottom: 1px solid rgb(50,190,255);
+		background-color:rgb(245,245,245);
+	}
+	/*搜索框样式*/
+	.mr {
+		margin-right: 8px;
+	}
+	.searchBtn .btn-group .btn {
+		width: 98px;
+		height: 44px;
+		border-color: rgb(23,166,232);
+	}
+	.searchBtn .btn .caret {
+		margin-left: 16px;
+	}
+	.searchBtn .dropdown-menu {
+		margin: 0;
+		min-width: 98px;
+	}
+	.searchBtn .dropdown-menu > li > a {
+		display: inline-block;
+		padding: 10px 33px 10px 13px;	
+	}
+	.searchBtn .dropdown-menu > li > a:hover{
+		color:rgb(50,190,255);
+	}
+	.searchGroup {
+		display: inline-block;
+		width: 456px;
+	}
+	.searchGroup .nav {
+		border:1px solid #e0e0e0;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+	}
+	.input-group {
+		position: relative;
+	}
+	.input-group i {
+		position: absolute;
+		font-size: 14px;
+		top:21px;
+		margin-top: -7px;
+		z-index: 10;
+	}
+	.input-group .form-control:not(:first-child):not(:last-child) {
+		font-size: 14px;
+		height: 44px;
+		padding: 6px 34px;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-color: rgb(23,166,232);
+	}
+	.input-group button {
+		width: 88px;
+		height: 44px;
+		background-color: #32beff;
+		border-color: rgb(23,166,232);
+	}
+	.input-group > i:nth-child(1) {
+		left:12px;
+		color: #32beff;
+	}
+	.input-group > i:nth-child(3) {
+		right:100px;
+		color: #ccc;
+	}
+	.searchGroup .nav {
+		width: 368px;
+		height: 300px;
+		overflow-y:scroll;
+		background-color: #fff;
+	}
+	.searchGroup .nav > li > a {
+		padding: 10px 11px 10px 19px;
+		color: #666;
+	}
+	.searchGroup .nav > li > a i{
+		padding-right: 6px;
+	}
+	.searchGroup .nav > li:last-child {
+		text-align: center;
+	}
+	.open > .dropdown-toggle.btn-default:focus {
+		background-color: #fff;
+	}
+	/*搜索结果*/
+	.resultContent {
+		position: relative;
+		width: 335px;
+		border-bottom: 1px solid #e0e0e0;
+	}
+	.resultContent p {
+		margin-bottom: 1px;
+	}
+	.resultContent div {
+		padding: 10px 100px 10px 43px;
+	}
+	.resultContent > i {
+		position: absolute;
+		top: 10px;
+	}
+	.resultContent img {
+		position: absolute;
+		top: 10px;
+		right: 0;
+		width: 60px;
+		height: 60px;
+	}
+	.resultContent button {
+		position: absolute;
+		bottom: 10px;
+		right: 0;
+		width: 60px;
+	}
+	.fr {
+		float: right;
+	}
+	.cr {
+		clear:right;
+	}
+	.orange {
+		color: #ff8800;
+	}
+	.blue {
+		color:#19b6ff;
+	}
+	.f12 {
+		font-size: 12px;
+	}
+	.f16 {
+		font-size: 16px;
+	}
+	.pl5 {
+		padding-left: 5px;
+	}
+	.resultContent > div > p:nth-child(3) >i,
+	.resultContent > div > p:nth-child(3) >span{
+		color: rgb(251,113,145);
+	}
+	.resultContent > div > p:first-child > span:first-child {
+		display: inline-block;
+		text-overflow: ellipsis;
+		white-space:nowrap;
+		overflow: hidden;
+		width: 120px;
+	}	
+	.resultContent > div > p:nth-child(2) {
+		display: inline-block;
+		text-overflow: ellipsis;
+		white-space:nowrap;
+		overflow: hidden;
+		width: 200px;
+	}
+	.searchResult {
+		width: 368px;
+	}
+	.searchResult > div {
+		width: 368px;
+		height: 46px;
+		border:1px solid #ccc;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		background-color: rgb(245,245,245);
+	}
+	.searchResult > div > span {
+		display: inline-block;
+		padding: 20px 0  12px 14px;
+		font-size: 12px;
+		color:#424242;
+	}
+	.searchResult > div > i {
+		float: right;
+		top:16px;
+		right: 19px;
+	}
+	.searchResult .nav {
+		height: 300px;
+		overflow: auto;
+		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
+		background-color: #fff;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+	}
+	.searchResult .nav li{
+		padding: 0 20px 0 13px;
+	}
+	.searchResult .nav li:hover{
+		background-color: rgb(237,242,245);
+	}
+	.off {
+		opacity: 0;
+	}
+	.on {
+		opacity: 1;
+	}
+	.hidden {
+		display: none;
+	}
+	.show {
+		display: block;
 	}
 </style>
+<!-- <div class="resultContent">
+	<i class="glyphicon glyphicon-leaf"></i>
+	<div>
+		<p>
+			<span>宋家宝</span>
+			<span class="fr orange f12">50元/小时</span>
+		</p>
+		<p class="secondFontColor cr">小时工、保姆、月嫂</p>
+		<p>
+			<i class="glyphicon glyphicon-heart-empty"></i>
+			<i class="glyphicon glyphicon-heart-empty"></i>
+			<i class="glyphicon glyphicon-heart-empty"></i>
+			<i class="glyphicon glyphicon-heart-empty"></i>
+			<i class="glyphicon glyphicon-heart-empty"></i>
+			<span>5.0</span>
+		</p>
+		<p>
+			<i class="glyphicon glyphicon-modal-window"></i>
+			<i class="glyphicon glyphicon-modal-window"></i>
+			<i class="glyphicon glyphicon-modal-window"></i>
+			<i class="glyphicon glyphicon-modal-window"></i>
+			<i class="glyphicon glyphicon-modal-window"></i>
+		</p>
+		<p>电话：151****6895</p>
+	</div>
+	<img src="./../images/main/BigPic1.png" alt="">
+	<button class="btn btn-info">下单</button>
+</div> -->
+
+<!-- <div class="searchResult">
+	<div>
+		<span>共12条搜索结果</span>
+		<i class="glyphicon glyphicon-circle-arrow-down blue"></i>	
+	</div>
+	<ul class="nav">
+		<li>
+			<div class="resultContent">
+				<i class="glyphicon glyphicon-leaf"></i>
+				<div>
+					<p>
+						<span>宋家宝</span>
+						<span class="fr orange f12">50元/小时</span>
+					</p>
+					<p class="secondFontColor cr">小时工、保姆、月嫂</p>
+					<p>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<span>5.0</span>
+					</p>
+					<p>
+						<i class="glyphicon glyphicon-modal-window"></i>
+						<i class="glyphicon glyphicon-modal-window"></i>
+						<i class="glyphicon glyphicon-modal-window"></i>
+						<i class="glyphicon glyphicon-modal-window"></i>
+						<i class="glyphicon glyphicon-modal-window"></i>
+					</p>
+					<p>电话：151****6895</p>
+				</div>
+				<img src="./../images/main/BigPic1.png" alt="">
+				<button class="btn btn-info">下单</button>
+			</div>
+		</li>
+		<li>
+			<div class="resultContent">
+				<i class="glyphicon glyphicon-leaf"></i>
+				<div>
+					<p>
+						<span>宋家宝</span>
+						<span class="fr orange f12">50元/小时</span>
+					</p>
+					<p class="secondFontColor cr">小时工、保姆、月嫂</p>
+					<p>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<span>5.0</span>
+					</p>
+					<p>
+						<i class="glyphicon glyphicon-modal-window"></i>
+						<i class="glyphicon glyphicon-modal-window"></i>
+						<i class="glyphicon glyphicon-modal-window"></i>
+						<i class="glyphicon glyphicon-modal-window"></i>
+						<i class="glyphicon glyphicon-modal-window"></i>
+					</p>
+					<p>电话：151****6895</p>
+				</div>
+				<img src="./../images/main/BigPic2.png" alt="">
+				<button class="btn btn-info">下单</button>
+			</div>
+		</li>
+		<li>
+			<div class="resultContent">
+				<i class="glyphicon glyphicon-leaf"></i>
+				<div>
+					<p>
+						<span>宋家宝</span>
+						<span class="fr orange f12">50元/小时</span>
+					</p>
+					<p class="secondFontColor cr">小时工、保姆、月嫂</p>
+					<p>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<i class="glyphicon glyphicon-heart-empty"></i>
+						<span>5.0</span>
+					</p>
+					<p>
+						<i class="glyphicon glyphicon-modal-window"></i>
+						<i class="glyphicon glyphicon-modal-window"></i>
+						<i class="glyphicon glyphicon-modal-window"></i>
+						<i class="glyphicon glyphicon-modal-window"></i>
+						<i class="glyphicon glyphicon-modal-window"></i>
+					</p>
+					<p>电话：151****6895</p>
+				</div>
+				<img src="./../images/main/smallPic2.png" alt="">
+				<button class="btn btn-info">下单</button>
+			</div>
+		</li>
+	</ul>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div>
+	<div class="searchBtn">
+		<div class="btn-group">
+		  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    <i class="glyphicon glyphicon-list mr"></i>全部 <span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu">
+		    <li><a href="javascript:;"><i class="glyphicon glyphicon-question-sign mr"></i>全部</a></li>
+		    <li><a href="javascript:;"><i class="glyphicon glyphicon-question-sign mr"></i>商户</a></li>
+		    <li><a href="javascript:;"><i class="glyphicon glyphicon-question-sign mr"></i>工人</a></li>
+		  </ul>
+		</div>
+	</div>	
+	<div class="searchGroup">
+	    <div class="input-group">
+		  <i class="glyphicon glyphicon-search"></i>
+	      <input type="text" class="form-control" placeholder="请输入您的服务地址、商户或工人...">
+	      <i class="glyphicon glyphicon-remove"></i>
+	      <span class="input-group-btn">
+	        <button class="btn btn-info" type="button">搜索</button>
+	      </span>
+	    </div><!-- /input-group -->
+	    <!-- <ul class="nav">
+	    	<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>
+	    	<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>
+	    	<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>
+	    	<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>
+	    	<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>
+	    	<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>
+	    	<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>
+	    	<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>
+	    	<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>
+	    	<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>
+	    	<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>
+	    	<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>
+	    	<li><a href="javascript:;"><i class="glyphicon glyphicon-trash mr"></i>清除历史记录</a></li>
+	    </ul>
+	</div>    
+</div> -->
+
+
+
+
+
+
+
+
 <!-- <div class="infoWindow">
 	<img src="../../images/main/bigPic2.png" alt="">
 	<div class="content">

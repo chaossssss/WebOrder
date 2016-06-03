@@ -2,6 +2,7 @@
 
 angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,httpService) {
   var vm = $scope.vm = {};
+  $scope.searchName = "";
 
   var $winHeight = $(window).height();
     $("#allmap").css("height",$winHeight);
@@ -101,8 +102,8 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
 
     }
     var opts = {
-    	width : 320,
-    	height : 0
+    	width : 0,
+    	height : 135
     }
 
     var sContent = '<div class="infoWindow" id="imgDemo">'
@@ -158,10 +159,10 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
         });
     }
 
-    //自定义图文结合信息窗口
+    //自定义图文结合信息窗口(百度地图自带的样式修改)
     function changeInfoWin(){
     	var BMap_pop = $(".BMap_pop");
-		console.log(BMap_pop);
+		console.log('BMap_pop',BMap_pop);
 		//左上角
 		BMap_pop.children("div").eq(0).children("div").css({
 			"border-top":"1px solid rgb(50,190,255)",
@@ -176,23 +177,19 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
 			"border-radius":"6px",
 			"background-color":"rgb(245,245,245)"
 		});
-		//中间
-		BMap_pop.children("div").eq(3).css({
-			"border-left":"1px solid rgb(50,190,255)",
-			"border-right":"1px solid rgb(50,190,255)",
-			"height":"140px"
-		});
 		//左下角
 		BMap_pop.children("div").eq(4).children("div").css({
 			"border-left":"1px solid rgb(50,190,255)",
 			"border-bottom":"1px solid rgb(50,190,255)",
 			"border-radius":"6px",
+			"background-color":"rgb(245,245,245)"
 		});
 		//右下角
 		BMap_pop.children("div").eq(6).children("div").css({
 			"border-right":"1px solid rgb(50,190,255)",
 			"border-bottom":"1px solid rgb(50,190,255)",
 			"border-radius":"6px",
+			"background-color":"rgb(245,245,245)"
 		});
 		//箭头
 		// BMap_pop.children("div").eq(7).children("img").attr("src","../../images/main/worker.png")
@@ -202,6 +199,301 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
 		});
     }
 
+    /* 搜索控件
+    *  按钮
+    *  输入框
+    */
+    function searchButtonControl(){
+        this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+        this.defaultOffset = new BMap.Size(378,20);
+    }  
+    searchButtonControl.prototype = new BMap.Control();    
+    searchButtonControl.prototype.initialize = function(map){
+
+        var div = document.createElement("div");
+        div.className = "searchBtn";
+
+        map.getContainer().appendChild(div);
+        return div;
+    }
+    var webSearchButtonControl = new searchButtonControl();
+    map.addControl(webSearchButtonControl);
+
+    function searchButton(){
+        $(".searchBtn").append(
+            '<div id="searchBtn" class="btn-group">'
+          +'<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
+          + '<i class="glyphicon glyphicon-list mr"></i><span>全部</span><i class="caret"></i>'
+          +'</button>'
+          +'<ul class="dropdown-menu">'
+          +  '<li><a href="javascript:;"><i class="glyphicon glyphicon-question-sign mr"></i>全部</a></li>'
+          +  '<li><a href="javascript:;"><i class="glyphicon glyphicon-question-sign mr"></i>商户</a></li>'
+          +  '<li><a href="javascript:;"><i class="glyphicon glyphicon-question-sign mr"></i>工人</a></li>'
+          +'</ul>'
+          +'</div>'
+        )
+    }
+    searchButton();
+
+    function searchBthClick(){
+        $("#searchBtn").on("click",".dropdown-menu li",function(){
+            var index = $(this).index();
+            var content = $(this).children("a").text();
+            console.log("点击第几个",index);
+            console.log("取到点击的值",content);
+
+            var btnVal = $(this).closest("ul").siblings("button").text();
+            console.log("取到的按钮值",btnVal);
+            $(this).closest("ul").siblings("button").children("span").text(content);
+        })
+        
+    }
+    searchBthClick();
+
+    function searchInputControl(){
+        this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+        this.defaultOffset = new BMap.Size(485,20);
+    }  
+    searchInputControl.prototype = new BMap.Control();    
+    searchInputControl.prototype.initialize = function(map){
+
+        var div = document.createElement("div");
+        div.className = "searchGroup";
+
+        map.getContainer().appendChild(div);
+        return div;
+    }
+    var webSearchInputControl = new searchInputControl();
+    map.addControl(webSearchInputControl);
+
+    function searchInput(){
+        $(".searchGroup").append(
+            '<div id="searchGroup" class="searchGroup">'
+            +    '<div class="input-group">'
+            +      '<i class="glyphicon glyphicon-search"></i>'
+            +      '<input id="input" ng-model="searchName" type="text" class="form-control" placeholder="请输入您的服务地址、商户或工人...">'
+            +      '<i id="close" class="glyphicon glyphicon-remove off"></i>'
+            +      '<span class="input-group-btn">'
+            +        '<button id="search" class="btn btn-info" type="button">搜索</button>'
+            +      '</span>'
+            +    '</div>'
+            +    '<ul class="nav">'
+            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>北戴河</a></li>'
+            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>萧山区</a></li>'
+            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>杭州乐园</a></li>'
+            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>蜀山</a></li>'
+            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
+            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
+            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
+            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
+            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
+            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
+            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
+            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-trash mr"></i>清除历史记录</a></li>'
+            +    '</ul>'
+            +'</div>'
+        )
+    }
+    searchInput();
+
+    function searchInputClick(){
+        $("#searchGroup").on("click",".nav li",function(){
+            var index = $(this).index();
+            var content = $(this).children("a").text();
+            console.log("点击第几个",index);
+            console.log("取到点击的值",content);
+            $("#input").val(content);
+            $("#input").focus();
+        })
+        //显示隐藏关闭icon
+        $("#input").on("focus",function(){
+            $(this).siblings("#close").removeClass("off");
+        })
+        $("#input").on("blur",function(){
+            $(this).siblings("#close").addClass("off");
+        })
+        // var inputVal = $scope.searchName;
+        // console.log(inputVal);
+        // if(inputVal){
+        //     $("#searchGroup").children(".nav").removeClass("off");
+        // }else{
+        //     $("#searchGroup").children(".nav").addClass("off");
+        // }
+
+        $("#close").on("click",function(){
+            $("#input").val("");
+        })
+
+
+    }
+    searchInputClick();
+    $scope.$watch("searchName",function(){
+        console.log("$scope.searchName",$scope.searchName);
+    })
+    /*
+    *   搜索结果控件
+    */
+    function searchResultControl(){
+        this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+        this.defaultOffset = new BMap.Size(20,88);
+    }  
+    searchResultControl.prototype = new BMap.Control();    
+    searchResultControl.prototype.initialize = function(map){
+
+        var div = document.createElement("div");
+        div.className = "searchResult";
+
+        map.getContainer().appendChild(div);
+        return div;
+    }
+    var webSearchResultControl = new searchResultControl();
+    map.addControl(webSearchResultControl);
+
+    function searchResult(){
+        $(".searchResult").append(
+            '<div id="searchResult">'
+            +    '<span>共12条搜索结果</span>'
+            +    '<i class="glyphicon glyphicon-circle-arrow-down blue"></i>'  
+            +'</div>'
+            +'<ul class="nav">'
+            +    '<li>'
+            +        '<div class="resultContent">'
+            +            '<i class="glyphicon glyphicon-leaf"></i>'
+            +            '<div>'
+            +                '<p>'
+            +                    '<span>宋家宝</span>'
+            +                    '<span class="fr orange f12">50元/小时</span>'
+            +                '</p>'
+            +                '<p class="secondFontColor cr">小时工、保姆、月嫂</p>'
+            +                '<p>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<span class="pl5 f16">5.0</span>'
+            +                '</p>'
+            +                '<p>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                '</p>'
+            +                '<p>电话：151****6895</p>'
+            +            '</div>'
+            +            '<img src="./../images/main/BigPic1.png" alt="">'
+            +            '<button class="btn btn-info">下单</button>'
+            +        '</div>'
+            +    '</li>'
+            +    '<li>'
+            +        '<div class="resultContent">'
+            +            '<i class="glyphicon glyphicon-leaf"></i>'
+            +            '<div>'
+            +                '<p>'
+            +                    '<span>宋家宝</span>'
+            +                    '<span class="fr orange f12">50元/小时</span>'
+            +                '</p>'
+            +                '<p class="secondFontColor cr">小时工、保姆、月嫂</p>'
+            +                '<p>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<span class="pl5 f16">5.0</span>'
+            +                '</p>'
+            +                '<p>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                '</p>'
+            +                '<p>电话：151****6895</p>'
+            +            '</div>'
+            +            '<img src="./../images/main/BigPic1.png" alt="">'
+            +            '<button class="btn btn-info">下单</button>'
+            +        '</div>'
+            +    '</li>'
+            +    '<li>'
+            +        '<div class="resultContent">'
+            +            '<i class="glyphicon glyphicon-leaf"></i>'
+            +            '<div>'
+            +                '<p>'
+            +                    '<span>宋家宝</span>'
+            +                    '<span class="fr orange f12">50元/小时</span>'
+            +                '</p>'
+            +                '<p class="secondFontColor cr">小时工、保姆、月嫂</p>'
+            +                '<p>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<i class="glyphicon glyphicon-heart-empty"></i>'
+            +                    '<span class="pl5 f16">5.0</span>'
+            +                '</p>'
+            +                '<p>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                    '<i class="glyphicon glyphicon-modal-window"></i>'
+            +                '</p>'
+            +                '<p>电话：151****6895</p>'
+            +            '</div>'
+            +            '<img src="./../images/main/BigPic1.png" alt="">'
+            +            '<button class="btn btn-info">下单</button>'
+            +        '</div>'
+            +    '</li>'    
+            +'</ul>'
+        )
+    }
+    searchResult();
+
+    function searchResultClick(){
+        $("#searchResult").on("click",function(){
+            $(this).siblings("ul").toggle();
+        })
+    }
+    searchResultClick();
+
+    /*
+    *   比例尺控件
+    *   缩放平移控件
+    */
+    var bottom_left_control = new BMap.ScaleControl({
+        anchor: BMAP_ANCHOR_BOTTOM_LEFT
+    });
+    var top_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT});
+
+    //添加控件和比例尺
+    function add_control(){
+        map.addControl(bottom_left_control);        
+        map.addControl(top_right_navigation);        
+    }
+    add_control();
+
+    /*
+    *   广告位控件
+    */
+    function noticeControl(){
+        this.defaultAnchor = BMAP_ANCHOR_TOP_RIGHT;
+        this.defaultOffset = new BMap.Size(32,406);
+    }
+    noticeControl.prototype = new BMap.Control();    
+    noticeControl.prototype.initialize = function(map){
+
+        var img = document.createElement("img");
+        img.style.width = "105px";
+        img.style.height = "132px";
+        img.src = "../../images/main/qrCode.png";
+
+        map.getContainer().appendChild(img);
+        return img;
+    }
+    var webNoticeControl = new noticeControl();
+    map.addControl(webNoticeControl);
 
     //从后台获取所有数据方法,默认搜索
     function getData(){
