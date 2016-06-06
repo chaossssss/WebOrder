@@ -12,17 +12,23 @@ html.ngdialog-open,
 body.ngdialog-open {
   overflow:visible ;
 }
-	.popDiv{height: 420px!important;width: 680px!important;background-color: #fff;border-top: 5px solid #32beff;border-top-left-radius: 4px;border-top-right-radius: 4px;}
-	.popDiv button{width:100px;height: 30px;line-height: 30px;position: absolute;border: none;bottom: 50px;color: #fff;border-radius: 4px;}
-	.popConfirm{left: 220px;background-color: #32beff;cursor: pointer;}
+	.popDiv{height: 430px!important;width: 680px!important;background-color: #fff;border-top: 5px solid #32beff;border-top-left-radius: 4px;border-top-right-radius: 4px;}
+	.popDiv button{width:102px;height: 30px;line-height: 30px;position: absolute;border: none;bottom: 50px;color: #fff;border-radius: 4px;}
+	.popConfirm{left: 200px;background-color: #32beff;cursor: pointer;}
 	.popCancel{left: 390px;background-color: #cccccc;cursor: pointer;}
-  .setScore ul{list-style: none;position: relative;height: 20px;width: 170px; top:18px;left:40px;}
-  .setScore ul li{width: 23px;height: 20px; float: left;background: url('images/myOrder/star.png') no-repeat 0 -20px;}
+  .setScore ul{list-style: none;position: relative;height: 20px;width: 170px; top:22px;left:40px;}
+  .setScore ul li{width: 23px;height: 16px; float: left;background: url('images/myOrder/star.png') no-repeat 0 -16px;}
   .star{background: url('images/myOrder/star.png') no-repeat 0 0px!important;}
   .setScore span:nth-child(1){position:absolute;top:50px;left: 50px; }
   .content-title{position:absolute;top:100px;left: 50px; }
-  .setScore p{position:absolute;top:50px;left: 230px;color: #fd718e; }
+  .setScore p{position:absolute;top:50px;left: 220px;color: #fd718e; }
   .content-area{width:550px;height:140px;position: absolute;top: 93px;left:96px; padding: 10px;resize: none; font: none!important;line-height: normal;overflow: visible;outline: none;}
+
+  #imgesFilesAuto{width:auto;height:98px; position: absolute;bottom: 120px;left: 96px;}
+  #imagesBox{width:auto;height:98px;float:left;cursor: pointer;}
+  #imagesBox img{width:98px;height:98px;float:left;cursor: pointer;border:1px solid #ccc;margin-right: 6px;}
+  #imgesFiles{width:98px;height:98px;float:left;position:relative;border:1px dashed #ccc;cursor: pointer;}
+  #imgesFiles span{position:absolute;font-size:80px;display:block;width:98px;text-align:center;height:98px;color:#CCC;cursor: pointer;line-height: 98px;font-weight: lighter;}
 </style>
 <body>
   <div class="popDiv">  
@@ -39,9 +45,16 @@ body.ngdialog-open {
    <span class="content-title">内容：</span>   
    <textarea class="content-area" name="" placeholder="请输入评论内容(至多200字)..."></textarea>
    </div>
+
+    <div id="imgesFilesAuto" style="">
+       <div id="imagesBox"></div>
+       <div id="imgesFiles">
+          <span>+</span>
+          <input type="file" name="photoimage" id="uploadImage" multiple="multiple" style="width:98px; height:98px;opacity:0;" accept="image/gif, image/jpeg"/>
+       </div>
+    </div>
    <button type="submit" class="popConfirm" onclick="alert('提交');">提交</button>
    <button type="button" class="popCancel" onclick="alert('取消');">取消</button>
-   
   </div>
   <script type="text/javascript">
   $(function(){
@@ -58,6 +71,51 @@ body.ngdialog-open {
       }
       $('.setScore p').html(score+'分');
     })
+
+        //alert($('#imgesFiles img').length);
+        var result = document.getElementById("imagesBox");
+        var input = document.getElementById("uploadImage");
+
+        if(typeof FileReader === 'undefined'){
+            result.innerHTML = "<p class='warn'>抱歉，你的浏览器不支持 FileReader</p>";
+            input.setAttribute('disabled','disabled');
+        }else{
+
+            input.addEventListener('change',readFile,false);
+        }
+         
+        function readFile(){            
+              for(var i=0;i<this.files.length;i++)
+              {
+                  if(this.files.length < 5){
+                    var file = this.files[i];
+                    if(!/image\/\w+/.test(file.type)){
+                        alert("请确保文件为图像类型");
+                        return false;
+                    }
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);                    
+                    reader.onload = function(e){                        
+                        result.innerHTML+= '<img src="'+this.result+'" alt=""/>';
+                    }  
+                  }else if(this.files.length == 5){
+                    var file = this.files[i];
+                    if(!/image\/\w+/.test(file.type)){
+                        alert("请确保文件为图像类型");
+                        return false;
+                    }
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);                    
+                    reader.onload = function(e){                        
+                        result.innerHTML+= '<img src="'+this.result+'" alt=""/>';                                               
+                    }                   
+                      $('#imgesFiles').hide();
+                  }
+             }
+
+            
+        }
+        
   })
   </script>
 </body>

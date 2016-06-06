@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<style type="text/css">
+  .ngdialog.ngdialog-theme-default .ngdialog-content{
+    line-height: 0px;
+    width: 630px;
+    background: rgba(255,255,255,0.5);    
+  }
+html.ngdialog-open,
+body.ngdialog-open {
+  overflow:visible ;
+}
+	.popDiv{height: 514px!important;width: 600px!important;background-color: #fff;border-top: 5px solid #32beff;border-top-left-radius: 4px;border-top-right-radius: 4px;padding: 0 15px;}
+  .popDiv h3{text-align: center;}
+  .popDiv h4{margin-top: 30px;}
+  .popDiv h5{color: #ff2727;font-size: 13px;}
+  .contriduce{line-height: 22px;text-indent:2em;color: #808080;font-size: 12px;}
+  .service{margin-left: 40px;line-height: 20px;}
+  .pay{float: left;margin-right: 90px;}
+
+	.popDiv button{width:102px;height: 30px;line-height: 30px;position: absolute;border: none;bottom: 50px;color: #fff;border-radius: 4px;}
+	.popConfirm{left: 138px;background-color: #32beff;cursor: pointer;}
+	.popCancel{left: 360px;background-color: #cccccc;cursor: pointer;}
+</style>
+<body>
+  <div class="popDiv">  
+    <h3>充值</h3>
+    <p class="contriduce">充值说明：亚马逊河流经的亚马逊平原是世界上面积最大的平原。亚马逊河是世界上流量最大、流域面积最广的河流。其长度仅次于尼罗河(约6440公里)，为世界第二大河。据估计，所有在地球表面流动的水约有20-25%在亚马逊河。河口宽达240公里，泛滥期流量达每秒18万立方米，是密西西比河的10倍。泻水量如此之大，使距岸边160公里内的海水变淡。已知支流有1000多条，其中7条长度超过1600公里。</p>
+
+   <h4>请选择充值服务:</h4>
+   <p class="service"><input type="radio" name="service" checked="checked" value="" placeholder="">200 元充值卡(充200元,送50元)      售价￥200元</p>
+   <p class="service"><input type="radio" name="service" value="" placeholder="">1000 元充值卡(充1000元,送300元)      售价￥1000元</p>
+   <p class="service"><input type="radio" name="service" value="" placeholder="">3000 元充值卡(充3000元,送1000元)      售价￥3000元</p>
+   <p class="service"><input type="radio" name="service" value="" placeholder="">活动名称（活动说明）      活动金额</p>
+
+   <h4>请选择支付方式:</h4>
+   <div style="overflow:hidden;">
+     <p style="margin-left: 40px;" class="pay"><input type="radio" name="pay" value="" placeholder="">支付宝</p>
+     <p class="pay"><input type="radio" name="pay" value="" placeholder="">财付通</p>
+     <p class="pay"><input type="radio" name="pay" value="" placeholder="">盛付通</p>
+   </div>
+   <h5>* 调用第三方支付功能失败，请稍后再试</h5>
+   
+   <button type="submit" class="popConfirm" onclick="alert('提交');">提交</button>
+   <button type="button" class="popCancel" onclick="alert('取消');">取消</button>
+  </div>
+  <script type="text/javascript">
+  $(function(){
+    $('.ngdialog-close').remove();
+    $('input[name=service]:radio,input[name=pay]:radio').click(function(){
+      $(this).parent('p').css('color','#ff8800').siblings('p').css('color','#424242');
+    })
+  })
+  </script>
+</body>
+</html>

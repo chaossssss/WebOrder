@@ -1,1 +1,249 @@
-<h1>这里是账户管理</h1>
+<style type="text/css">
+.navbar-static-top{
+	position: relative;
+	width:1170px;
+	margin: 0 auto;
+	top: -260px;
+}
+	.glyphicon{
+		cursor: pointer;
+	}
+	.myManage{
+		width: 940px;
+		height: 114px;
+		top: 0px;
+		position: absolute;
+		left: 190px;
+		padding: 0;
+		border-radius: 4px;
+		border:1px solid #ccc;
+	}
+	.yue{
+		color:#999;
+		margin: 18px 0 0 20px;
+	}
+	.money{
+		font-size: 30px;
+		color: #19b6ff;
+		margin: 12px 0 0 20px;
+	}
+	.money span{
+		font-size: 16px;
+		color:#999;
+	}
+	.btnCharge{
+		border:none;
+		width: 102px;
+		height: 36px;
+		background: #ff8903;
+		color: #fff;
+		border-radius: 4px;
+		text-align: center;
+		line-height: 36px;
+		font-size: 16px;
+		margin-left: 50px;
+		vertical-align: text-bottom;
+		outline: none;
+	}
+	.myManageBody{
+		width: 940px;
+		height: auto;
+		position: absolute;
+		top: 120px;		
+		left: 190px;
+		padding: 0;
+		border-radius: 4px;		
+	}
+	.ngdialog.ngdialog-theme-default .ngdialog-content{
+		line-height: 390px;
+		width: 560px;
+		opacity: 0.5px!important;
+		 background: rgba(255,255,255,0.5);
+	}
+	.myManageTab{
+		border-bottom:1px solid #32beff;
+		height: 38px;
+	}
+	.manageUl{
+		margin: 0;
+		padding:0;
+		list-style: none;
+
+	}
+	.manageUl li{
+		float: left;
+		border:1px solid #ccc;
+		width: 126px;
+		height: 38px;
+		text-align: center;
+		line-height: 38px;
+		margin-right: 6px;
+		cursor: pointer;
+		margin-bottom: -1px;
+		border-top-right-radius: 4px;
+		border-top-left-radius: 4px;
+		 background: -webkit-linear-gradient(#f2f2f2, #fff); 
+	}
+	.active1{
+		border: 1px solid #32beff!important;
+		border-bottom: 1px solid #ccc!important;
+		color: #32beff;
+	}
+	.timeBox{
+		width: 100%;
+		height: 80px;
+		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
+	}
+	.timeBox p{
+		float: left;
+		margin-top: 23px;
+		margin-left: 20px;
+	}
+	 input[type="date"]{
+	 	width: 130px;
+	 	height: 30px;
+	 }
+	 .search{
+	 	border:none;
+		width: 46px;
+		height: 26px;
+		background: #32beff;
+		color: #fff;
+		border-radius: 4px;
+		text-align: center;
+		line-height: 26px;
+		font-size: 14px;
+		margin-left: 10px;
+		outline: none;
+		margin-top: 24px;
+	 }
+	 .table{
+	 	margin-top: 30px;
+	 	border:1px solid #ccc;
+	 }
+	 .table thead tr{
+	 	height: 40px;
+	 	line-height: 40;
+	 	background: #f2f2f2;
+	 }
+	 .table tbody tr{
+	 	height: 70px;
+	 	
+	 }
+	 .table tbody tr td{
+	 	line-height: 70px;
+	 }
+	 .table th{
+	 	border-bottom: none!important;
+	 	height: 40px;
+	 }
+	 .table th, .table td { 
+		text-align: center; 
+		height:38px;
+	}
+	.pagination{
+	
+		margin-left: 140px;
+	}
+	.pagination > li > a{
+		background: #32beff;
+		color: #fff;
+		margin: 0 5px;
+	}
+	.pagination > li > a:hover{
+		background-color: #32beff!important;
+		color: #fff;
+	}
+	.pagination > li:first-child > a,.pagination > li:last-child > a{
+		background:#fff;
+		color:#999;
+		border:none;
+	}
+	.pagination > li:first-child > a:hover,.pagination > li:last-child > a:hover{
+		background-color: #fff!important;
+		color: #999;
+		border:none;
+	}
+	html.ngdialog-open,
+	body.ngdialog-open {
+	  overflow:visible ;
+	}
+</style>
+<nav class="navbar  navbar-static-top">
+  <div class="container myManage">
+   	<p class="yue">账户余额:</p>
+   	<p class="money">500.00 <span>元</span><input class="btnCharge" type="button" name="" ng-click="openUseExternalTemplate()" value="立即充值"></p>
+  </div>
+  <div class="container myManageBody">
+  	<div class="myManageTab">
+  		<ul class="manageUl">
+		  	<li class="active1">余额变量明细</li>
+		  	<li>消费记录</li>
+	   	</ul>	  
+  	</div>
+	<div class="timeBox">
+	 	<p>时间：<input type="date" name="" value="">  -  <input type="date" name="" value=""></p>
+	 	<input class="search" type="button" name="" value="搜索">
+	 	<table class="table">
+		   <thead>
+		      <tr>
+		         <th>交易时间</th>
+		         <th>消费类别</th>
+		         <th>支付对象</th>
+		         <th>消费金额</th>
+		         <th>交易方式</th>
+		         <th>状态</th>
+		      </tr>
+		   </thead>
+		   <tbody>
+		      <tr >
+		         <td style="background:#f7f7f7;">2015-02-03 13:30</td>
+		         <td>
+			         <span style="display:block;line-height:50px;">订单支付</span>
+			         <span style="display:block;line-height:0px;">(3303215415214152)</span>
+		         </td>
+		         <td style="background:#f7f7f7;">工人:王鑫</td>
+		         <td>100.00元</td>
+		         <td style="background:#f7f7f7;">账户余额</td>
+		         <td>交易成功</td>
+		      </tr>
+		      <tr >
+		         <td style="background:#f7f7f7;">2015-02-03 13:30</td>
+		         <td>
+			         <span style="display:block;line-height:50px;">订单支付</span>
+			         <span style="display:block;line-height:0px;">(3303215415214152)</span>
+		         </td>
+		         <td style="background:#f7f7f7;">工人:王鑫</td>
+		         <td>100.00元</td>
+		         <td style="background:#f7f7f7;">账户余额</td>
+		         <td>交易成功</td>
+		      </tr>
+		   </tbody>
+		</table>
+		<span style="font-size:12px;display:block;">总共10条记录</span>
+		<ul class="pagination">
+		  <li ><a href=""style="">&laquo;上一页</a></li>
+		  <li><a href="">1</a></li>
+		  <li><a href="">2</a></li>
+		  <li><a href="">3</a></li>
+		  <li><a href="">4</a></li>
+		  <li><a href="">5</a></li>
+		  <li><a href="">6</a></li>
+		  <li><a href="">7</a></li>
+		  <li><a href="">8</a></li>
+		  <li><a href="">9</a></li>
+		  <li><a href="">10</a></li>
+		  <li style="background:#fff;"><a href="">下一页&raquo;</a></li>
+		</ul>	  	
+ 	 </div>
+  </div>
+  
+</nav>
+<script type="text/javascript">
+$(function(){
+	$('.manageUl li').click(function(){
+		$(this).addClass('active1').siblings().removeClass('active1').css('border-bottom','1px solid #32beff');
+	})
+})	
+</script>
