@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,httpService) {
+angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,httpService,ngDialog) {
   var vm = $scope.vm = {};
   $scope.searchName = "";
 
@@ -205,7 +205,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
     */
     function searchButtonControl(){
         this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
-        this.defaultOffset = new BMap.Size(378,20);
+        this.defaultOffset = new BMap.Size(378,108);
     }  
     searchButtonControl.prototype = new BMap.Control();    
     searchButtonControl.prototype.initialize = function(map){
@@ -252,7 +252,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
 
     function searchInputControl(){
         this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
-        this.defaultOffset = new BMap.Size(485,20);
+        this.defaultOffset = new BMap.Size(485,108);
     }  
     searchInputControl.prototype = new BMap.Control();    
     searchInputControl.prototype.initialize = function(map){
@@ -297,13 +297,22 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
     searchInput();
 
     function searchInputClick(){
+        var localStorage = window.localStorage;
+        var history = [];
         $("#searchGroup").on("click",".nav li",function(){
             var index = $(this).index();
             var content = $(this).children("a").text();
-            console.log("点击第几个",index);
-            console.log("取到点击的值",content);
-            $("#input").val(content);
-            $("#input").focus();
+            
+            //取到最后一个：清除历史记录
+            if(content === "清除历史记录"){
+                localStorage.setItem("history","");
+                $("#input").focus();
+            }else{
+                console.log("点击第几个",index);
+                console.log("取到点击的值",content);
+                $("#input").val(content);
+                $("#input").focus();
+            }
         })
         //显示隐藏关闭icon
         $("#input").on("focus",function(){
@@ -324,7 +333,10 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
             $("#input").val("");
         })
 
-
+        $("#search").on("click",function(){
+            history.push($("#input").val());
+            localStorage.setItem("history",history)
+        })
     }
     searchInputClick();
     $scope.$watch("searchName",function(){
@@ -335,7 +347,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
     */
     function searchResultControl(){
         this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
-        this.defaultOffset = new BMap.Size(20,88);
+        this.defaultOffset = new BMap.Size(20,178);
     }  
     searchResultControl.prototype = new BMap.Control();    
     searchResultControl.prototype.initialize = function(map){
@@ -459,13 +471,90 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
     searchResultClick();
 
     /*
+    *   头部导航
+    */
+    function topBarControl(){
+        this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+        this.defaultOffset = new BMap.Size(0,0);
+    }  
+    topBarControl.prototype = new BMap.Control();    
+    topBarControl.prototype.initialize = function(map){
+
+        var div = document.createElement("div");
+        div.className = "top";
+
+        map.getContainer().appendChild(div);
+        return div;
+    }
+    var webTopBarControl = new topBarControl();
+    map.addControl(webTopBarControl);
+    
+    function topBar(){
+        $(".top").append(
+            '<nav id="topbar" class="navbar navbar-default navbar-fixed-top">'
+        +      '<div class="container">'
+        +        '<div class="navbar-header">'
+        +          '<a href="javascript:;">'
+        +            '<img class="logo" src="images/headerImg/zhujiaLogo.png" alt="">'
+        +          '</a>'    
+        +        '</div>'
+        +        '<div class="navbar-header navPosition">'
+        +            '<a href="javascript:;">'
+        +                '<img class="position" src="images/headerImg/position.png" alt="">'
+        +            '</a>'
+        +            '<span class="positionText">杭州市 萧山区<br><a class="togglePosition" ng-click="openUseExternalTemplate()"">[切换]</a></span>'    
+        +        '</div>'
+        +        '<div id="navbar" class="collapse navbar-collapse">'
+        +          '<ul class="nav navbar-nav">'
+        +            '<li><a href="javascript:;">首页</a></li>'
+        +            '<li><a href="javascript:;">我的订单</a></li>'
+        +            '<li><a href="javascript:;">下载APP</a></li>'
+        +          '</ul>'
+        +          '<div class="dropdown" >'       
+        +            '<p class=""  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">'
+        +                '家奶和鲁大八个字'
+        +                '<span class="glyphicon glyphicon-menu-down" style="color:#999;"></span>'
+        +            '</p>'
+        +            '<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">'
+        +                '<li><a href="javascript:;">我的订单</a></li>'
+        +                '<li><a href="javascript:;">我的收藏</a></li>'
+        +                '<li><a href="javascript:;">账户管理</a></li>'
+        +                '<li><a href="javascript:;">消息设置</a></li>'
+        +                '<li><a href="javascript:;">帐号设置</a></li>'
+        +                '<li><a href="javascript:;"><span class="glyphicon glyphicon-log-in"></span>退出</a></li>'
+        +            '</ul>'
+        +          '</div>'
+        +          '<img class="headPic" src="images/headerImg/headPic.png" alt="">'
+        +        '</div>'
+        +      '</div>'
+        +    '</nav>'
+        )
+    }
+    topBar();
+    /*
+    *   登录注册弹窗
+    */
+
+    ngDialog.open({
+        template: 'controllers/main/login.html',
+        plain: false,
+        className: 'ngdialog-theme-default',
+        closeByEscape: true,
+        closeByDocument: true,
+        controller: 'loginCtrl'
+      });
+
+    /*
     *   比例尺控件
     *   缩放平移控件
     */
     var bottom_left_control = new BMap.ScaleControl({
         anchor: BMAP_ANCHOR_BOTTOM_LEFT
     });
-    var top_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT});
+    var top_right_navigation = new BMap.NavigationControl({
+        anchor: BMAP_ANCHOR_TOP_RIGHT,
+        offset: new BMap.Size(0,154)
+    });
 
     //添加控件和比例尺
     function add_control(){
@@ -479,7 +568,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
     */
     function noticeControl(){
         this.defaultAnchor = BMAP_ANCHOR_TOP_RIGHT;
-        this.defaultOffset = new BMap.Size(32,406);
+        this.defaultOffset = new BMap.Size(32,494);
     }
     noticeControl.prototype = new BMap.Control();    
     noticeControl.prototype.initialize = function(map){
@@ -510,6 +599,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
 	        })                      
     }
     getData();
+
 
 
 

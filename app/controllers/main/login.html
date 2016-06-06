@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录注册</title>
+	<style>
+	.ngdialog.ngdialog-theme-default .ngdialog-content {
+		background-image: url("../../images/main/login_pc.png");
+		height: 545px;
+		width: 508px;
+		background-color: rgba(255,255,255,0);
+		padding:70px 110px 70px 70px;
+	}
+	.ngdialog.ngdialog-theme-default .ngdialog-close {
+		display: none;
+	}
+	.changeLogin {
+		position: absolute;
+		top: 32px;
+		right: 0;
+		height: 52px;
+		opacity: 0;
+	}
+	.footImg {
+ 		position: absolute;
+ 		bottom: 70px;
+		width: 100px;
+		height: 28px;
+		margin-left: 127px;
+	}
+	.loginNav {
+		padding-left: 20px;
+		text-align: center;
+	}
+	.loginNav > li {
+		display: inline-block;
+		font-size: 20px;
+		border-bottom: 1px solid #ccc;
+		color: #b2b2b2;
+		width: 150px;
+		padding-bottom: 8px;
+	}
+	/*
+	*	切换输入框登录
+	*/
+	.switchInput {
+		display: block;
+	}
+	/*
+	*	登录
+	*/
+	.loginForm {
+		margin-top: 30px;
+	}
+	.loginForm > span {
+		font-size: 12px;
+		color: #ff2727;
+		padding-left: 27px;
+	}
+	.login {
+		position: relative;	
+	}
+	.login > input {
+		position: relative;
+		border-radius: 4px;
+		width: 300px;
+		height: 42px;
+		border:1px solid #999;
+		font-size: 14px;
+		color: #3b3b3b;
+		padding-left: 10px;
+		margin-left: 7px;
+	}
+	.login > i:last-child {
+		position: absolute;
+		top: 12px;
+		right: 10px;
+		opacity: 0;
+	}
+	.mt20 {
+		margin-top: 20px;
+	}
+	.forgotPsd {
+		position: relative;
+		margin-left:27px;
+		margin-top: 10px; 
+		font-size: 12px;
+		color: rgb(153,153,153);
+	}
+	.forgotPsd > input {
+		position: absolute;
+		top: 5px;
+		display: inline-block;
+		margin: 0;
+	}
+	.forgotPsd > p {
+		display: inline-block;
+		padding-left: 19px;
+	}
+	.forgotPsd > span {
+		position: absolute;
+		right: 0;
+		color: #19b6ff;
+	}
+	.loginFooter {
+		margin-top: 30px;
+	}
+	.loginFooter button {
+		width: 240px;
+		height: 42px;
+		font-size: 18px;
+		text-align: center;
+		margin-left: 57px;	
+		color: #fff;
+		background-color: #b3b3b3;
+	}
+	/*.loginFooter button:hover{
+		background: #32beff;
+		color: #fff;	
+	}*/
+	.loginNav .active {
+		color: #1ab6ff;
+		border-bottom: 1px solid #1ab6ff;
+	}
+	/*按钮样式*/
+	.btn-info {
+		border: none;
+	}
+	/*
+	*	注册
+	*/
+	.registForm {
+		margin-top: 30px;
+		display: none;
+	}
+	.registForm > span {
+		font-size: 12px;
+		color: #ff2727;
+		padding-left: 27px;
+	}
+	.registForm .sendCode input {
+		width: 148px;
+	}
+	.registForm .sendCode button {
+		width: 148px;
+		height: 42px;
+		background-color: #32beff;
+	}
+
+	.registForm .agreement {
+		position: relative;
+		color: #999;
+		font-size: 12px;
+		margin-left: 84px;
+		margin-top: 20px;
+	}
+	.registForm .agreement input{
+		position: absolute;
+		top: 13px;
+	}
+	.registForm .agreement p {
+		position: absolute;
+		top: 13px;
+		left: 18px;
+	}
+	.registForm .agreement span {
+		color: #32beff;
+	}
+	.registFooter {
+		margin-top: 60px;
+	}
+	.registFooter button {
+		width: 240px;
+		height: 42px;
+		font-size: 18px;
+		text-align: center;
+		margin-left: 57px;	
+		color: #fff;
+		background-color: #b3b3b3;
+	}
+	/*
+	*	切换二维码登陆
+	*/
+	.switchCode {
+		margin-top: 40px;
+		margin-left: 40px;
+		text-align: center;
+		display: none;
+	}
+	.sweepCode {
+		display: block;
+	}
+	.sweepCode > p:first-child {
+		font-size: 20px;
+		color: #424242;
+		margin-bottom: 26px;
+	}
+	.sweepCode > p:first-child > span:last-child {
+		margin-left: 38px;
+	}
+	.sweepCode img {
+		border: 2px solid #32beff;
+		padding: 11px;
+	}
+	.sweepCode > p:nth-child(3) {
+		margin: 20px 0 0 -3px;
+		color: #999;
+	}
+	.sweepCode > p:nth-child(3) > span {
+		color: #19b6ff;
+	}
+	.sweepCode > p:nth-child(4) {
+		margin-left: 18px;
+		color: #999;
+	}
+	.sweepCode > p:nth-child(4) > span{
+		color: #eb1919;
+	}
+	.invalidCode {
+		display: none;
+	}
+	.invalidCode img {
+		margin-bottom: 28px;
+	}
+	.invalidCode > p:nth-child(2) {
+		color: #424242;
+		font-size: 20px;
+		margin-bottom: 16px;
+		font-weight: bold;
+	}
+	.invalidCode > p:nth-child(3) {
+		color: #999;
+		font-size: 14px;
+	}
+	.invalidCode button:hover,
+	.invalidCode button:focus {
+		color: #fff;
+	}
+	.invalidCode button {
+		margin-top: 40px;
+		border: none;
+		color: #fff;
+		background-color: #32beff;
+		width: 240px;
+		height: 42px;
+		font-size: 18px;
+	}
+	</style>
+</head>
+<body>
+	<div class="changeLogin">
+		切换二维码
+	</div>
+	<img class="footImg" src="../../images/main/logo.png" alt="">
+
+	<div class="switchInput">
+		<ul class="loginNav">
+			<li class="active" ng-click="clearForm()">登录</li>
+			<li ng-click="clearForm()">注册</li>
+		</ul>
+		<form class="loginForm" name="loginForm" ng-submit="login(loginForm.loginInput.$valid,loginForm.loginPsd.$valid)" novalidate="">
+			<span ng-show="errorTag"><i class="glyphicon glyphicon-minus-sign"></i>&nbsp;&nbsp;&nbsp;{{errorInfo}}</span>
+			<div class="login">
+				<i class="glyphicon glyphicon-user"></i>
+				<input type="tel" name="loginInput" placeholder="请输入您的手机号" ng-model="phone" maxlength="11" required="">
+				<i class="glyphicon glyphicon-remove"></i>
+			</div>
+			<div class="login mt20">
+				<i class="glyphicon glyphicon-lock"></i>
+				<input type="text" name="loginPsd" placeholder="请输入您的密码" ng-model="password" required="">
+				<i class="glyphicon glyphicon-remove"></i>
+			</div>
+			<div class="forgotPsd">
+				<input type="checkbox">
+				<p>一个月内自动登录</p>
+				<span>忘记密码?</span>
+			</div>
+			<div class="loginFooter">
+				<button class="btn btn-info">登录</button>
+			</div>
+		</form>
+
+		<form class="registForm" name="registForm" ng-submit="regist(registForm.registInput.$valid,registForm.registPsd.$valid,registForm.registCode.$valid)" novalidate="">
+			<span ng-show="errorTag"><i class="glyphicon glyphicon-minus-sign"></i>&nbsp;&nbsp;&nbsp;{{errorInfo}}</span>
+			<div class="login">
+				<i class="glyphicon glyphicon-user"></i>
+				<input type="tel" name="registInput" placeholder="请输入您的手机号" ng-model="phone" minlength="11" maxlength="11" required="" ng-pattern="/^1\d{10}$/">
+				<i class="glyphicon glyphicon-remove"></i>
+			</div>
+			<div class="login mt20">
+				<i class="glyphicon glyphicon-lock"></i>
+				<input type="text" name="registPsd" placeholder="请输入您的密码" ng-model="password" required="" ng-pattern="/^[_0-9a-z]{6,12}$/">
+				<i class="glyphicon glyphicon-remove"></i>
+			</div>
+			<div class="login mt20 sendCode">
+				<i class="glyphicon glyphicon-lock"></i>
+				<input type="text" name="registCode" placeholder="请输入验证码" ng-model="code" ng-minlength="4" maxlength="8" required="">
+				<button class="btn btn-info" ng-disabled="sms_code_status" ng-click="sendTime(registForm.registInput.$valid)">{{sms_code_content}}</button>
+			</div>
+			<div class="agreement">
+				<input type="checkbox" checked="">
+				<p>我已阅读并接受<span>《嗖搜用户协议》</span></p>
+			</div>
+			<div class="registFooter">
+				<button class="btn btn-info">注册</button>
+				
+			</div>
+		</form>
+	</div>
+	<!-- 切换二维码登录 -->
+	<div class="switchCode">
+		<div class="sweepCode">
+			<p>
+				<span>手机扫码</span>
+				<span>安全登录</span>
+			</p>
+			<img src="../../images/main/code.png" alt="">
+			<p>打开<span>助家生活II</span>，扫一扫登录</p>
+			<p>手机上<span>安装</span>并登录</p>
+		</div>	
+		<div class="invalidCode">
+			<img src="../../images/main/invalidCode.png" alt="">
+			<p>二维码已失效</p>
+			<p>请点击刷新二维码后重新扫码</p>
+			<button class="btn">刷新二维码</button>
+		</div>
+	</div>
+
+	
+	
+<script>
+	$(function(){
+		//tab切换
+		$(".loginNav").on("click","li",function(){
+			var index = $(this).index();
+			var loginForm = $(this).closest("ul").siblings(".loginForm");
+			var registForm = $(this).closest("ul").siblings(".registForm");
+			console.log(index);
+			if(index === 0){
+				loginForm.css("display","block");
+				registForm.css("display","none");
+				$(this).addClass("active");
+				$(this).siblings("li").removeClass("active");
+			}
+			if(index === 1){
+				registForm.css("display","block");
+				loginForm.css("display","none");
+				$(this).addClass("active");
+				$(this).siblings("li").removeClass("active");
+			}
+		})
+
+		//显示删除文本icon
+		$("input").on("focus",function(){
+			$(this).siblings(".glyphicon-remove").css("opacity","1");
+		})
+		$("input").on("blur",function(){
+			$(this).siblings(".glyphicon-remove").css("opacity","0");
+		})
+		$(".glyphicon-remove").on("click",function(){
+			$(this).siblings("input").val("");
+		})
+
+		//切换登录模式
+		$(".changeLogin").on("click",function(){
+			var Dialog = $(".ngdialog.ngdialog-theme-default .ngdialog-content");
+			var backgroundImg = Dialog.css("background-image");
+			console.log(backgroundImg);
+			if(backgroundImg === 'url("http://192.168.1.134:5000/images/main/login_pc.png")'){
+				Dialog.css("background-image","url(../../images/main/login_qrCode.png)");
+				//隐藏登录注册界面，显示二维码登录界面
+				$(this).siblings(".switchInput").css("display","none");
+				$(this).siblings(".switchCode").css("display","block");
+
+			}else{
+				Dialog.css("background-image","url(../../images/main/login_pc.png)");
+				$(this).siblings(".switchInput").css("display","block");
+				$(this).siblings(".switchCode").css("display","none");
+			}
+		})
+	})
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
