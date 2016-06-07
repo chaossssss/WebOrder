@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').controller('loginCtrl', function MainIndexCtrl($scope,$timeout,httpService) {
+angular.module('app').controller('loginCtrl', function loginCtrl($scope,$timeout,httpService) {
 	var vm = $scope.vm = {};
 
 	$scope.errorInfo = "";

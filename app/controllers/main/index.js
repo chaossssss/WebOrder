@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,httpService,ngDialog) {
+angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,$state,httpService,ngDialog) {
   var vm = $scope.vm = {};
   $scope.searchName = "";
 
@@ -502,7 +502,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
         +            '<a href="javascript:;">'
         +                '<img class="position" src="images/headerImg/position.png" alt="">'
         +            '</a>'
-        +            '<span class="positionText">杭州市 萧山区<br><a class="togglePosition" ng-click="openUseExternalTemplate()"">[切换]</a></span>'    
+        +            '<span class="positionText">杭州市 萧山区<br><a class="togglePosition" id="changeLocation">[切换]</a></span>'    
         +        '</div>'
         +        '<div id="navbar" class="collapse navbar-collapse">'
         +          '<ul class="nav navbar-nav">'
@@ -510,6 +510,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
         +            '<li><a href="javascript:;">我的订单</a></li>'
         +            '<li><a href="javascript:;">下载APP</a></li>'
         +          '</ul>'
+        +          '<div id="openLogin">' 
         +          '<div class="dropdown" >'       
         +            '<p class=""  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">'
         +                '家奶和鲁大八个字'
@@ -525,6 +526,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
         +            '</ul>'
         +          '</div>'
         +          '<img class="headPic" src="images/headerImg/headPic.png" alt="">'
+        +           '</div>' 
         +        '</div>'
         +      '</div>'
         +    '</nav>'
@@ -532,17 +534,39 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
     }
     topBar();
     /*
+    *   切换登录地点
+    */
+    function changeLocation(){
+        ngDialog.open({
+                template: 'controllers/main/location.html',
+                plain: false,
+                className: 'ngdialog-theme-default',
+                closeByEscape: true,
+                closeByDocument: true,
+                controller: 'locationCtrl'
+            });
+        $("#changeLocation").on("click",function(){
+            
+        })
+    }
+    changeLocation();
+
+    /*
     *   登录注册弹窗
     */
-
-    ngDialog.open({
-        template: 'controllers/main/login.html',
-        plain: false,
-        className: 'ngdialog-theme-default',
-        closeByEscape: true,
-        closeByDocument: true,
-        controller: 'loginCtrl'
-      });
+    function openLogin(){
+        $("#openLogin").on("click",function(){
+            ngDialog.open({
+                template: 'controllers/main/login.html',
+                plain: false,
+                className: 'ngdialog-theme-default',
+                closeByEscape: true,
+                closeByDocument: true,
+                controller: 'loginCtrl'
+              });
+        })
+    }
+    openLogin();
 
     /*
     *   比例尺控件
