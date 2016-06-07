@@ -68,8 +68,12 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
   //消息记录详情
   $stateProvider.state('abstract.detail', {
     url: '/detail',
-    templateUrl: 'controllers/record/recordDetail.html',
-    controller: 'RecordDetailCtrl'
+    views: {
+      'content@abstract': {
+        templateUrl: 'controllers/record/recordDetail.html',
+        controller: 'RecordDetailCtrl'
+      }
+     } 
   });
 
   //账号设置
