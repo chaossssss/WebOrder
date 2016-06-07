@@ -537,7 +537,8 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
     *   切换登录地点
     */
     function changeLocation(){
-        ngDialog.open({
+        $("#changeLocation").on("click",function(){
+            ngDialog.open({
                 template: 'controllers/main/location.html',
                 plain: false,
                 className: 'ngdialog-theme-default',
@@ -545,8 +546,6 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
                 closeByDocument: true,
                 controller: 'locationCtrl'
             });
-        $("#changeLocation").on("click",function(){
-            
         })
     }
     changeLocation();

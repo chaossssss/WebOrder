@@ -83,6 +83,40 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     controller: 'SetUpIndexCtrl'
   });
 
+  //账号设置——添加新地址
+  $stateProvider.state('abstract.newPhone', {
+    url: '/newPhone',
+    views: {
+      'content@abstract': {
+        templateUrl: 'controllers/setUp/newPhone.html',
+        controller: 'NewPhoneCtrl'
+      }
+    } 
+  });
+
+  //账号设置——添加新地址
+  $stateProvider.state('abstract.newPassword', {
+    url: '/newPassword',
+    views: {
+      'content@abstract': {
+        templateUrl: 'controllers/setUp/newPassword.html',
+        controller: 'NewPasswordCtrl'
+      }
+    } 
+  });
+
+  //账号设置——添加新地址
+  $stateProvider.state('abstract.newAddress', {
+    url: '/newAddress',
+    views: {
+      'content@abstract': {
+        templateUrl: 'controllers/setUp/newAddress.html',
+        controller: 'NewAddressCtrl'
+      }
+    } 
+  });
+
+
   //工人页面
   $stateProvider.state('abstract.worker', {
     url: '/worker',
