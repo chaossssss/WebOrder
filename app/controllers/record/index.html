@@ -1,15 +1,16 @@
 <style type="text/css">
 	.record{
 		position: relative;
-		width: 920px;
+		width: 940px;
 		margin: 0 auto;
 		top:-270px;
-		left: 70px;
+		left: 85px;
 	}
 	.myRecord{
 		width: 100%;		
 	}
 	.RecordHead{
+		height: 50px;
 		border-bottom: 10px solid #90dafc;
 	}
 	.recordHead h4{
@@ -24,18 +25,113 @@
 	.recordHead span{
 		font-size: 14px;
 		color: #999999;
+
 	}
+	.RecordBody{
+		width: 940px;
+		padding-top: 15px;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	.recordContentLeft img{
+		margin-left: 10px;
+	}
+	.recordContentRight{
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 10px;
+	}
+	.noRead{
+		color: #f63333;
+		margin-left: 5px;
+		vertical-align: 5px;
+	}
+	.detail{
+		float: right;
+		margin-right: 10px;
+	}
+	.pagination{
+	
+		margin-left: 140px;
+	}
+	.pagination > li > a{
+		background: #32beff;
+		color: #fff;
+		margin: 0 5px;
+	}
+	.pagination > li > a:hover{
+		background-color: #32beff!important;
+		color: #fff;
+	}
+	.pagination > li:first-child > a,.pagination > li:last-child > a{
+		background:#fff;
+		color:#999;
+		border:none;
+	}
+	.pagination > li:first-child > a:hover,.pagination > li:last-child > a:hover{
+		background-color: #fff!important;
+		color: #999;
+		border:none;
+	}
+	.fl{float: left;}
+	.P6{width: 6%;}
+	.P94{width: 94%;}
+	.color999{color: #999}
 </style>
 <div class="record">
-	<div class="container myRecord">
-		<div class="row RecordHead">
-			<div class="col-12 recordHead">
+	<div class="myRecord">
+		<div class="RecordHead">
+			<div class="recordHead">
 				<h4>共10条消息</h2>
 				<p>3<span>条未读消息</span></p>
 			</div>
 		</div>
-		<div class="row">
-			
+
+		<div class="RecordBody" ui-sref='abstract.detail'>
+			<div class="P6 fl recordContentLeft">
+				<img src="images/record/hongbao.png" alt="">
+			</div>
+			<div class="P94 fl recordContentRight">
+				<p>优惠提醒：您获得了一个红包<span class="noRead">●</span><span class="detail color999">详情<img  src="images/record/detail1.png" alt=""></span></p>
+				<p class="color999">感谢您对嗖搜的支持，15元现金红包已悄悄放入您的账户，赶紧去看看吧!</p>
+				<span class="color999">2015-02-30 15:30</span>
+			</div>
 		</div>
+
+		<div class="RecordBody">
+			<div class="P6 fl recordContentLeft">
+				<img src="images/record/systermNews.png" alt="">
+			</div>
+			<div class="P94 fl recordContentRight">
+				<p>优惠提醒：您获得了一个红包<span class="noRead">●</span><span class="detail color999">详情<img  src="images/record/detail1.png" alt=""></span></p>
+				<p class="color999">感谢您对嗖搜的支持，15元现金红包已悄悄放入您的账户，赶紧去看看吧!</p>
+				<span class="color999">2015-02-30 15:30</span>
+			</div>
+		</div>
+
+		<div class="RecordBody">
+			<div class="P6 fl recordContentLeft">
+				<img src="images/record/backMoney.png" alt="">
+			</div>
+			<div class="P94 fl recordContentRight">
+				<p>优惠提醒：您获得了一个红包<span class="noRead">●</span><span class="detail color999">详情<img  src="images/record/detail1.png" alt=""></span></p>
+				<p class="color999">感谢您对嗖搜的支持，15元现金红包已悄悄放入您的账户，赶紧去看看吧!</p>
+				<span class="color999">2015-02-30 15:30</span>
+			</div>
+		</div>
+
+		<ul class="pagination">
+		  <li ><a href=""style="">&laquo;上一页</a></li>
+		  <li><a href="">1</a></li>
+		  <li><a href="">2</a></li>
+		  <li><a href="">3</a></li>
+		  <li><a href="">4</a></li>
+		  <li><a href="">5</a></li>
+		  <li><a href="">6</a></li>
+		  <li><a href="">7</a></li>
+		  <li><a href="">8</a></li>
+		  <li><a href="">9</a></li>
+		  <li><a href="">10</a></li>
+		  <li style="background:#fff;"><a href="">下一页&raquo;</a></li>
+		</ul>	  	
 	</div>
 </div>

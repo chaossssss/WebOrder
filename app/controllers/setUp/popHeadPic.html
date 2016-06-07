@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<style type="text/css">
+  .ngdialog.ngdialog-theme-default .ngdialog-content{width: 830px!important;background: rgba(255,255,255,0.5);}
+	.popDiv{height: 460px!important;width: 800px!important;background-color: #fff;border-top: 5px solid #32beff;border-top-left-radius: 4px;border-top-right-radius: 4px;}
+	button{width:102px;height: 30px;line-height: 30px;position: absolute;border: none;bottom: 30px;color: #fff;border-radius: 4px;outline: none;}
+	.popConfirm{left: 256px;background-color: #32beff;}
+	.popCancel{left: 478px;background-color: #cccccc;}
+  #file_input{background: red;width: 88px;height: 30px;position: absolute;top: 50px;left: 50px;opacity: 0;}
+  .inputText{position:absolute; left:155px; top:55px;font-size:12px;color:#999;}
+  #rrr{width: 270px;height: 270px;border:1px solid #ccc;background: url('images/setUp/popPicBg.png') no-repeat;margin-left: 35px;margin-top:90px;float: left;}
+  #rrr img{width: 100%;height: 100%;}
+  .kuilei{width: 88px;height: 30px;text-align: center;line-height: 30px;background: #32beff; outline: none;border:none;color: #fff;border-radius: 4px;position: absolute;top:50px;left: 50px;}
+  .crop_preview{position:absolute; left:30px; top:0; width:120px; height:120px; overflow:hidden;}
+  .crop_preview1{position:absolute; left:180px; top:0; width:90px; height:90px; overflow:hidden;}
+  .crop_preview2{position:absolute; left:300px; top:0; width:60px; height:60px; overflow:hidden;}
+  .crop_p{position:absolute; left:55px; top:130px;font-size:12px;color:#999;}
+  .crop_p1{position:absolute; left:200px; top:100px;font-size:12px;color:#999;}
+  .crop_p2{position:absolute; left:302px; top:70px;font-size:12px;color:#999;}
+  .smallPic{width:460px;height:240px;position:absolute;left:350px;top:125px;border-left:2px solid #ccc;}
+</style>
+<body>
+  <div class="popDiv">
+    <input class="kuilei" type="button" name="" value="本地上传" placeholder="">
+    <input id="file_input" type="file" name="" value="" placeholder="">
+    <p class="inputText">* 文件仅支持JPG、PNG，且小于5M</p>
+    <div id="rrr"></div>
+    <div class="smallPic">
+      <span id="preview_box" class="crop_preview"><img id="crop_preview" src="images/setUp/popPicBg.png" /></span><p class='crop_p'>120*120像素</p>
+      <span id="preview_box1" class="crop_preview1"><img id="crop_preview1" src="images/setUp/popPicBg.png" /></span><p class='crop_p1'>90*90像素</p>
+      <span id="preview_box2" class="crop_preview2"><img id="crop_preview2" src="images/setUp/popPicBg.png" /></span><p class='crop_p2'>60*60像素</p>
+    </div>
+    
+   <button class="popConfirm" type="button">保存</button>
+   <button class="popCancel" type="button">取消</button>
+  </div>
+  <script type="text/javascript">
+  $(function(){
+      	$('.ngdialog-close').remove();
+        var aaa = document.getElementById("rrr"); //获取显示图片的div元素
+        var input = document.getElementById("file_input"); //获取选择图片的input元素
+              
+              //这边是判断本浏览器是否支持这个API。
+        if(typeof FileReader==='undefined'){ 
+            aaa.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+            input.setAttribute('disabled','disabled'); 
+        }else{ 
+            input.addEventListener('change',readFile,false); //如果支持就监听改变事件，一旦改变了就运行readFile函数。
+        }                   
+        function readFile(){ 
+            var file = this.files[0]; //获取file对象
+            //判断file的类型是不是图片类型。
+            if(!/image\/\w+/.test(file.type)){ 
+                alert("文件必须为图片！"); 
+                return false; 
+            }            
+            var reader = new FileReader(); //声明一个FileReader实例
+            reader.readAsDataURL(file); //调用readAsDataURL方法来读取选中的图像文件
+            //最后在onload事件中，获取到成功读取的文件内容，并以插入一个img节点的方式显示选中的图片
+            reader.onload = function(e){ 
+                aaa.innerHTML = '<img id="cut" src="'+this.result+'" alt=""/>' 
+                //记得放在jQuery(window).load(...)内调用，否则Jcrop无法正确初始化
+                  $("#cut").Jcrop({
+                    onChange:showPreview,
+                    onSelect:showPreview,
+                    aspectRatio:1
+                  }); 
+                  //简单的事件处理程序，响应自onChange,onSelect事件，按照上面的Jcrop调用
+                 function showPreview(coords){
+                    if(parseInt(coords.w) > 0){
+                      //计算预览区域图片缩放的比例，通过计算显示区域的宽度(与高度)与剪裁的宽度(与高度)之比得到
+                      var rx = $("#preview_box").width() / coords.w; 
+                      var ry = $("#preview_box").height() / coords.h;
+
+                              var rx1 = $("#preview_box1").width() / coords.w; 
+                              var ry1 = $("#preview_box1").height() / coords.h;
+
+                              var rx2 = $("#preview_box2").width() / coords.w; 
+                              var ry2 = $("#preview_box2").height() / coords.h;
+                      //通过比例值控制图片的样式与显示
+                      $("#crop_preview,#crop_preview1").css({
+                        width:Math.round(rx * $("#cut").width()) + "px",  //预览图片宽度为计算比例值与原图片宽度的乘积
+                        height:Math.round(rx * $("#cut").height()) + "px",  //预览图片高度为计算比例值与原图片高度的乘积
+                        marginLeft:"-" + Math.round(rx * coords.x) + "px",
+                        marginTop:"-" + Math.round(ry * coords.y) + "px"
+                      });
+                              $("#crop_preview1").css({
+                                  width:Math.round(rx1 * $("#cut").width()) + "px",  //预览图片宽度为计算比例值与原图片宽度的乘积
+                                  height:Math.round(rx1 * $("#cut").height()) + "px",    //预览图片高度为计算比例值与原图片高度的乘积
+                                  marginLeft:"-" + Math.round(rx1 * coords.x) + "px",
+                                  marginTop:"-" + Math.round(ry1 * coords.y) + "px"
+                              });
+                              $("#crop_preview2").css({
+                                  width:Math.round(rx2 * $("#cut").width()) + "px",  //预览图片宽度为计算比例值与原图片宽度的乘积
+                                  height:Math.round(rx2 * $("#cut").height()) + "px",    //预览图片高度为计算比例值与原图片高度的乘积
+                                  marginLeft:"-" + Math.round(rx2 * coords.x) + "px",
+                                  marginTop:"-" + Math.round(ry2 * coords.y) + "px"
+                              });
+                    }
+                  }
+            } 
+
+        }
+         
+      })
+  </script>
+</body>
+</html>
