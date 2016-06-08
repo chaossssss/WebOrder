@@ -1,1 +1,174 @@
-<h1>我的收藏页面</h1>
+<style type="text/css">
+	html.ngdialog-open,
+		body.ngdialog-open {
+		  overflow:visible ;
+	}
+	.glyphicon{
+		cursor: pointer;
+	}
+	.navbar-static-top{
+		position: relative;
+		width:1170px;
+		margin: 0 auto;
+		top: -260px;
+	}
+	.myOrderBox{
+		background: #4e595f;
+		width: 940px;
+		height: 40px;
+		top: 0px;
+		position: absolute;
+		left: 190px;
+		padding: 0;p[]
+		border-radius: 4px;
+	}
+	.myOrderList{margin-bottom:10px;}
+	.myOrderUl{margin:0;padding: 0;}
+	.myOrderUl li:nth-child(1){
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+	}
+	.myOrderUl li{
+		width: 100px;
+		height: 40px;
+		line-height: 40px; 
+		color: #fff;
+		cursor: pointer;		
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	.myOrderUl li:hover{background: #33beff;}
+	.myOrderActive{background: #33beff;}
+	.searchBox{
+		width: 300px;
+		height: 40px;
+		float: right;
+	}
+	.searchBox input{
+		width: 260px;
+		height: 26px;
+		border:none;
+		border-radius: 10px;
+		margin-top: 7px;
+		padding-left: 10px;
+		outline:none;	
+		float: right;
+		margin-right: 20px;	
+	}
+	.searchBox img{
+		cursor: pointer;
+		position: absolute;
+		right: 12px;
+		top: 5px;
+	}
+	.myOrderBody{
+		width: 940px;
+		height: auto;
+		position: absolute;
+		top: 50px;		
+		left: 190px;
+		padding: 0;
+		border-radius: 4px;
+		
+	}
+	.myOrderHead{
+		width:940px;
+		height: 134px;
+		border:1px solid #dcf0f9;
+	}
+	.cen{margin: 0 auto;}
+	.fl{float: left;}
+	.fr{float: right;}
+	.headerBox{width: 100%;height: 210px;border:1px solid #ccc;}
+	.headerPic{width: 90px;height: 90px;border:1px solid #ccc;margin-top: 20px;margin-bottom: 20px;margin-left: 10px;}
+	.headerPic img{width: 100%;height: 100%;}
+	.headerDetail{width: 828px;height: 90px;margin:20px 0 0 10px;}
+	.userNameBox{width: 100%;}
+	p.userName{font-size: 18px;color: #424242;font-weight: bold;margin-right: 20px;}
+	p.userInfo{border-right:1px solid #999;color: #999;font-size: 12px;padding: 0 10px;margin-top: 3px;}
+	.headerbottom{width: 97%;height: 79px;border-top:1px dashed #ccc;margin-left:10px; }
+	.workerService{width: 100%;}
+	.workerService_l{padding-right: 25px;}
+	p.serviceItem{color: #808080;margin-bottom: 12px!important;font-size: 12px;}
+	p.pingfen span{padding:0 10px 0 2px;vertical-align: -2px;color: #999;}
+	.workerService_r{padding-left: 50px;}
+	p.rankBox{color: #808080;font-size: 12px;}
+	p.rankBox span{}
+	p.rankBox img{margin: 0 2px 0 8px;vertical-align: 0px;}	
+	.buttonBox{width: 300px;height:55px;}
+	.buttonBox button{width: 102px;height: 36px;color: #fff;background: #32beff;border:none;border-radius: 4px;margin-left: 50px;outline: none;}
+	p.prince{font-size: 16px;color: #ff8800;margin-left: 40px;}
+	p.prince span{font-size: 22px;}
+	.buttonBox p:nth-child(3){font-size:12px;color:#999;margin-left: 78px;margin-top: 8px;}
+	.headerbottom div{float: left;width: 33%;text-align: center;height: 50px;line-height: 50px;margin-top: 15px;border-right: 1px solid #ccc;}
+	.headerbottom div p{color: #999;}
+	.headerbottom div p span{color: #424242;}
+</style>
+<nav class="navbar  navbar-static-top">
+  <div class="container myOrderBox">
+    <ul class="nav navbar-nav myOrderUl">
+    	<li>收藏工人</li>
+    	<li>收藏商户</li>
+    </ul>
+    <div class="searchBox">
+    	<img src="images/myOrder/search.png" alt="">
+    	<input type="text" name="" value="">   	
+    </div>    
+  </div>
+  <div class="container myOrderBody">
+	<div class="headerBox">
+		<div class="headerPic fl">
+			<img src="images/worker/score.png">
+		</div>
+		<div class="headerDetail fl">
+			<div class="userNameBox fl">
+				<p class="userName fl">周杰伦</p>
+				<p class="userInfo fl">女</p>
+				<p class="userInfo fl">35岁</p>
+				<p class="userInfo fl">从业11年</p>
+				<p class="userInfo fl">浙江籍</p>
+			</div>
+			<div class="workerService fl">
+				<div class="workerService_l fl">
+					<p class="serviceItem">服务内容：小时工、保姆、月嫂</p>
+					<p class="pingfen"><img src="images/worker/good.png"><span>9999</span><img src="images/worker/star.png"><span>9999</span><img src="images/worker/score.png"><span>4.5</span></p>
+				</div>
+				<div class="workerService_r fl">
+					<p class="rankBox">已接订单220单<img src="images/worker/rank.png" alt=""><span>70%</span></p>
+					<p class="rankBox" style="margin-top:15px;">已接订单220单<img src="images/worker/rank.png" alt=""><span>70%</span></p>
+				</div>
+				<div class="buttonBox fr">
+					<p class="prince fl">¥<span>50/</span>小时</p>
+					<button type="button">下  单</button>
+					<p class="fl">取消收藏</p>
+				</div>
+			</div>
+		</div>
+		<div class="headerbottom fl">
+			<div>
+				<p>联系电话:<span>15215151421</span></p>
+			</div>
+			<div>
+				<p>服务时间:<span>周一至周六 (8:20~20:20)</span></p>
+			</div>
+			<div style="border-right: none">
+				<p>服务范围:<span>五公里以内</span></p>
+			</div>
+		</div>
+	</div>
+  </div>
+</nav>
+<script type="text/javascript">
+$(function(){
+	$('.myOrderUl li').click(function(){
+		$(this).addClass('myOrderActive').siblings().removeClass('myOrderActive');		
+	})
+	$('.searchBox img').hover(function(){
+		$(".searchBox input").animate({
+		    width: "200px",
+		  }, 200 );
+	})
+
+})	
+</script>

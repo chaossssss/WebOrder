@@ -1,1 +1,204 @@
-<h1>工人页面</h1>
+<style type="text/css">
+
+	.cen{margin: 0 auto;}
+	.fl{float: left;}
+	.f12{font-size: 12px;}
+	.workerBox{width: 1130px;margin-top:88px!important; }
+	.headerBox{width: 100%;height: 510px;}
+	.headerPic{width: 318px;height: 318px;border:1px solid #ccc;margin-top: 30px;}
+	.headerPic img{width: 100%;height: 100;}
+	.headerDetail{width: 760px;height: 318px;margin:30px 0 0 20px;}
+	.userNameBox{width: 100%;}
+	p.userName{font-size: 18px;color: #424242;font-weight: bold;margin-right: 20px;}
+	p.userInfo{border-right:1px solid #999;color: #999;font-size: 12px;padding: 0 10px;margin-top: 3px;}
+	.shoreBox{width: 100%;height: 56px;}
+	.shoreBox p{margin-top: 8px;cursor: pointer;}
+	.shoreBox p:nth-child(1){margin-left: 217px;margin-right: 10px;}
+	.headerbottom{width: 100%;height: 86px;border:1px solid #ccc;border-radius: 4px;}
+	.headerbottom p{color: #32beff;margin: 8px 0 0 8px;}
+	.headerbottom img{width: 30px;height: 30px;border:1px solid #ccc;border-radius: 4px;cursor: pointer;}
+	.renzhenBox{position: relative;margin-top: 15px;margin-left: 8px; }
+	.talkBox{width: 66px;height: 27px;background: url('images/worker/talkBg.png');position: absolute;left: 10px;top: 33px;font-size: 12px;text-align:center;line-height: 34px;}
+	.workerService{width: 100%;margin-top: 10px;}
+	.workerService_l{border-right:1px solid #e5e5e5;padding-right: 25px;}
+	p.serviceItem{color: #808080;margin-top: 5px;}
+	.pingfen{margin-top: 22px;}
+	p.pingfen span{padding:0 10px 0 2px;vertical-align: -2px;color: #999;}
+	.workerService_r{padding-left: 30px;}
+	p.rankBox{color: #808080;margin-bottom: 22px;margin-top: 5px;}
+	p.rankBox span{}
+	p.rankBox img{margin: 0 2px 0 8px;vertical-align: 0px;}
+	.prince{width: 256px;height: 43px;border-radius: 4px;background: #32beff;}
+	p.princetext{font-size: 14px;color: #fff; margin: 10px 0 0 20px;border-right: 1px solid #fff;padding-right: 10px;}
+	p.princetext span{font-size: 18px;}
+	.prince input{border:none;background: #32beff;color: #fff;font-size: 20px;outline: none;margin: 6px 0 0 36px;}
+	p.telephone{color: #808080;margin: 10px 0 0 25px;}
+	p.telephone span{background: #808080;color: #fff;padding: 5px;border-radius: 4px;cursor: pointer;}
+	.slideBox{width: 100%;height: 119px;/*background: red;*/margin-top: 25px;}
+	/* 效果CSS开始 */
+	.slideBox #zsgun{position:relative;height:inherit; width:100%; margin:auto;overflow: hidden;}
+	.slideBox a.hScrollPane_leftarrow{top:0px; cursor:pointer; display:block; width:14px; height:119px; background:url('images/worker/left.png') no-repeat;left:0px; position:absolute;border:1px solid #ccc;}
+	
+	.slideBox a.hScrollPane_rightarrow{ top:0px; cursor:pointer; display:block; width:14px; height:119px; background:url('images/worker/right.png') no-repeat; right:0px; position:absolute;border:1px solid #ccc;}
+	.slideBox #gundiv{ width:97%; position:relative; margin-left:-12px; padding-top:22px; float:left; display:inline;height:119px; overflow:hidden;}
+	.slideBox #gundiv ul {height:117px;position: absolute; width:10000px;bottom:-8px;}
+	.slideBox #gundiv li{ width:117; height:117; overflow:hidden; float:left; margin-right:17px;position:relative; border:1px solid #ccc;}
+	
+	/* 效果CSS结束 */
+
+	.contentBox{width: 100%;}
+	.contentBox .content{width: 850px;}
+	.contentBox .map{width: 300px;}
+	.contentFirst{position: relative;}
+	.workerTab{width: 100%;height: 50px;}
+	.workerUl{margin: 0;padding:0;list-style: none;}
+	.workerUl li{float: left;width: 180px;height: 50px;text-align: center;line-height: 50px;cursor: pointer;color: #000;font-size: 16px;}
+	.active1{background-color: #32beff;color: #fff!important;}
+	/*评论上图样式*/
+	.contentFirst .popDiv{height: 430px!important;width: 680px!important;background-color: #fff;}
+	.contentFirst .popDiv button{width:102px;height: 30px;line-height: 30px;position: absolute;border: none;bottom: 50px;color: #fff;border-radius: 4px;}
+	.contentFirst .popConfirm{left: 200px;background-color: #32beff;cursor: pointer;}
+	.contentFirst .popCancel{left: 390px;background-color: #cccccc;cursor: pointer;}
+  	.contentFirst .setScore ul{list-style: none;position: relative;height: 20px;width: 170px; top:22px;left:40px;}
+  	.contentFirst .setScore ul li{width: 23px;height: 16px; float: left;background: url('images/myOrder/star.png') no-repeat 0 -16px;}
+  	.contentFirst .star{background: url('images/myOrder/star.png') no-repeat 0 0px!important;}
+  	.contentFirst .setScore span:nth-child(1){position:absolute;top:50px;left: 50px; }
+  	.contentFirst .content-title{position:absolute;top:100px;left: 50px; }
+  	.contentFirst .setScore p{position:absolute;top:50px;left: 220px;color: #fd718e; }
+  	.contentFirst .content-area{width:550px;height:140px;position: absolute;top: 93px;left:96px; padding: 10px;resize: none; font: none!important;line-height: normal;overflow: visible;outline: none;}
+
+  	.contentFirst #imgesFilesAuto{width:auto;height:98px; position: absolute;bottom: 120px;left: 96px;}
+  	.contentFirst #imagesBox{width:auto;height:98px;float:left;cursor: pointer;}
+  	.contentFirst #imagesBox img{width:98px;height:98px;float:left;cursor: pointer;border:1px solid #ccc;margin-right: 6px;}
+  	.contentFirst #imgesFiles{width:98px;height:98px;float:left;position:relative;border:1px dashed #ccc;cursor: pointer;}
+  	.contentFirst #imgesFiles span{position:absolute;font-size:80px;display:block;width:98px;text-align:center;height:98px;color:#CCC;cursor: pointer;line-height: 98px;font-weight: lighter;}
+</style>
+<div class="workerBox cen">
+	<div class="headerBox">
+		<div class="headerPic fl">
+			<img src="images/worker/score.png">
+		</div>
+		<div class="headerDetail fl">
+			<div class="userNameBox fl">
+				<p class="userName fl">周杰伦</p>
+				<p class="userInfo fl">女</p>
+				<p class="userInfo fl">35岁</p>
+				<p class="userInfo fl">从业11年</p>
+				<p class="userInfo fl">浙江籍</p>
+			</div>
+			<div class="workerService fl">
+				<div class="workerService_l fl">
+					<p class="serviceItem">服务内容：小时工、保姆、月嫂</p>
+					<p class="pingfen"><img src="images/worker/good.png"><span>9999</span><img src="images/worker/star.png"><span>9999</span><img src="images/worker/score.png"><span>4.5</span></p>
+				</div>
+				<div class="workerService_r fl">
+					<p class="rankBox">已接订单220单<img src="images/worker/rank.png" alt=""><span>70%</span></p>
+					<p class="rankBox">已接订单220单<img src="images/worker/rank.png" alt=""><span>70%</span></p>
+				</div>
+			</div>
+			<div class="princeBox fl">
+				<div class="prince fl">
+					<p class="princetext fl">¥<span>35</span>/小时</p>
+					<input type="button" name="" value="立即下单" placeholder="">
+				</div>
+				<p class="telephone fl">联系电话:15465654214 <span>查看完整号码</span></p>
+			</div>
+			<div class="slideBox fl">
+				<div id="zsgun">
+			
+					<div id="gundiv" class="container2">
+						<ul>
+							<li><img src="images/worker/star.png" alt="" width="117" height="117"/></li>
+							<li><img src="images/worker/star.png" alt="" width="117" height="117"/></li>
+							<li><img src="images/worker/star.png" alt="" width="117" height="117"/></li>
+							<li><img src="images/worker/star.png" alt="" width="117" height="117"/></li>
+							<li><img src="images/worker/star.png" alt="" width="117" height="117"/></li>
+							<li><img src="images/worker/star.png" alt="" width="117" height="117"/></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="shoreBox fl">
+			<p class="fl f12"><img src="images/worker/bad.png">举报</p>
+			<p class="fl f12"><img src="images/worker/shore.png">分享</p>
+		</div>
+		<div class="headerbottom fl">
+			<p class="f12">认证信息</p>
+			<div class="renzhenBox fl" ng-mouseenter="show = true" ng-mouseleave="show = false">
+				<img src="images/worker/score.png">
+				<div ng-show="show" class="talkBox">这是sb</div>
+			</div>
+			<div class="renzhenBox fl" ng-mouseenter="show = true" ng-mouseleave="show = false">
+				<img src="images/worker/score.png">
+				<div ng-show="show" class="talkBox">这是sb</div>
+			</div>
+			<div class="renzhenBox fl" ng-mouseenter="show = true" ng-mouseleave="show = false">
+				<img src="images/worker/score.png">
+				<div ng-show="show" class="talkBox">这是sb</div>
+			</div>
+		</div>
+	</div>
+	<div class="contentBox">
+		
+		<div class="content">
+			<div class="workerTab">
+				<ul class="workerUl">
+				  	<li class="active1">用户评价(250)</li>
+				  	<li>个人信息</li>
+			   	</ul>	
+			</div>
+			<div class="contentFirst">
+				<div class="popDiv">  
+				   <div class="setScore">
+				      <span>评分:</span>
+				      <ul>
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				      </ul>
+				      <p>0分</p>
+				   <span class="content-title">内容：</span>   
+				   <textarea class="content-area" name="" placeholder="请输入评论内容(至多200字)..."></textarea>
+				   </div>
+
+				    <div id="imgesFilesAuto" style="">
+				       <div id="imagesBox"></div>
+				       <div id="imgesFiles">
+				          <span>+</span>
+				          <input type="file" name="photoimage" id="uploadImage" multiple="multiple" style="width:98px; height:98px;opacity:0;" accept="image/gif, image/jpeg"/>
+				       </div>
+				    </div>
+				   <button type="submit" class="popConfirm" onclick="alert('提交');">提交</button>
+				   <button type="button" class="popCancel" onclick="alert('取消');">取消</button>
+				</div>
+			</div>
+		</div>
+		<div class="workerInfo">
+			
+		</div>
+		<div class="map">
+			
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		$(function() {
+		var glen = $("#gundiv ul li").length;
+		$("#gundiv ul").css("width",172 * (glen));
+		$("#gundiv li").hover(function(){$("#gundiv li").removeClass("zslion");$(this).addClass("zslion");},function(){$(this).removeClass("zslion");})
+		});
+		$("#zsgun").hScrollPane({
+			mover:"ul",
+			moverW:function(){return $("#zsgun li").length*172-17;}(),
+			showArrow:true,
+			handleCssAlter:"draghandlealter"
+		});
+		$('.workerUl li').click(function(){
+			$(this).addClass('active1').siblings().removeClass('active1').css('color','#000');
+		})
+	})
+</script>
