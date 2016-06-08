@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="libraries/ngDialog/ngDialog-theme-default.css">
   <link rel="stylesheet" href="libraries/ngDialog/ngDialog-theme-plain.css">
   <link href="libraries/Jcrop/jquery.Jcrop.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="libraries/perfect-scrollbar-0.4.10/perfect-scrollbar.css">
   <!-- endbuild -->
 </head>
 <body ng-app="app">
@@ -70,6 +71,7 @@
 <script src="constants/api.js" charset="utf-8"></script>
 <script src="controllers/aside/index.js" charset="utf-8"></script>
 <script src="controllers/boss/index.js" charset="utf-8"></script>
+<script src="controllers/boss/lookBigMap.js" charset="utf-8"></script>
 <script src="controllers/header/index.js" charset="utf-8"></script>
 <script src="controllers/home/index.js" charset="utf-8"></script>
 <script src="controllers/home/notFound.js" charset="utf-8"></script>
@@ -88,16 +90,18 @@
 <script src="controllers/setUp/newPhone.js" charset="utf-8"></script>
 <script src="controllers/worker/index.js" charset="utf-8"></script>
 <script src="libraries/Jcrop/jquery.Jcrop.js" charset="utf-8"></script>
-<script src="libraries/slider/hScrollPane.js" charset="utf-8"></script>
 <script src="libraries/ngDialog/ngDialog.js" charset="utf-8"></script>
+<script src="libraries/perfect-scrollbar-0.4.10/jquery.mousewheel.js" charset="utf-8"></script>
+<script src="libraries/perfect-scrollbar-0.4.10/perfect-scrollbar.js" charset="utf-8"></script>
+<script src="libraries/slider/hScrollPane.js" charset="utf-8"></script>
 <script src="services/interceptors/ApiHandler.js" charset="utf-8"></script>
 <script src="services/interceptors/AuthHandler.js" charset="utf-8"></script>
 <script src="services/interceptors/ErrorHandler.js" charset="utf-8"></script>
 <script src="services/interceptors/LoadingHandler.js" charset="utf-8"></script>
 <script src="services/main/httpService.js" charset="utf-8"></script>
+<script src="services/sao/ipService.js" charset="utf-8"></script>
 <script src="services/ui/ui.js" charset="utf-8"></script>
 <script src="services/utils/utils.js" charset="utf-8"></script>
-
 <!-- endinject -->
 <!-- build:js({app,.tmp/shadow}) scripts/templates.js -->
 <!-- <script src="templates.js"

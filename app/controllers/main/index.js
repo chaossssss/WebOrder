@@ -337,6 +337,8 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
             history.push($("#input").val());
             localStorage.setItem("history",history)
         })
+        //自定义滚动条样式
+        $("#searchGroup .nav").perfectScrollbar({useBothWheelAxes: true});
     }
     searchInputClick();
     $scope.$watch("searchName",function(){
@@ -467,6 +469,8 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
         $("#searchResult").on("click",function(){
             $(this).siblings("ul").toggle();
         })
+        //自定义滚动条样式
+        $(".searchResult .nav").perfectScrollbar({useBothWheelAxes: true});
     }
     searchResultClick();
 

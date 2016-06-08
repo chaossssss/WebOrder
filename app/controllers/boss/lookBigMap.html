@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>查看大地图</title>
+
+	<style>
+	.ngdialog.ngdialog-theme-default .ngdialog-content {
+		height: 547px;
+		width: 820px;
+		border-radius: 6px;
+		padding: 10px;
+		background-color: rgba(255,255,255,0.5);
+	}
+	.ngdialog.ngdialog-theme-default .ngdialog-close {
+		top: 10px;
+		right: 6px;
+	}	
+	#box {
+		width: 800px;
+		height: 527px;
+		background-color: rgb(255,255,255);
+		border-radius: 4px;
+		border-top:6px solid #32beff;
+		padding: 35px 20px 20px 20px;
+	}
+	#box p:first-child {
+		font-size: 12px;
+		color: #ff8800;
+	}
+	#box p:first-child > span {
+		color: #32beff;
+		font-weight: bold;
+	}
+	.f16 {
+		font-size: 16px;
+	}
+	#box p:last-child {
+		color: #999;
+		font-size: 12px;
+		margin-right: 16px;
+		margin-top: 14px;
+		text-align: right;
+	}
+	#bigMap {
+		border:1px solid #ccc;
+	}
+	</style>
+</head>
+<body>
+	<div id="box"> 
+		<p><i class="glyphicon glyphicon-phone f16"></i>下载<span>助家生活II</span>手机软件，更快速查询工人/商户信息</p>
+		<div id="bigMap" style="width: 758px;height: 398px;">
+			
+		</div>
+		<p>注意：地图位置仅供参考，具体情况已实际路标信息为准</p>
+	</div>
+
+	<!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UXegbhdGem9GamXiE61ipcYcWe1jcsjv"></script>
+ -->
+ <script>
+ 	$(function(){
+		// 初始化定位(根据浏览器定位)
+		var mk;
+		var localPoint;
+	    var geolocation = new BMap.Geolocation();
+	    geolocation.getCurrentPosition(function(r){
+	        if(this.getStatus() == BMAP_STATUS_SUCCESS){
+				mk = new BMap.Marker(r.point);
+				map.addOverlay(mk);
+				map.panTo(r.point);
+				localPoint = r.point;
+				console.log('您的位置：'+r.point.lng+','+r.point.lat);
+			}
+			else {
+				alert('failed'+this.getStatus());
+			}            
+	    },{enableHighAccuracy: true})
+
+		var map = new BMap.Map("bigMap");   //创建地图实例
+		map.centerAndZoom(new BMap.Point(120.159788,30.320708), 15); //创建点坐标；并且初始化地图，设置中心点坐标和地图级别     
+
+	    /*
+	    *	比例尺控件
+	    *   缩放控件
+	    */
+	    var bottom_left_control = new BMap.ScaleControl({
+	        anchor: BMAP_ANCHOR_BOTTOM_LEFT
+	    });
+	    var top_right_navigation = new BMap.NavigationControl({
+	        anchor: BMAP_ANCHOR_TOP_LEFT,
+	        type: BMAP_NAVIGATION_CONTROL_LARGE,
+	        offset: new BMap.Size(3,10)
+	    });
+	    map.addControl(top_right_navigation); 
+	    map.addControl(bottom_left_control);    
+
+	    /*
+	    *	添加信息窗口
+	    */
+	    function addInfoWindow(point){
+	    	var opts = {
+			  // width : 100,     // 信息窗口宽度
+			  // height: 100,     // 信息窗口高度
+			  title : "我在迪凯国际中心" , // 信息窗口标题
+			}
+			var infoWindow = new BMap.InfoWindow("我在迪凯国际中心", opts);  // 创建信息窗口对象 
+	    	map.openInfoWindow(infoWindow,new BMap.Point(120.159788,30.320708)); //开启信息窗口
+	    }
+	    addInfoWindow(localPoint);
+	    
+	      
+		
+
+ 	})
+ </script>
+</body>
+</html>

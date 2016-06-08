@@ -1,1 +1,227 @@
-<h1>这里是商户页面</h1>
+<style>
+	#boss {
+		position: relative;	
+	}
+	.bossBox {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		top: 118px;
+		width: 1100px;
+		height: 100%;
+	}
+	.leftBox {
+		float: left;
+	}
+	.titleLeft {
+		position: relative;
+		padding-left: 320px;
+		width: 768px;
+		height: 212px;
+	}
+	.titleLeft img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 300px;
+		height: 182px;
+	}
+	.titleLeft span {
+		font-size: 24px;
+	}
+	.titleLeft p {
+		font-size: 12px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.titleLeft .btn {
+		position: absolute;
+		bottom: 30px;
+		width: 256px;
+		height: 42px;
+		background-color: rgb(50,190,255);
+	}
+	.admitInfo {
+		border: 1px solid #ebebeb;
+		border-radius: 4px;
+		width: 768px;
+		height: 128px;
+		padding: 10px;
+		color: rgb(92,199,255);
+	}
+
+	.tab-content .tab-panel > img{
+		
+	}
+	.rightBox {
+		float: right;
+	}
+	.titleRight {
+		position: relative;
+		padding:20px 20px 20px 120px;
+		width: 298px;
+		height: 298px;
+		border:1px solid #ccc;
+	}
+	.titleRight > div:first-child > img {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		width: 88px;
+		height: 88px;
+	}
+	.titleRight > div:first-child > span {
+		color: #424242;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: bold;
+	}
+	.titleRight > div:first-child > p {
+		color: #999;
+		font-size: 12px;
+		line-height: 20px;
+		margin-top: 16px;
+	}
+	.titleRight > div:last-child {
+		position: absolute;
+		top: 158px;
+		left: 20px;
+	}
+	.titleRight > div:last-child  div {
+		text-align: center;
+		width: 99px;
+		display: inline-block;
+	}
+	.titleRight > div:last-child  > div > span:first-child {
+		color:rgb(25,182,255);
+		font-size: 26px;
+	}
+	.titleRight > div:last-child  > div > p {
+		color: #424242;
+		font-size: 14px;
+	}
+	/*地图样式*/
+	.mapRight {
+		margin-top: 60px;
+	}
+	.mapRight > p:first-child {
+		border-bottom: 1px solid #ccc;
+		font-size: 20px;
+		margin-bottom: 20px;
+		padding-bottom: 10px;
+	}
+	.mapRight > p:nth-child(3) {
+		color: #19b6ff;
+		font-size: 14px;
+	}
+	.mapRight > p:nth-child(4),
+	.mapRight > p:nth-child(5) {
+		color:#808080;
+		font-size: 12px;
+	}
+	.mapRight > p:nth-child(4) > span,
+	.mapRight > p:nth-child(5) > span {
+		color: #424242;
+		font-size: 12px;
+	}
+	#bossmap {
+		border: 1px solid #ccc;
+		margin-bottom: 20px;
+	}
+	.ml-20 {
+		margin-left: -20px;
+	}
+	.mr-20 {
+		margin-right: -20px;
+	}
+	.mr2 {
+		margin-right: 2px;
+	}
+	.lookBigMap {
+		width: 100%;
+		height:50px;
+		background-color: rgba(242,247,240,0.9);
+		text-align: center;
+		color: rgb(179,179,179);
+		padding-top: 8px;
+	}
+</style>
+
+<div class="#boss">
+<div class="bossBox">
+	<div class="leftBox">
+		<div class="titleLeft">
+			<img src="images/boss/title.png" alt="">
+			<span>新房开荒</span>
+			<p>提供新房</p>
+			<button class="btn">¥50/小时｜ 立即下单</button>
+		</div>
+		<div class="admitInfo">
+			<span>认证信息</span>
+		</div>
+		<ul class="nav" ng-init="vm.activeTab=1">
+			<li ng-class="{active: vm.activeTab == 1}"><a href="javascript:;" ng-click="vm.activeTab = 1">服务说明</a></li>
+			<li ng-class="{active: vm.activeTab == 2}"><a href="javascript:;" ng-click="vm.activeTab = 2">用户评价(250)</a></li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-panel" ng-show="vm.activeTab == 1">
+			  <img src="images/boss/starpic.png" alt="">
+
+			</div>
+			<div class="tab-panel" ng-show="vm.activeTab == 2">
+			  标签2的内容
+			</div>
+		</div>
+	</div>	
+	<div class="rightBox">
+		<div class="titleRight">
+			<div>
+				<img src="" alt="">
+				<span>助家生活助家生活助家生活</span>
+				<p>地板安装、灯饰安装、卫浴安装</p>
+			</div>
+			<div>
+				<div class="ml-20">
+					<span>1220</span>
+					<p>点赞</p>
+					<span><i class="glyphicon glyphicon-signal mr2"></i>70%</span>
+				</div>
+				<div>
+					<span>1220</span>
+					<p>收藏</p>
+					<span><i class="glyphicon glyphicon-signal mr2"></i>70%</span>
+				</div>
+				<div class="mr-20">
+					<span>5.0</span>
+					<p>满意</p>
+					<span><i class="glyphicon glyphicon-signal mr2"></i>70%</span>
+				</div>
+			</div>
+		</div>
+		<div class="mapRight">
+			<p>商家位置</p>
+			<div id="bossmap" style="width:300px;height:300px;">
+    	
+			</div> 
+			<p>杭州雷博家政服务有限公司</p>
+			<p><span>地址：</span>江干区丹桂路迪凯国际中心25B</p>
+			<p><span>电话：</span>0571-15462584</p>
+		</div>
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
