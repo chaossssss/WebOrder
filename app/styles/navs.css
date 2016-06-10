@@ -1,0 +1,22 @@
+/*导航*/
+.nav-talks {
+	margin-top: 30px;
+	border-bottom: 1px solid #32beff;
+	width: 770px;
+}
+.nav-talks > li { 
+  float: left;
+  text-align: center;
+  width: 160px;
+}
+.nav-talks > li > a {
+  color: #424242;
+  font-size: 18px;
+  padding: 12px 15px;
+  outline: none;   
+}
+.nav-talks > li > a:hover,
+.nav-talks > li > a:focus {
+  color: #fff;
+  background-color: #32beff;
+}

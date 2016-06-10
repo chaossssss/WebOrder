@@ -26,7 +26,7 @@
 		width: 300px;
 		height: 182px;
 	}
-	.titleLeft span {
+	.titleLeft > span {
 		font-size: 24px;
 	}
 	.titleLeft p {
@@ -40,6 +40,29 @@
 		width: 256px;
 		height: 42px;
 		background-color: rgb(50,190,255);
+		text-align: left;
+	}
+	.titleLeft .btn > span:first-child {
+		display: inline-block;
+		line-height: 16px;
+		font-size: 16px;
+		border-right:1px solid #fff;
+		padding-right: 16px;
+	}
+	.titleLeft .btn > span:last-child {
+		display: inline-block;
+		line-height: 16px;
+		font-size: 16px;
+		padding-left: 45px; 
+	}	
+	.titleLeft .btn > span:first-child::before {
+		content: "¥ ";
+		font-size: 14px;
+		padding-left: 5px;
+	}
+	.titleLeft .btn > span:first-child::after {
+		content: "/小时";
+		font-size: 14px;
 	}
 	.admitInfo {
 		border: 1px solid #ebebeb;
@@ -145,6 +168,14 @@
 		color: rgb(179,179,179);
 		padding-top: 8px;
 	}
+	/*导航栏内容*/
+	.tab-panel {
+		margin-top: 30px;
+	}
+	.tab-panel img {
+		width: 770px;
+		height: 300px;
+	}
 </style>
 
 <div class="#boss">
@@ -154,12 +185,15 @@
 			<img src="images/boss/title.png" alt="">
 			<span>新房开荒</span>
 			<p>提供新房</p>
-			<button class="btn">¥50/小时｜ 立即下单</button>
+			<button class="btn">
+				<span>50</span>
+				<span>立即下单</span>
+			</button>
 		</div>
 		<div class="admitInfo">
 			<span>认证信息</span>
 		</div>
-		<ul class="nav" ng-init="vm.activeTab=1">
+		<ul class="nav nav-talks" ng-init="vm.activeTab=1">
 			<li ng-class="{active: vm.activeTab == 1}"><a href="javascript:;" ng-click="vm.activeTab = 1">服务说明</a></li>
 			<li ng-class="{active: vm.activeTab == 2}"><a href="javascript:;" ng-click="vm.activeTab = 2">用户评价(250)</a></li>
 		</ul>
