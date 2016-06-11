@@ -2,6 +2,7 @@
 
 	.cen{margin: 0 auto;}
 	.fl{float: left;}
+	.fr{float:right;}
 	.f12{font-size: 12px;}
 	.workerBox{width: 1130px;margin-top:88px!important; }
 	.headerBox{width: 100%;height: 510px;}
@@ -50,28 +51,47 @@
 	.contentBox .content{width: 850px;}
 	.contentBox .map{width: 300px;}
 	.contentFirst{position: relative;}
-	.workerTab{width: 100%;height: 50px;}
+	.workerTab{width: 100%;height: 50px;border-bottom:1px solid #32beff;}
 	.workerUl{margin: 0;padding:0;list-style: none;}
 	.workerUl li{float: left;width: 180px;height: 50px;text-align: center;line-height: 50px;cursor: pointer;color: #000;font-size: 16px;}
 	.active1{background-color: #32beff;color: #fff!important;}
 	/*评论上图样式*/
-	.contentFirst .popDiv{height: 430px!important;width: 680px!important;background-color: #fff;}
-	.contentFirst .popDiv button{width:102px;height: 30px;line-height: 30px;position: absolute;border: none;bottom: 50px;color: #fff;border-radius: 4px;}
-	.contentFirst .popConfirm{left: 200px;background-color: #32beff;cursor: pointer;}
-	.contentFirst .popCancel{left: 390px;background-color: #cccccc;cursor: pointer;}
-  	.contentFirst .setScore ul{list-style: none;position: relative;height: 20px;width: 170px; top:22px;left:40px;}
+	.contentFirst .popDiv{height: 300px!important;width: 850px!important;background:#f9fbf6;margin-top:15px;}
+	.popDiv .headPic{width:59px;height:59px;border:1px solid #ccc;position:absolute;top:4px;left:20px;}
+	.popDivuserName{width:59px;position:absolute;top:85px;left:22px;color:#32beff;}
+	.contentFirst .popDiv button{width:102px;height: 36px;line-height: 36px;border: none;color: #fff;border-radius: 4px;}
+	.contentFirst .popConfirm{background-color: #32beff;cursor: pointer;margin:160px 20px 0 0;}
+  	.contentFirst .setScore ul{list-style: none;position: relative;height: 20px;width: 170px; top:23px;left:100px;}
   	.contentFirst .setScore ul li{width: 23px;height: 16px; float: left;background: url('images/myOrder/star.png') no-repeat 0 -16px;}
   	.contentFirst .star{background: url('images/myOrder/star.png') no-repeat 0 0px!important;}
-  	.contentFirst .setScore span:nth-child(1){position:absolute;top:50px;left: 50px; }
+  	.contentFirst .setScore span:nth-child(1){position:absolute;top:20px;left: 100px; }
   	.contentFirst .content-title{position:absolute;top:100px;left: 50px; }
-  	.contentFirst .setScore p{position:absolute;top:50px;left: 220px;color: #fd718e; }
-  	.contentFirst .content-area{width:550px;height:140px;position: absolute;top: 93px;left:96px; padding: 10px;resize: none; font: none!important;line-height: normal;overflow: visible;outline: none;}
+  	.contentFirst .setScore p{position:absolute;top:20px;left: 260px;color: #fd718e; }
+  	.contentFirst .content-area{width:750px;height:120px;position: absolute;top: 55px;left:96px; padding: 10px;resize: none; font: none!important;line-height: normal;overflow: visible;outline: none;}
 
-  	.contentFirst #imgesFilesAuto{width:auto;height:98px; position: absolute;bottom: 120px;left: 96px;}
+  	.contentFirst #imgesFilesAuto{width:auto;height:98px; margin:160px 0 0 96px;float:left;}
   	.contentFirst #imagesBox{width:auto;height:98px;float:left;cursor: pointer;}
   	.contentFirst #imagesBox img{width:98px;height:98px;float:left;cursor: pointer;border:1px solid #ccc;margin-right: 6px;}
   	.contentFirst #imgesFiles{width:98px;height:98px;float:left;position:relative;border:1px dashed #ccc;cursor: pointer;}
-  	.contentFirst #imgesFiles span{position:absolute;font-size:80px;display:block;width:98px;text-align:center;height:98px;color:#CCC;cursor: pointer;line-height: 98px;font-weight: lighter;}
+  	.contentFirst #imgesFiles span{position:absolute;font-size:80px;display:block;width:98px;text-align:center;height:98px;color:#CCC;cursor: pointer;line-height: 87px;font-weight: lighter;}
+  	.popDiv1{background:#f9fbf6;}
+  	.contentBody{overflow:hidden;border-bottom:1px solid #ccc;padding:20px 0 30px 0;}
+  	.contentBodyLeft{width:80px;}
+  	.contentBodyLeft .headPic1{width:59px;height:59px;border:1px solid #ccc;margin-left:20px;}
+  	.contentBodyLeft .popDivuserName1{width:59px;color:#32beff;margin-left:20px;}
+  	.contentBodyRight{width:770px;padding-left:20px;}
+  	.contentBodyRight .setScore1 ul{list-style: none;height: 20px;width: 170px; margin:3px 0 0 -42px;}
+  	.contentBodyRight .setScore1 ul li{width: 23px;height: 16px; float: left;background: url('images/myOrder/star.png') no-repeat 0 0px;}
+  	.contentBodyRight .setScore1 p{color: #fd718e; padding-right:60px;}
+  	.contentBodyRight .setScore1 p span{color:#999;}
+  	.contentBodyRight .reply{width:100%;background:#f5f5f5;padding:20px;}
+  	.contentBodyRight .reply p span{color:#52a5cc;}
+  	.contentBodyRight .replayPic{}
+  	.workerInfo{width:850px;}
+  	.workerInfo .biaoge{width:850px;margin-top:30px;}
+  	.workerInfo .detailInfo h4{border-bottom:5px solid #a6e3ff;padding-bottom:5px;}
+  	.workerInfo .detailInfo p{padding:5px 0 5px 0;border-bottom:1px solid #f0f0f0;font-weight:bold;}
+  	.workerInfo .detailInfo p span{font-weight:normal;}
 </style>
 <div class="workerBox cen">
 	<div class="headerBox">
@@ -139,17 +159,18 @@
 			</div>
 		</div>
 	</div>
-	<div class="contentBox">
-		
+	<div class="contentBox">		
 		<div class="content">
 			<div class="workerTab">
-				<ul class="workerUl">
-				  	<li class="active1">用户评价(250)</li>
-				  	<li>个人信息</li>
+				<ul class="workerUl" >
+				  	<li class="active1" ng-click="toggle()">用户评价(250)</li>
+				  	<li ng-click="toggle1()">个人信息</li>
 			   	</ul>	
 			</div>
-			<div class="contentFirst">
-				<div class="popDiv">  
+			<div class="contentFirst" ng-show = "infoshow">
+				<div class="popDiv">
+				   <img class="headPic" src="images/worker/score.png" alt="">  
+				   <p class="popDivuserName">家奶和鲁大</p>
 				   <div class="setScore">
 				      <span>评分:</span>
 				      <ul>
@@ -159,25 +180,105 @@
 				        <li></li>
 				        <li></li>
 				      </ul>
-				      <p>0分</p>
-				   <span class="content-title">内容：</span>   
+				      <p>0分</p>				   
 				   <textarea class="content-area" name="" placeholder="请输入评论内容(至多200字)..."></textarea>
 				   </div>
-
 				    <div id="imgesFilesAuto" style="">
 				       <div id="imagesBox"></div>
 				       <div id="imgesFiles">
 				          <span>+</span>
 				          <input type="file" name="photoimage" id="uploadImage" multiple="multiple" style="width:98px; height:98px;opacity:0;" accept="image/gif, image/jpeg"/>
-				       </div>
+				       </div>				       				       					       
 				    </div>
-				   <button type="submit" class="popConfirm" onclick="alert('提交');">提交</button>
-				   <button type="button" class="popCancel" onclick="alert('取消');">取消</button>
+				    <button type="button" class="popConfirm fr">发表</button>
+				</div>
+				<div class="popDiv1">
+					<div class="contentBody">
+						<div class="contentBodyLeft fl">
+							<img class="headPic1" src="images/worker/score.png" alt=""> 
+							<p class="popDivuserName1">家奶和鲁大</p> 
+						</div>
+						<div class="contentBodyRight fl">
+							<div class="setScore1">
+						      <ul class="fl">
+						        <li></li>
+						        <li></li>
+						        <li></li>
+						        <li></li>
+						        <li></li>
+						      </ul>
+						      <p>0分<span class="fr">2016-05-06 13:20</span></p>				   
+						   </div>
+						   <p class=>评论什么的就写点吧。写点就行了。写那么多有什么用？擦脸给你嘿哟</p>
+						   <div class="reply fl">
+						   		<p>客服回复: <span>评论什么的就写点吧。写点就行了。写那么多有什么用？擦脸给你嘿哟评论什么的就写点吧吧
+那么多有什么用？擦脸给你嘿哟用？擦脸给你嘿哟</span> </p>
+							<p class="replayPic fr"> <img src="images/worker/reply.png" alt="">回复</p>
+						   </div>
+						</div>
+					</div>
+					<div class="contentBody">
+						<div class="contentBodyLeft fl">
+							<img class="headPic1" src="images/worker/score.png" alt=""> 
+							<p class="popDivuserName1">家奶和鲁大</p> 
+						</div>
+						<div class="contentBodyRight fl">
+							<div class="setScore1">
+						      <ul class="fl">
+						        <li></li>
+						        <li></li>
+						        <li></li>
+						        <li></li>
+						        <li></li>
+						      </ul>
+						      <p>0分<span class="fr">2016-05-06 13:20</span></p>				   
+						   </div>
+						   <p class=>评论什么的就写点吧。写点就行了。写那么多有什么用？擦脸给你嘿哟</p>
+						   <div class="reply fl" style="display:none;">
+						   		<p>客服回复: <span>评论什么的就写点吧。写点就行了。写那么多有什么用？擦脸给你嘿哟评论什么的就写点吧吧
+那么多有什么用？擦脸给你嘿哟用？擦脸给你嘿哟</span> </p>
+							<p class="replayPic fr"> <img src="images/worker/reply.png" alt="">回复</p>
+						   </div>
+						</div>
+					</div>					
 				</div>
 			</div>
 		</div>
-		<div class="workerInfo">
-			
+		<div class="workerInfo" ng-show = "infoshow1">
+			<div class="table-responsive biaoge">
+			  <table class="table table-bordered">
+			    <tbody>
+			    	<tr>
+			    		<td>工号GR250151</td>
+			    		<td>籍贯:浙江省东阳市</td>
+			    		<td>从业年限：4年</td>
+			    		<td>学历：高中</td>
+			    	</tr>
+			    	<tr>
+			    		<td>爱好：无</td>
+			    		<td>身高：162cm</td>
+			    		<td>体重：52kg</td>
+			    		<td>血型：B型</td>
+			    	</tr>
+			    	<tr>
+			    		<td>星座：巨蟹座</td>
+			    		<td>普通话：流畅</td>
+			    		<td></td>
+			    		<td></td>
+			    	</tr>
+			    </tbody>
+			  </table>
+			</div>
+			<div class="detailInfo">
+				<h4>详细资料</h4>	
+				<p>个性签名：<span>勤勤恳恳</span></p>	
+				<p>服务类别：<span>小时工、家政、月嫂</span></p>	
+				<p>服务时间：<span>周一至周六，8：00</span></p>	
+				<p>居住地址：<span>杭州市江干区迪凯国际中心25B</span></p>	
+				<p>服务范围：<span>5公里内</span></p>	
+				<p>介绍：<span>勤勤恳恳</span></p>	
+				<p>工作经历：<span>勤勤恳勤勤恳恳勤勤恳恳恳</span></p>	
+			</div>
 		</div>
 		<div class="map">
 			
@@ -200,5 +301,64 @@
 		$('.workerUl li').click(function(){
 			$(this).addClass('active1').siblings().removeClass('active1').css('color','#000');
 		})
+
+		    $('.setScore ul li').click(function(){
+      var score = $(this).index() + 1;
+      if(!$(this).hasClass('star')){
+        $(this).addClass('star');
+        $(this).prevAll().addClass('star');
+        $(this).nextAll().removeClass('star');
+      }else{       
+        $(this).nextAll().removeClass('star');
+      }
+      $('.setScore p').html(score+'分');
+    })
+
+        //alert($('#imgesFiles img').length);
+        var result = document.getElementById("imagesBox");
+        var input = document.getElementById("uploadImage");
+
+        if(typeof FileReader === 'undefined'){
+            result.innerHTML = "<p class='warn'>抱歉，你的浏览器不支持 FileReader</p>";
+            input.setAttribute('disabled','disabled');
+        }else{
+
+            input.addEventListener('change',readFile,false);
+        }
+         
+        function readFile(){            
+              for(var i=0;i<this.files.length;i++)
+              {
+                  if(this.files.length < 5){
+                    var file = this.files[i];
+                    if(!/image\/\w+/.test(file.type)){
+                        alert("请确保文件为图像类型");
+                        return false;
+                    }
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);                    
+                    reader.onload = function(e){                        
+                        result.innerHTML+= '<img src="'+this.result+'" alt=""/>';
+                    }  
+                  }else if(this.files.length == 5){
+                    var file = this.files[i];
+                    if(!/image\/\w+/.test(file.type)){
+                        alert("请确保文件为图像类型");
+                        return false;
+                    }
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);                    
+                    reader.onload = function(e){                        
+                        result.innerHTML+= '<img src="'+this.result+'" alt=""/>';                                               
+                    }                   
+                      $('#imgesFiles').hide();
+                  }
+             }
+
+            
+        }
+
+
+
 	})
 </script>
