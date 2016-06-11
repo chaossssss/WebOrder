@@ -289,7 +289,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
             +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
             +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
             +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
-            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-trash mr"></i>清除历史记录</a></li>'
+            +        '<li class="tc"><a href="javascript:;"><i class="glyphicon glyphicon-trash mr"></i>清除历史记录</a></li>'
             +    '</ul>'
             +'</div>'
         )

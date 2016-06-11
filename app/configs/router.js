@@ -139,13 +139,24 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     }  
   });
 
-  //下单页面
-  $stateProvider.state('abstract.order', {
-    url: '/order',
+  //下单页面(工人下单页面)
+  $stateProvider.state('abstract.workerOrder', {
+    url: '/workerOrder',
     views: {
       'content@abstract': {
-        templateUrl: 'controllers/order/index.html',
-        controller: 'OrderIndexCtrl'
+        templateUrl: 'controllers/order/workerIndex.html',
+        controller: 'OrderWorkerIndexCtrl'
+      }
+    } 
+  });
+
+  //下单页面(商户下单页面)
+  $stateProvider.state('abstract.bossOrder', {
+    url: '/bossOrder',
+    views: {
+      'content@abstract': {
+        templateUrl: 'controllers/order/bossIndex.html',
+        controller: 'OrderBossIndexCtrl'
       }
     } 
   });
