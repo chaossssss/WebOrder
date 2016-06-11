@@ -259,7 +259,21 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
 
         var div = document.createElement("div");
         div.className = "searchGroup";
-
+        
+        //
+        // var divIn = div.appendChild(document.createElement("div"));
+        // divIn.className = "searchGroup";
+        // divIn.setAttribute("id","searchGroup");
+        // var input_group = divIn.appendChild(document.createElement("div"));
+        // input_group.className = "input-group";
+        // var i0 = input_group.appendChild(document.createElement("i"));
+        // i0.className = "glyphicon glyphicon-search";
+        // var input = input_group.appendChild(document.createElement("input"));
+        // input.className = "form-control";
+        // input.setAttribute("id","input");
+        // input.setAttribute("ng-model","searchName");
+        // input.setAttribute("placeholder","请输入您的服务地址、商户或工人...");
+        // input.value = "";
         map.getContainer().appendChild(div);
         return div;
     }
@@ -278,34 +292,49 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
             +      '</span>'
             +    '</div>'
             +    '<ul class="nav">'
-            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>北戴河</a></li>'
-            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>萧山区</a></li>'
-            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>杭州乐园</a></li>'
-            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>蜀山</a></li>'
-            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
-            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
-            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
-            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
-            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
-            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
-            +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
-            +        '<li class="tc"><a href="javascript:;"><i class="glyphicon glyphicon-trash mr"></i>清除历史记录</a></li>'
+            // +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>北戴河</a></li>'
+            // +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>萧山区</a></li>'
+            // +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>杭州乐园</a></li>'
+            // +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>蜀山</a></li>'
+            // +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
+            // +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
+            // +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
+            // +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
+            // +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
+            // +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
+            // +        '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>钱江新城</a></li>'
+            // +        '<li class="tc"><a href="javascript:;"><i class="glyphicon glyphicon-trash mr"></i>清除历史记录</a></li>'
             +    '</ul>'
             +'</div>'
         )
     }
     searchInput();
 
+    //数组去重复数据
+    function unique(arr) {
+        arr.sort();//排序
+        var n = [arr[0]];
+        for (var i = 1; i < arr.length; i++) {
+            if (arr[i] !== n[n.length - 1]) {
+                n.push(arr[i]);
+            }
+        }
+        return n;
+    }
+
     function searchInputClick(){
         var localStorage = window.localStorage;
-        var history = [];
+        var history = [];   //本地数组
+
         $("#searchGroup").on("click",".nav li",function(){
             var index = $(this).index();
             var content = $(this).children("a").text();
             
             //取到最后一个：清除历史记录
             if(content === "清除历史记录"){
-                localStorage.setItem("history","");
+                // 清空数组
+                history.length = 0;
+                localStorage.removeItem("history");
                 $("#input").focus();
             }else{
                 console.log("点击第几个",index);
@@ -314,36 +343,83 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
                 $("#input").focus();
             }
         })
-        //显示隐藏关闭icon
+        //显示隐藏关闭icon； 历史记录的显示隐藏
         $("#input").on("focus",function(){
             $(this).siblings("#close").removeClass("off");
+
+            var getHistory = localStorage.getItem("history");
+            var localHistory = JSON.parse(getHistory);
+
+            // console.log("localHistory.length",localHistory.length);
+            console.log("localHistory",localHistory);
+            if(localHistory){
+                if(localHistory.length > 0){
+                    // 清空历史记录窗口
+                    $(this).closest(".input-group").siblings(".nav").html("");
+                    // 数组去重复
+
+                    for(var i=0,len=localHistory.length;i<len;i++){
+                        $(this).closest(".input-group").siblings(".nav").append(
+                             '<li><a href="javascript:;"><i class="glyphicon glyphicon-search mr"></i>'+localHistory[i]+'</a></li>'
+                        )
+                    }
+                    $(this).closest(".input-group").siblings(".nav").append(
+                        '<li class="tc"><a href="javascript:;"><i class="glyphicon glyphicon-trash mr"></i>清除历史记录</a></li>'
+                    )        
+                }
+            }else{
+                $(this).closest(".input-group").siblings(".nav").html("");
+            }    
         })
         $("#input").on("blur",function(){
             $(this).siblings("#close").addClass("off");
+            // $(this).closest(".input-group").siblings(".nav").html("");
         })
-        // var inputVal = $scope.searchName;
-        // console.log(inputVal);
-        // if(inputVal){
-        //     $("#searchGroup").children(".nav").removeClass("off");
-        // }else{
-        //     $("#searchGroup").children(".nav").addClass("off");
-        // }
 
+        //清空输入框
         $("#close").on("click",function(){
             $("#input").val("");
+            // 清空历史记录窗口
+            $(this).closest(".input-group").siblings(".nav").html("");
         })
 
+        // 搜索按钮
         $("#search").on("click",function(){
-            history.push($("#input").val());
-            localStorage.setItem("history",history)
+            // 清空历史记录窗口
+            $(this).closest(".input-group").siblings(".nav").html("");
+            // 保存历史记录
+            if($("#input").val().length > 0){
+                var getSearchHistory = localStorage.getItem("history");
+                var localSearchHistory = JSON.parse(getSearchHistory);
+                if(localSearchHistory){
+                    
+                    history = localSearchHistory;
+                    history.push($("#input").val());
+                    
+                    console.log("history",history);
+                    console.log("localSearchHistory",localSearchHistory);
+
+                    // 去掉重复数据
+                    var resultHistory = unique(history);
+                    console.log("resultHistory",resultHistory);
+
+                    var setHistory = JSON.stringify(resultHistory);
+                    localStorage.setItem("history",setHistory);
+                }else{
+                    history.push($("#input").val());
+                    var setHistory = JSON.stringify(history);
+                    localStorage.setItem("history",setHistory);
+                }
+            } 
+            // 显示搜索结果控件
+            webSearchResultControl.show();
+
         })
         //自定义滚动条样式
         $("#searchGroup .nav").perfectScrollbar({useBothWheelAxes: true});
     }
     searchInputClick();
-    $scope.$watch("searchName",function(){
-        console.log("$scope.searchName",$scope.searchName);
-    })
+
     /*
     *   搜索结果控件
     */
@@ -362,6 +438,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
     }
     var webSearchResultControl = new searchResultControl();
     map.addControl(webSearchResultControl);
+    webSearchResultControl.hide();
 
     function searchResult(){
         $(".searchResult").append(
@@ -511,7 +588,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
         +        '<div id="navbar" class="collapse navbar-collapse">'
         +          '<ul class="nav navbar-nav">'
         +            '<li><a href="javascript:;">首页</a></li>'
-        +            '<li><a href="javascript:;">我的订单</a></li>'
+        +            '<li id="toMyOrder"><a href="javascript:;">我的订单</a></li>'
         +            '<li><a href="javascript:;">下载APP</a></li>'
         +          '</ul>'
         +          '<div id="openLogin">' 
@@ -535,6 +612,10 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
         +      '</div>'
         +    '</nav>'
         )
+        $("#toMyOrder").on("click",function(){
+            $state.go("abstract.aside");
+        })
+
     }
     topBar();
     /*
@@ -543,7 +624,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
     function changeLocation(){
         $("#changeLocation").on("click",function(){
             ngDialog.open({
-                template: 'controllers/main/location.html',
+                template: 'components/location/location.html',
                 plain: false,
                 className: 'ngdialog-theme-default',
                 closeByEscape: true,

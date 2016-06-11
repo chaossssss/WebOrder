@@ -185,7 +185,7 @@
 	.searchGroup .nav {
 		position: relative;
 		width: 368px;
-		height: 300px;
+		max-height: 300px;
 		overflow: hidden;
 		background-color: #fff;
 	}
@@ -305,7 +305,7 @@
 	}
 	.searchResult .nav {
 		position: relative;
-		height: 300px;
+		max-height: 300px;
 		overflow: hidden;
 		border-left: 1px solid #ccc;
 		border-right: 1px solid #ccc;
@@ -354,12 +354,17 @@
 		line-height: 58px;
 		font-size: 18px;
 		color:#666!important;
+		outline: none;
 	}
-	#topbar .navbar-nav li a:hover,.active{		
+	#topbar .navbar-nav li:first-child > a {
 		color: #32beff!important;
 	}
+	/*#topbar .navbar-nav li a:hover,.active{		
+		color: #32beff!important;
+	}*/
 	#topbar .position{
 		margin-left: 20px;	
+		margin-right: 5px;
 	}
 	#topbar .positionText{
 		font-size: 12px;
