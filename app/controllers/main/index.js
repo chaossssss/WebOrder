@@ -598,11 +598,11 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
         +                '<span class="glyphicon glyphicon-menu-down" style="color:#999;"></span>'
         +            '</p>'
         +            '<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">'
-        +                '<li><a href="javascript:;">我的订单</a></li>'
-        +                '<li><a href="javascript:;">我的收藏</a></li>'
-        +                '<li><a href="javascript:;">账户管理</a></li>'
-        +                '<li><a href="javascript:;">消息设置</a></li>'
-        +                '<li><a href="javascript:;">帐号设置</a></li>'
+        +                '<li id="myOrder"><a href="javascript:;">我的订单</a></li>'
+        +                '<li id="myLove"><a href="javascript:;">我的收藏</a></li>'
+        +                '<li id="myManage"><a href="javascript:;">账户管理</a></li>'
+        +                '<li id="myRecord"><a href="javascript:;">消息设置</a></li>'
+        +                '<li id="mySetUp"><a href="javascript:;">帐号设置</a></li>'
         +                '<li><a href="javascript:;"><span class="glyphicon glyphicon-log-in"></span>退出</a></li>'
         +            '</ul>'
         +          '</div>'
@@ -615,6 +615,22 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
         $("#toMyOrder").on("click",function(){
             $state.go("abstract.aside");
         })
+        $("#myOrder").on("click",function(){
+            $state.go("abstract.aside.myOrder");
+        })
+        $("#myLove").on("click",function(){
+            $state.go("abstract.aside.love");
+        })
+        $("#myManage").on("click",function(){
+            $state.go("abstract.aside.manage");
+        })
+        $("#myRecord").on("click",function(){
+            $state.go("abstract.aside.record");
+        })
+        $("#mySetUp").on("click",function(){
+            $state.go("abstract.aside.setUp");
+        })
+
 
     }
     topBar();

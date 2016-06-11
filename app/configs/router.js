@@ -139,6 +139,17 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     }  
   });
 
+  //商户详情页面
+  $stateProvider.state('abstract.bossDetail', {
+    url: '/bossDetail',
+    views: {
+      'content@abstract': {
+        templateUrl: 'controllers/boss/bossDetail.html',
+        controller: 'BossDetailCtrl'
+      }
+    }  
+  });
+
   //下单页面(工人下单页面)
   $stateProvider.state('abstract.workerOrder', {
     url: '/workerOrder',
