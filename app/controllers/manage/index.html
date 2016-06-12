@@ -100,9 +100,10 @@
 		margin-top: 23px;
 		margin-left: 20px;
 	}
-	 input[type="date"]{
+	 input[type="date"],.Wdate{
 	 	width: 130px;
 	 	height: 30px;
+	 	padding-left:5px;
 	 }
 	 .search{
 	 	border:none;
@@ -183,7 +184,7 @@
 	   	</ul>	  
   	</div>
 	<div class="timeBox">
-	 	<p>时间：<input type="date" name="" value="">  -  <input type="date" name="" value=""></p>
+	 	<p>时间：<input id="d4311" class="Wdate" type="text" onFocus="WdatePicker({maxDate:'#F{$dp.$D(\'d4312\')||\'2020-10-01\'}'})"/>  -  <input id="d4312" class="Wdate" type="text" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'d4311\')}',maxDate:'2020-10-01'})"/></p>
 	 	<input class="search" type="button" name="" value="搜索">
 	 	<table class="table">
 		   <thead>
