@@ -6,7 +6,7 @@
         width: 72px;   */  
         height:76px;
         width:64px;
-        background:url(../../images/main/bubble.svg) no-repeat left top;
+        background:url(../../images/main/bubbleBlue.svg) no-repeat left top;
         text-align:center;
     }    
     .imgInfo {
@@ -14,7 +14,7 @@
         height:60px;
         margin:2px;
         padding:0px;
-        border-radius:8px;
+        /*border-radius:8px;*/
     }     
     /*.textInfo {
         font-size: 12px;
@@ -52,10 +52,16 @@
 		position: absolute;
 		display: block;
 		width: 100%;
-		color:rgb(25,182,255);
+		color: #fff;
 		border:none;
 		outline: none;
 		z-index: 1000;
+		background-color: #32beff;
+	}
+	.infoWindow .btn:hover,
+	.infoWindow .btn:focus {
+		color:#fff;
+		background-color: #32beff;
 	}
 	.content .firstFontColor {
 		display: inline-block;
@@ -117,6 +123,10 @@
 	.BMap_pop .BMap_bottom{
 		border-bottom: 1px solid rgb(50,190,255);
 		background-color:rgb(245,245,245);
+	}
+	.BMap_shadow img {	
+		height: 0;
+		width: 0;
 	}
 	/*搜索框样式*/
 	.mr {

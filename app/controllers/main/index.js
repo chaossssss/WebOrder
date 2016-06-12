@@ -30,8 +30,8 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
 	var map = new BMap.Map("allmap");   //创建地图实例
 	map.centerAndZoom(new BMap.Point(120.159788,30.320708), 15); //创建点坐标；并且初始化地图，设置中心点坐标和地图级别     
 
-	var boss = "../../images/main/worker.png";
-    var workMan = "../../images/main/boss.png";
+	var workMan = "../../images/main/worker.png";
+    var boss = "../../images/main/boss.png";
 
 	//清除覆盖物
     function remove_overlay(){
@@ -52,7 +52,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
                 myRichMarkerObject.disableDragging();   //不可拖拽
                 map.addOverlay(myRichMarkerObject);
                 
-                addClickHandler(myRichMarkerObject,workers[i]);
+                // addClickWorkHandler(myRichMarkerObject,workers[i]);
             }  
         }
          
@@ -68,7 +68,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
                 myRichMarkerObject.disableDragging();   //不可拖拽
                 map.addOverlay(myRichMarkerObject);
                 
-                addClickHandler(myRichMarkerObject,business[j]);
+                // addClickBossHandler(myRichMarkerObject,business[j]);
             }
         }
     }  
@@ -82,7 +82,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
                 var marker1 = new BMap.Marker(point1,{icon:myIcon1});  // 创建标注
                 map.addOverlay(marker1);              // 将标注添加到地图中 
                                                          //将唯一身份认证信息传入                                               
-                addClickHandler(marker1,workers[i]);
+                addClickWorkHandler(marker1,workers[i]);
             }  
         }
         if(business){
@@ -92,7 +92,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
                 var marker2 = new BMap.Marker(point2,{icon:myIcon2});  // 创建标注
                 map.addOverlay(marker2);              // 将标注添加到地图中
                 
-                addClickHandler(marker2,business[j]);
+                addClickBossHandler(marker2,business[j]);
             }
         }
     }
@@ -106,14 +106,14 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
     	height : 135
     }
 
-    var sContent = '<div class="infoWindow" id="imgDemo">'
+    var sWorkContent = '<div class="infoWindow" id="imgDemo">'
 	+'<img src="../../images/main/bigPic2.png" alt="">'
 	+'<div class="content">'
 	+	'<p class="firstLine">'
 	+		'<span class="firstFontColor">神马艾玛保洁保洁</span>'
 	+		'<span class="secondFontColor" style="float: right;">距离1.9km</span>'
 	+	'</p>'
-	+	'<p class="secondLine secondFontColor" style="clear:right;">成立于1990年</p>'
+	+	'<p class="secondLine secondFontColor" style="clear:right;">浙江省 | 从业一年</p>'
 	+	'<p class="thirdLine">'
 	+		'<i class="glyphicon glyphicon-list iconListColor"></i>'
 	+		'<span class="secondFontColor">小时工,保姆,月嫂</span>'
@@ -129,19 +129,22 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
 	+'</div>'
 	+'<button class="btn btn-default">立即下单</button>'
 	+'</div>'
-    var infoWindow = new BMap.InfoWindow(sContent,opts);
+    var infoWorkWindow = new BMap.InfoWindow(sWorkContent,opts);
 
-    //个人身份标志信息
-    function addClickHandler(marker,info){
+    //个人身份标志信息(工人)
+    function addClickWorkHandler(marker,info){
         marker.addEventListener("click",function(e){
-        	console.log("this",this);
-	    	this.openInfoWindow(infoWindow);
+        	// console.log("this",this);
+	    	this.openInfoWindow(infoWorkWindow);
 	    	//图片加载完毕重绘infowindow
 		   document.getElementById('imgDemo').onload = function (){
-			   infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+			   infoWorkWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
 		   }
 		   changeInfoWin();
 
+           $("#imgDemo .btn").on("click",function(){
+                $state.go("abstract.worker");
+           })
             //console.log("唯一",e);
             //console.log("唯一身份确认信息",info);
 
@@ -158,6 +161,98 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
             // }   
         });
     }
+
+    var sBossContent = '<div class="infoWindow" id="imgDemo">'
+    +'<img src="../../images/main/bigPic2.png" alt="">'
+    +'<div class="content">'
+    +   '<p class="firstLine">'
+    +       '<span class="firstFontColor">神马艾玛保洁保洁</span>'
+    +       '<span class="secondFontColor" style="float: right;">距离1.9km</span>'
+    +   '</p>'
+    +   '<p class="secondLine secondFontColor" style="clear:right;">成立于1990年</p>'
+    +   '<p class="thirdLine">'
+    +       '<i class="glyphicon glyphicon-list iconListColor"></i>'
+    +       '<span class="secondFontColor">小时工,保姆,月嫂</span>'
+    +   '</p>'
+    +   '<p class="fourLine">'
+    +       '<i class="glyphicon glyphicon-thumbs-up iconUpColor"></i>'
+    +       '<span>9999</span>'
+    +       '<i class="glyphicon glyphicon-star-empty iconStarColor ml"></i>'
+    +       '<span>9999</span>'
+    +       '<i class="glyphicon glyphicon-heart-empty iconHeartColor ml"></i>'
+    +       '<span>9999</span>'
+    +   '</p>'
+    +'</div>'
+    +'<button class="btn btn-default">立即下单</button>'
+    +'</div>'
+    var infoBossWindow = new BMap.InfoWindow(sBossContent,opts);
+
+    //个人身份标志信息(商户)
+    function addClickBossHandler(marker,info){
+        marker.addEventListener("click",function(e){
+            // console.log("this",this);
+            this.openInfoWindow(infoBossWindow);
+            //图片加载完毕重绘infowindow
+           document.getElementById('imgDemo').onload = function (){
+               infoBossWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+           }
+           changeInfoWin();  
+
+           $("#imgDemo .btn").on("click",function(){
+                $state.go("abstract.boss");
+           })
+        });
+    }
+
+    //信息窗口控件
+    // function InfoWorkWinControl(){
+    //     this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+    //     this.defaultOffset = new BMap.Size(20,178);
+    // }  
+    // InfoWorkWinControl.prototype = new BMap.Control();    
+    // InfoWorkWinControl.prototype.initialize = function(map){
+
+    //     var div = document.createElement("div");
+    //     div.className = "infoWindow";
+    //     div.setAttribute("id","imgWorkDemo");
+
+
+    //     map.getContainer().appendChild(div);
+    //     return div;
+    // }
+    // var webInfoWorkWinControl = new InfoWorkWinControl();
+    // map.addControl(webInfoWorkWinControl);
+    // // webInfoWorkControl.hide()
+    // function InfoWorkWin(){
+    //     var a = 180;
+    //     webInfoWorkWinControl.setOffset(new BMap.Size(a,178));
+
+    //     $("#imgWorkDemo").append(
+    //         '<img src="../../images/main/bigPic2.png" alt="">'
+    //         +'<div class="content">'
+    //         +   '<p class="firstLine">'
+    //         +       '<span class="firstFontColor">神马艾玛保洁保洁</span>'
+    //         +       '<span class="secondFontColor" style="float: right;">距离1.9km</span>'
+    //         +   '</p>'
+    //         +   '<p class="secondLine secondFontColor" style="clear:right;">成立于1990年</p>'
+    //         +   '<p class="thirdLine">'
+    //         +       '<i class="glyphicon glyphicon-list iconListColor"></i>'
+    //         +       '<span class="secondFontColor">小时工,保姆,月嫂</span>'
+    //         +   '</p>'
+    //         +   '<p class="fourLine">'
+    //         +       '<i class="glyphicon glyphicon-thumbs-up iconUpColor"></i>'
+    //         +       '<span>9999</span>'
+    //         +       '<i class="glyphicon glyphicon-star-empty iconStarColor ml"></i>'
+    //         +       '<span>9999</span>'
+    //         +       '<i class="glyphicon glyphicon-heart-empty iconHeartColor ml"></i>'
+    //         +       '<span>9999</span>'
+    //         +   '</p>'
+    //         +'</div>'
+    //         +'<button class="btn btn-default">立即下单</button>'
+    //         +'</div>'
+    //     )
+    // }
+    // InfoWorkWin();
 
     //自定义图文结合信息窗口(百度地图自带的样式修改)
     function changeInfoWin(){
@@ -192,11 +287,13 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
 			"background-color":"rgb(245,245,245)"
 		});
 		//箭头
-		// BMap_pop.children("div").eq(7).children("img").attr("src","../../images/main/worker.png")
+		BMap_pop.children("div").eq(7).children("img").attr("src","../../images/main/iw3.png");
 		//关闭按钮图片隐藏
 		BMap_pop.children("img").first().css({
 			"opacity":"0"
 		});
+        // 去掉阴影
+        // $(".BMap_shadow").children("div").children("img").attr("src","none");
     }
 
     /* 搜索控件

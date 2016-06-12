@@ -68,7 +68,7 @@
 		border: 1px solid #ebebeb;
 		border-radius: 4px;
 		width: 768px;
-		height: 128px;
+		max-height: 128px;
 		padding: 10px;
 		color: rgb(92,199,255);
 	}
@@ -169,13 +169,59 @@
 		padding-top: 8px;
 	}
 	/*导航栏内容*/
-	.tab-panel {
+	.tab-content > .tab-panel:first-child {
 		margin-top: 30px;
 	}
-	.tab-panel img {
+	.tab-content > .tab-panel:last-child {
+		margin-top: 10px;
+	}
+	.tab-panel > img {
 		width: 770px;
 		height: 300px;
 	}
+	.bossActive {
+		background-color: #32beff;
+		color: #fff!important;
+	}
+	.fl {
+		float: left;
+	}
+	.fr {
+		float: right;
+	}
+	/*用户评价*/
+	.contentFirst{position: relative;}
+	.contentFirst .popDiv{height: 300px!important;width: 770px!important;background:#f9fbf6;}
+	.popDiv .headPic{width:59px;height:59px;border:1px solid #ccc;position:absolute;}
+	.popDivuserName{width:59px;position:absolute;top:85px;color:#32beff;}
+	.contentFirst .popDiv button{width:102px;height: 36px;line-height: 36px;border: none;color: #fff;border-radius: 4px;}
+	.contentFirst .popConfirm{background-color: #32beff;cursor: pointer;margin:160px 20px 0 0;}
+  	.contentFirst .setScore ul{list-style: none;position: relative;height: 20px;width: 170px; top:23px;left:73px;}
+  	.contentFirst .setScore ul li{width: 23px;height: 16px; float: left;background: url('images/myOrder/star.png') no-repeat 0 -16px;}
+  	.contentFirst .star{background: url('images/myOrder/star.png') no-repeat 0 0px!important;}
+  	.contentFirst .setScore span:nth-child(1){position:absolute;top:20px;left: 73px; }
+  	.contentFirst .content-title{position:absolute;top:100px;left: 50px; }
+  	.contentFirst .setScore p{position:absolute;top:20px;left: 237px;color: #fd718e; }
+  	.contentFirst .content-area{width:698px;height:120px;position: absolute;top: 55px;left:73px; padding: 10px;resize: none; font: none!important;line-height: normal;overflow: visible;outline: none;}
+
+  	.contentFirst #imgesFilesAuto{width:auto;height:98px; margin:160px 0 0 73px;float:left;}
+  	.contentFirst #imagesBox{width:auto;height:98px;float:left;cursor: pointer;}
+  	.contentFirst #imagesBox img{width:98px;height:98px;float:left;cursor: pointer;border:1px solid #ccc;margin-right: 6px;}
+  	.contentFirst #imgesFiles{width:98px;height:98px;float:left;position:relative;border:1px dashed #ccc;cursor: pointer;}
+  	.contentFirst #imgesFiles span{position:absolute;font-size:80px;display:block;width:98px;text-align:center;height:98px;color:#CCC;cursor: pointer;line-height: 87px;font-weight: lighter;}
+  	.popDiv1{background:#f9fbf6;}
+  	.contentBody{overflow:hidden;border-bottom:1px solid #ccc;padding:20px 0 30px 0;}
+  	.contentBodyLeft{width:73px;}
+  	.contentBodyLeft .headPic1{width:59px;height:59px;border:1px solid #ccc;}
+  	.contentBodyLeft .popDivuserName1{width:59px;color:#32beff;}
+  	.contentBodyRight{width:698px;}
+  	.contentBodyRight .setScore1 ul{list-style: none;height: 20px;width: 170px; margin:3px 0 0 -42px;}
+  	.contentBodyRight .setScore1 ul li{width: 23px;height: 16px; float: left;background: url('images/myOrder/star.png') no-repeat 0 0px;}
+  	.contentBodyRight .setScore1 p{color: #fd718e; padding-right:20px;}
+  	.contentBodyRight .setScore1 p span{color:#999;}
+  	.contentBodyRight .reply{width:100%;background:#f5f5f5;padding:20px;}
+  	.contentBodyRight .reply p span{color:#52a5cc;}
+	
 </style>
 
 <div class="#boss">
@@ -194,8 +240,8 @@
 			<span>认证信息</span>
 		</div>
 		<ul class="nav nav-talks" ng-init="vm.activeTab=1">
-			<li ng-class="{active: vm.activeTab == 1}"><a href="javascript:;" ng-click="vm.activeTab = 1">服务说明</a></li>
-			<li ng-class="{active: vm.activeTab == 2}"><a href="javascript:;" ng-click="vm.activeTab = 2">用户评价(250)</a></li>
+			<li><a ng-class="{bossActive: vm.activeTab == 1}" href="javascript:;" ng-click="vm.activeTab = 1">服务说明</a></li>
+			<li><a ng-class="{bossActive: vm.activeTab == 2}" href="javascript:;" ng-click="vm.activeTab = 2">用户评价(250)</a></li>
 		</ul>
 		<div class="tab-content">
 			<div class="tab-panel" ng-show="vm.activeTab == 1">
@@ -203,7 +249,60 @@
 
 			</div>
 			<div class="tab-panel" ng-show="vm.activeTab == 2">
-			  标签2的内容
+
+				<div class="contentFirst">
+				  	<div class="popDiv">
+					   <img class="headPic" src="images/worker/score.png" alt="">  
+					   <p class="popDivuserName">家奶和鲁大</p>
+					   <div class="setScore">
+					      <span>评分:</span>
+					      <ul>
+					        <li></li>
+					        <li></li>
+					        <li></li>
+					        <li></li>
+					        <li></li>
+					      </ul>
+					      <p>0分</p>				   
+					   <textarea class="content-area" name="" placeholder="请输入评论内容(至多200字)..."></textarea>
+					   </div>
+					    <div id="imgesFilesAuto" style="">
+					       <div id="imagesBox"></div>
+					       <div id="imgesFiles">
+					          <span>+</span>
+					          <input type="file" name="photoimage" id="uploadImage" multiple="multiple" style="width:98px; height:98px;opacity:0;" accept="image/gif, image/jpeg"/>
+					       </div>				       				       					       
+					    </div>
+					    <button type="button" class="popConfirm fr">发表</button>
+					</div>
+					<div class="popDiv1">
+						<div class="contentBody">
+							<div class="contentBodyLeft fl">
+								<img class="headPic1" src="images/worker/score.png" alt=""> 
+								<p class="popDivuserName1">家奶和鲁大</p> 
+							</div>
+							<div class="contentBodyRight fl">
+								<div class="setScore1">
+							      <ul class="fl">
+							        <li></li>
+							        <li></li>
+							        <li></li>
+							        <li></li>
+							        <li></li>
+							      </ul>
+							      <p>0分<span class="fr">2016-05-06 13:20</span></p>				   
+							   </div>
+							   <p class=>评论什么的就写点吧。写点就行了。写那么多有什么用？擦脸给你嘿哟</p>
+							   <div class="reply fl">
+							   		<p>客服回复: <span>评论什么的就写点吧。写点就行了。写那么多有什么用？擦脸给你嘿哟评论什么的就写点吧吧
+	那么多有什么用？擦脸给你嘿哟用？擦脸给你嘿哟</span> </p>
+								<p class="replayPic fr"> <img src="images/worker/reply.png" alt="">回复</p>
+							   </div>
+							</div>
+						</div>
+					</div>	
+				</div>
+				
 			</div>
 		</div>
 	</div>	
@@ -245,7 +344,63 @@
 	
 
 
+<script>
+	$(function(){
+		// 评价
+		$('.setScore ul li').click(function(){
+	      var score = $(this).index() + 1;
+	      if(!$(this).hasClass('star')){
+	        $(this).addClass('star');
+	        $(this).prevAll().addClass('star');
+	        $(this).nextAll().removeClass('star');
+	      }else{       
+	        $(this).nextAll().removeClass('star');
+	      }
+	      $('.setScore p').html(score+'分');
+	    })
+	    // 图片上传
+	    var result = document.getElementById("imagesBox");
+        var input = document.getElementById("uploadImage");
 
+        if(typeof FileReader === 'undefined'){
+            result.innerHTML = "<p class='warn'>抱歉，你的浏览器不支持 FileReader</p>";
+            input.setAttribute('disabled','disabled');
+        }else{
+
+            input.addEventListener('change',readFile,false);
+        }
+         
+        function readFile(){            
+              for(var i=0;i<this.files.length;i++)
+              {
+                  if(this.files.length < 5){
+                    var file = this.files[i];
+                    if(!/image\/\w+/.test(file.type)){
+                        alert("请确保文件为图像类型");
+                        return false;
+                    }
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);                    
+                    reader.onload = function(e){                        
+                        result.innerHTML+= '<img src="'+this.result+'" alt=""/>';
+                    }  
+                  }else if(this.files.length == 5){
+                    var file = this.files[i];
+                    if(!/image\/\w+/.test(file.type)){
+                        alert("请确保文件为图像类型");
+                        return false;
+                    }
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);                    
+                    reader.onload = function(e){                        
+                        result.innerHTML+= '<img src="'+this.result+'" alt=""/>';                                               
+                    }                   
+                      $('#imgesFiles').hide();
+                  }
+             }
+        }
+	})
+</script>
 
 
 

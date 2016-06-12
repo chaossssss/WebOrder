@@ -5,6 +5,7 @@ angular.module('app').controller('loginCtrl', function loginCtrl($scope,$timeout
 
 	$scope.errorInfo = "";
 	$scope.errorTag = false;
+	$scope.sms_success = false; 	//发送短信验证码成功显示
 
 	$scope.login = function(phone,password){
 		console.log("phone",phone,"password",password);
@@ -54,7 +55,9 @@ angular.module('app').controller('loginCtrl', function loginCtrl($scope,$timeout
 			$scope.errorInfo = "手机号码格式错误，请输入11位数字";
 		}else{
 			$scope.sms_code_status=true;
+			$scope.sms_success = true;
 			smsCodeLoad(60);
+
 		}
 	}
 

@@ -71,7 +71,8 @@
 		font-size: 14px;
 		color: #3b3b3b;
 		padding-left: 10px;
-		margin-left: 7px;
+		/*margin-left: 7px;*/
+		outline: none;
 	}
 	.login > i:last-child {
 		position: absolute;
@@ -247,6 +248,12 @@
 		height: 42px;
 		font-size: 18px;
 	}
+	.iconActive {
+		color:#32beff;
+	}
+	.inputBorder {
+		border:1px solid #32beff!important;
+	}
 	</style>
 </head>
 <body>
@@ -263,13 +270,13 @@
 		<form class="loginForm" name="loginForm" ng-submit="login(loginForm.loginInput.$valid,loginForm.loginPsd.$valid)" novalidate="">
 			<span ng-show="errorTag"><i class="glyphicon glyphicon-minus-sign"></i>&nbsp;&nbsp;&nbsp;{{errorInfo}}</span>
 			<div class="login">
-				<i class="glyphicon glyphicon-user"></i>
-				<input type="tel" name="loginInput" placeholder="请输入您的手机号" ng-model="phone" maxlength="11" required="">
-				<i class="glyphicon glyphicon-remove"></i>
+				<i class="iconfont icon-zhanghu f20 "></i>
+				<input class="ml4" type="tel" name="loginInput" placeholder="请输入您的手机号" ng-model="phone" maxlength="11" required="">
+				<i class="iconfont icon-cha"></i>
 			</div>
 			<div class="login mt20">
-				<i class="glyphicon glyphicon-lock"></i>
-				<input type="text" name="loginPsd" placeholder="请输入您的密码" ng-model="password" required="">
+				<i class="iconfont icon-mima f24"></i>
+				<input type="password" name="loginPsd" placeholder="请输入您的密码" ng-model="password" required="">
 				<i class="glyphicon glyphicon-remove"></i>
 			</div>
 			<div class="forgotPsd">
@@ -291,7 +298,7 @@
 			</div>
 			<div class="login mt20">
 				<i class="glyphicon glyphicon-lock"></i>
-				<input type="text" name="registPsd" placeholder="请输入您的密码" ng-model="password" required="" ng-pattern="/^[_0-9a-z]{6,12}$/">
+				<input type="password" name="registPsd" placeholder="请输入您的密码" ng-model="password" required="" ng-pattern="/^[_0-9a-z]{6,12}$/">
 				<i class="glyphicon glyphicon-remove"></i>
 			</div>
 			<div class="login mt20 sendCode">
@@ -299,6 +306,7 @@
 				<input type="text" name="registCode" placeholder="请输入验证码" ng-model="code" ng-minlength="4" maxlength="8" required="">
 				<button class="btn btn-info" ng-disabled="sms_code_status" ng-click="sendTime(registForm.registInput.$valid)">{{sms_code_content}}</button>
 			</div>
+			<div ng-if="sms_success" style="color:#39c032;font-size:12px;margin-left:25px;">验证码已发送，请查收短信</div>
 			<div class="agreement">
 				<input type="checkbox" checked="">
 				<p>我已阅读并接受<span>《嗖搜用户协议》</span></p>
@@ -355,9 +363,13 @@
 		//显示删除文本icon
 		$("input").on("focus",function(){
 			$(this).siblings(".glyphicon-remove").css("opacity","1");
+			$(this).siblings("i:first-child").addClass("iconActive");
+			$(this).addClass("inputBorder");
 		})
 		$("input").on("blur",function(){
 			$(this).siblings(".glyphicon-remove").css("opacity","0");
+			$(this).siblings("i:first-child").removeClass("iconActive");
+			$(this).removeClass("inputBorder");
 		})
 		$(".glyphicon-remove").on("click",function(){
 			$(this).siblings("input").val("");
