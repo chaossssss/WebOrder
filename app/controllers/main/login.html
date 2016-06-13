@@ -26,7 +26,7 @@
  		position: absolute;
  		bottom: 70px;
 		width: 100px;
-		height: 28px;
+		height: 58px;
 		margin-left: 127px;
 	}
 	.loginNav {
@@ -254,6 +254,9 @@
 	.inputBorder {
 		border:1px solid #32beff!important;
 	}
+	.iconOffColor {
+		color:#ccc;
+	}
 	</style>
 </head>
 <body>
@@ -270,14 +273,14 @@
 		<form class="loginForm" name="loginForm" ng-submit="login(loginForm.loginInput.$valid,loginForm.loginPsd.$valid)" novalidate="">
 			<span ng-show="errorTag"><i class="glyphicon glyphicon-minus-sign"></i>&nbsp;&nbsp;&nbsp;{{errorInfo}}</span>
 			<div class="login">
-				<i class="iconfont icon-zhanghu f20 "></i>
+				<i class="iconfont icon-zhanghu f20"></i>
 				<input class="ml4" type="tel" name="loginInput" placeholder="请输入您的手机号" ng-model="phone" maxlength="11" required="">
-				<i class="iconfont icon-cha"></i>
+				<i class="glyphicon glyphicon-remove iconOffColor"></i>
 			</div>
 			<div class="login mt20">
 				<i class="iconfont icon-mima f24"></i>
 				<input type="password" name="loginPsd" placeholder="请输入您的密码" ng-model="password" required="">
-				<i class="glyphicon glyphicon-remove"></i>
+				<i class="glyphicon glyphicon-remove iconOffColor"></i>
 			</div>
 			<div class="forgotPsd">
 				<input type="checkbox">
@@ -285,21 +288,21 @@
 				<span>忘记密码?</span>
 			</div>
 			<div class="loginFooter">
-				<button class="btn btn-info">登录</button>
+				<button class="btn btn-info">登&nbsp;录</button>
 			</div>
 		</form>
 
 		<form class="registForm" name="registForm" ng-submit="regist(registForm.registInput.$valid,registForm.registPsd.$valid,registForm.registCode.$valid)" novalidate="">
 			<span ng-show="errorTag"><i class="glyphicon glyphicon-minus-sign"></i>&nbsp;&nbsp;&nbsp;{{errorInfo}}</span>
 			<div class="login">
-				<i class="glyphicon glyphicon-user"></i>
-				<input type="tel" name="registInput" placeholder="请输入您的手机号" ng-model="phone" minlength="11" maxlength="11" required="" ng-pattern="/^1\d{10}$/">
-				<i class="glyphicon glyphicon-remove"></i>
+				<i class="iconfont icon-zhanghu f20"></i>
+				<input class="ml4" type="tel" name="registInput" placeholder="请输入您的手机号" ng-model="phone" minlength="11" maxlength="11" required="" ng-pattern="/^1\d{10}$/">
+				<i class="glyphicon glyphicon-remove iconOffColor"></i>
 			</div>
 			<div class="login mt20">
-				<i class="glyphicon glyphicon-lock"></i>
+				<i class="iconfont icon-mima f24"></i>
 				<input type="password" name="registPsd" placeholder="请输入您的密码" ng-model="password" required="" ng-pattern="/^[_0-9a-z]{6,12}$/">
-				<i class="glyphicon glyphicon-remove"></i>
+				<i class="glyphicon glyphicon-remove iconOffColor"></i>
 			</div>
 			<div class="login mt20 sendCode">
 				<i class="glyphicon glyphicon-lock"></i>

@@ -345,66 +345,56 @@
 	*	顶部导航
 	*/
 	#topbar {
-		margin-bottom: 0;
 		background-color: rgba(255,255,255,0.9);
+		position: fixed;
+		right: 0;
+		left: 0;
+		z-index: 1030;
 	} 
-	#topbar .navbar-nav{
+	#topbar .topbar {
+		width: 1100px;
 		height: 88px;
-		margin-left: 30px;
+		padding-right: 15px;
+  		padding-left: 15px;
+		margin-right: auto;
+  		margin-left: auto;
+  		border-bottom: 1px solid #ccc;
+	}	
+	#topbar .topbar-box {
+		width: 1100px;
+		height: 88px;
+		margin-left:auto;
+		margin-right: auto;
 	}
-	#topbar .navbar-default{
-		background-color: #fff;
+	#topbar .logo {
+		vertical-align: top;
 	}
-	#topbar .navbar-nav li{
-		height: inherit;
-		margin-left: 50px;
+	#topbar .nav-header {
+		display: inline-block;
 	}
-	#topbar .navbar-nav li a{
-		height: inherit;
-		line-height: 58px;
-		font-size: 18px;
-		color:#666!important;
-		outline: none;
-	}
-	#topbar .navbar-nav li:first-child > a {
-		color: #32beff!important;
-	}
-	/*#topbar .navbar-nav li a:hover,.active{		
-		color: #32beff!important;
-	}*/
-	#topbar .position{
-		margin-left: 20px;	
-		margin-right: 5px;
-	}
-	#topbar .positionText{
-		font-size: 12px;
-		color: #32beff;
-		cursor: pointer;
-	}
-	#topbar .togglePosition{
-		margin-left: 20px;
-		color: #999
-	}
-	#topbar .navPosition{
-		margin-top: 25px;
-	}
-	#topbar .glyphicon{
-		margin-right: 13px;
-	}
-	#topbar .dropdown-menu li{
+	#topbar .nav-header > li{
 		text-align: center;
+		margin-left: 50px;
+		float: left;
+	}
+	#topbar .nav-header > li > a{
+		height: inherit;
+		font-size: 18px;
+		outline: none;
+		color: #666;
+	}
+	#topbar .nav-header > li > a:focus,
+	#topbar .nav-header > li > a:hover,
+	#topbar .active{		
+		color: #19b6ff!important;
+		background-color: #fff;
 	}
 	#topbar .dropdown{
 		float:right;
 		margin-top:33px;
 		cursor: pointer;
 	}
-	#topbar .headPic{
-		float:right;
-		margin-top:20px;
-		margin-right:5px;
-	}
-	#topbar .open > .dropdown-menu{		
+	#topbar .open > .dropdown-menu{
 		left: -30px;
 		background: url('images/headerImg/dropdownBg.png') no-repeat;
 		background-position: top -1px left -4px;
@@ -412,8 +402,16 @@
 		border:none;
 		padding-top: 15px;
 	}
+	#topbar .dropdown-menu {
+		z-index:10000;
+	}
 	#topbar .dropdown-menu li{
 		height: 35px;
+	}
+	#topbar .headPic{
+		float:right;
+		margin-top:20px;
+		margin-right:10px;
 	}
 </style>
 <!-- <nav id="topbar" class="navbar navbar-default navbar-fixed-top">

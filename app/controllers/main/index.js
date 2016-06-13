@@ -4,8 +4,9 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
   var vm = $scope.vm = {};
   $scope.searchName = "";
 
+  var $winWidth = $(window).width();
   var $winHeight = $(window).height();
-    $("#allmap").css("height",$winHeight);
+  $("#allmap").css("height",$winHeight);
     console.log("height",$winHeight);
 
   	var initLng,initLat;
@@ -669,45 +670,39 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
     
     function topBar(){
         $(".top").append(
-            '<nav id="topbar" class="navbar navbar-default navbar-fixed-top">'
-        +      '<div class="container">'
-        +        '<div class="navbar-header">'
-        +          '<a href="javascript:;">'
-        +            '<img class="logo" src="images/headerImg/zhujiaLogo.png" alt="">'
-        +          '</a>'    
-        +        '</div>'
-        +        '<div class="navbar-header navPosition">'
-        +            '<a href="javascript:;">'
-        +                '<img class="position" src="images/headerImg/position.png" alt="">'
-        +            '</a>'
-        +            '<span class="positionText">杭州市 萧山区<br><a class="togglePosition" id="changeLocation">[切换]</a></span>'    
-        +        '</div>'
-        +        '<div id="navbar" class="collapse navbar-collapse">'
-        +          '<ul class="nav navbar-nav">'
-        +            '<li><a href="javascript:;">首页</a></li>'
-        +            '<li id="toMyOrder"><a href="javascript:;">我的订单</a></li>'
-        +            '<li><a href="javascript:;">下载APP</a></li>'
-        +          '</ul>'
-        +          '<div id="openLogin">' 
-        +          '<div class="dropdown" >'       
-        +            '<p class=""  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">'
-        +                '家奶和鲁大八个字'
-        +                '<span class="glyphicon glyphicon-menu-down" style="color:#999;"></span>'
-        +            '</p>'
-        +            '<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">'
-        +                '<li id="myOrder"><a href="javascript:;">我的订单</a></li>'
-        +                '<li id="myLove"><a href="javascript:;">我的收藏</a></li>'
-        +                '<li id="myManage"><a href="javascript:;">账户管理</a></li>'
-        +                '<li id="myRecord"><a href="javascript:;">消息设置</a></li>'
-        +                '<li id="mySetUp"><a href="javascript:;">帐号设置</a></li>'
-        +                '<li><a href="javascript:;"><span class="glyphicon glyphicon-log-in"></span>退出</a></li>'
-        +            '</ul>'
-        +          '</div>'
-        +          '<img class="headPic" src="images/headerImg/headPic.png" alt="">'
-        +           '</div>' 
-        +        '</div>'
-        +      '</div>'
-        +    '</nav>'
+             '<div id="topbar">'      
+       +     '<nav class="topbar">'
+       +      '<div class="topbar-box">'
+       +         '<img class="logo poi" src="images/headerImg/zhujiaLogo.png" alt="">' 
+       +         '<div class="mt25 inb poi" ng-click="openUseExternalTemplate()">'
+       +             '<img class="ml20" src="images/headerImg/position.png" alt="">'
+       +             '<span class="f12 fc19b6ff">杭州市萧山区</span>'    
+       +             '<br>'
+       +             '<span id="changeLocation" class="fc999 ml24 f12">[切换]</span>'    
+       +         '</div>'
+       +         '<ul class="nav nav-header">'
+       +             '<li><a ui-sref="main" href="javascript:;">首页</a></li>'
+       +             '<li id="toMyOrder"><a class="active" ui-sref="abstract.aside.myOrder" href="javascript:;">我的订单</a></li>'
+       +             '<li><a href="javascript:;">下载APP</a></li>'
+       +         '</ul>'
+       +         '<div class="dropdown" > '    
+       +             '<p class="fc424242 f14"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">'
+       +                 '家奶和鲁大八个字'
+       +                 '<span class="glyphicon glyphicon-menu-down fc999 ml8"></span>'
+       +             '</p>'
+       +             '<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">'
+       +                 '<li id="myOrder"><a ui-sref="abstract.aside.myOrder" href="javascript:;">我的订单</a></li>'
+       +                 '<li id="myLove"><a ui-sref="abstract.aside.love" href="javascript:;">我的收藏</a></li>'
+       +                 '<li id="myManage"><a ui-sref="abstract.aside.manage" href="javascript:;">账户管理</a></li>'
+       +                 '<li id="myRecord"><a ui-sref="abstract.aside.record" href="javascript:;">消息设置</a></li>'
+       +                 '<li id="mySetUp"><a ui-sref="abstract.aside.setUp" href="javascript:;">帐号设置</a></li>'
+       +                 '<li><a href="javascript:;"><i class="glyphicon glyphicon-log-in"></i>&nbsp;退出</a></li>'
+       +             '</ul>'
+       +         '</div>'
+       +         '<img class="headPic" src="images/headerImg/headPic.png" alt="">'
+       +       '</div>'
+       +     '</nav>'
+       +    '</div>'
         )
         $("#toMyOrder").on("click",function(){
             $state.go("abstract.aside");
