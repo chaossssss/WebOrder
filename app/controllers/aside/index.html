@@ -7,12 +7,16 @@
 	<li ui-sref="abstract.aside.setUp">账号设置</li>
 </ul> -->
 <style type="text/css">
-	.asideBox{}
+	.asideBox{
+		width: 1140px;
+		margin: 0 auto;
+	}
 	.slideTab{
 		width: 160px;
 		height: 260px;
 		background: #fff;
 		margin-top: 118px;
+
 		border-top-right-radius: 4px;
 		border-top-left-radius: 4px;
 		border:1px solid #ccc;
@@ -53,7 +57,7 @@
 		color: #32beff;
 	}
 </style>
-<div class="container asideBox">
+<div class="asideBox">
 	<div class="slideTab">
 		<div class="userCenter">个人中心</div>
 		<ul class="userTab">
@@ -64,9 +68,10 @@
 			<li ng-class="{active: setUpIsActive}" ui-sref="abstract.aside.setUp"><span class="glyphicon glyphicon-cog"></span>帐号设置</li>
 		</ul>
 	</div>
+	<div ui-view=""></div>
 </div>
 
-<div ui-view=""></div>
+
 <script type="text/javascript">
 	// $(function(){
 	// 	$('.userTab li').click(function(){
