@@ -454,7 +454,6 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
                 if(localHistory.length > 0){
                     // 清空历史记录窗口
                     $(this).closest(".input-group").siblings(".nav").html("");
-                    // 数组去重复
 
                     for(var i=0,len=localHistory.length;i<len;i++){
                         $(this).closest(".input-group").siblings(".nav").append(
@@ -681,8 +680,8 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
        +             '<span id="changeLocation" class="fc999 ml24 f12">[切换]</span>'    
        +         '</div>'
        +         '<ul class="nav nav-header">'
-       +             '<li><a ui-sref="main" href="javascript:;">首页</a></li>'
-       +             '<li id="toMyOrder"><a class="active" ui-sref="abstract.aside.myOrder" href="javascript:;">我的订单</a></li>'
+       +             '<li><a class="active" ui-sref="main" href="javascript:;">首页</a></li>'
+       +             '<li id="toMyOrder"><a ui-sref="abstract.aside.myOrder" href="javascript:;">我的订单</a></li>'
        +             '<li><a href="javascript:;">下载APP</a></li>'
        +         '</ul>'
        +         '<div class="dropdown" > '    
@@ -816,8 +815,10 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
     }
     getData();
 
-
-
+    //隐藏百度地图广告
+    $(".anchorBL > a").attr("href","javascript:;");
+    $(".BMap_cpyCtrl.BMap_noprint.anchorBL").css("display","none");
+    $(".anchorBL > a > img").css("opacity","0.5");
 
 
 

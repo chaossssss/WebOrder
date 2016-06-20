@@ -4,7 +4,7 @@
 	.fl{float: left;}
 	.fr{float:right;}
 	.f12{font-size: 12px;}
-	.workerBox{width: 1130px;margin-top:88px!important; }
+	.workerBox{width: 1130px;margin-top:10px!important; }
 	.headerBox{width: 100%;height: 510px;}
 	.headerPic{width: 318px;height: 318px;border:1px solid #ccc;margin-top: 30px;}
 	.headerPic img{width: 100%;height: 100;}
@@ -302,17 +302,17 @@
 			$(this).addClass('active1').siblings().removeClass('active1').css('color','#000');
 		})
 
-		    $('.setScore ul li').click(function(){
-      var score = $(this).index() + 1;
-      if(!$(this).hasClass('star')){
-        $(this).addClass('star');
-        $(this).prevAll().addClass('star');
-        $(this).nextAll().removeClass('star');
-      }else{       
-        $(this).nextAll().removeClass('star');
-      }
-      $('.setScore p').html(score+'分');
-    })
+	    $('.setScore ul li').click(function(){
+	      var score = $(this).index() + 1;
+	      if(!$(this).hasClass('star')){
+	        $(this).addClass('star');
+	        $(this).prevAll().addClass('star');
+	        $(this).nextAll().removeClass('star');
+	      }else{       
+	        $(this).nextAll().removeClass('star');
+	      }
+	      $('.setScore p').html(score+'分');
+    	})
 
         //alert($('#imgesFiles img').length);
         var result = document.getElementById("imagesBox");
