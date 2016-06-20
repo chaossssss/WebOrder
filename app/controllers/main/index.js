@@ -698,7 +698,7 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
        +                 '<li><a href="javascript:;"><i class="glyphicon glyphicon-log-in"></i>&nbsp;退出</a></li>'
        +             '</ul>'
        +         '</div>'
-       +         '<img class="headPic" src="images/headerImg/headPic.png" alt="">'
+       +         '<img id="openLogin" class="headPic" src="images/headerImg/headPic.png" alt="">'
        +       '</div>'
        +     '</nav>'
        +    '</div>'
@@ -721,8 +721,6 @@ angular.module('app').controller('MainIndexCtrl', function MainIndexCtrl($scope,
         $("#mySetUp").on("click",function(){
             $state.go("abstract.aside.setUp");
         })
-
-
     }
     topBar();
     /*
