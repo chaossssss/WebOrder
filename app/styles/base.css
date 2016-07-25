@@ -46,3 +46,189 @@
 	#aside .active {
 		color: #32beff;
 	}
+
+
+	#myOrder .glyphicon{
+		cursor: pointer;
+	}
+	#myOrder .navbar-static-top{
+		position: relative;
+		width:1170px;
+		margin: 0 auto;
+		top: -260px;
+	}
+	#myOrder .myOrderBox{
+		background: #4e595f;
+		width: 940px;
+		height: 40px;
+		top: 0px;
+		position: absolute;
+		left: 180px;
+		padding: 0;
+		border-radius: 4px;
+	}
+	#myOrder .myOrderList{margin-bottom:10px;}
+	#myOrder .myOrderUl{margin:0;padding: 0;}
+	#myOrder .myOrderUl li:nth-child(1){
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+	}
+	#myOrder .myOrderUl li{
+		width: 100px;
+		height: 40px;
+		line-height: 40px; 
+		color: #fff;
+		cursor: pointer;		
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	#myOrder .myOrderUl li:hover{background: #33beff;}
+	#myOrder .myOrderActive{background: #33beff;}
+	#myOrder .searchBox{
+		width: 300px;
+		height: 40px;
+		float: right;
+	}
+	#myOrder .searchBox input{
+		width: 0px;
+		height: 26px;
+		border:none;
+		border-radius: 10px;
+		margin-top: 7px;
+		padding-left: 10px;
+		outline:none;	
+		float: right;
+		margin-right: 20px;	
+	}
+	#myOrder .searchBox img{
+		cursor: pointer;
+		position: absolute;
+		right: 12px;
+		top: 5px;
+	}
+	#myOrder .myOrderBody{
+		width: 940px;
+		height: auto;
+		position: absolute;
+		top: 50px;		
+		left: 180px;
+		padding: 0;
+		border-radius: 4px;
+		
+	}
+	#myOrder .myOrderHead{
+		width:940px;
+		height: 134px;
+		border:1px solid #dcf0f9;
+	}
+	#myOrder .myOrderSucc{
+		border:1px solid #faecdc;
+	}
+	#myOrder .myOrderDone{
+		border:1px solid #ebebeb;
+	}
+	#myOrder .myOrderId{
+		width: inherit;
+		height: 40px;
+		background: #dcf0f9;
+		line-height: 40px;
+	}
+	#myOrder .myOrderHead .orderSucc{
+		background: #fcf2e6;
+	}
+	#myOrder .myOrderHead .orderDone{
+		background: #f2f2f2;
+	}
+	#myOrder .myOrderId p{
+		float: left;
+		margin-left: 20px;
+		margin-bottom: 0px;
+	}
+	#myOrder .myOrderDetail ul li:nth-child(1){
+		width: 27%;
+	}
+	#myOrder .myOrderDetail{
+		clear: both;
+		width: 940px;
+		height:94px;
+		padding: 0;
+		margin: 0;
+	}
+	#myOrder .myOrderDetail > ul > li{
+		margin:0;
+		padding:0;
+		float: left;
+		list-style: none;
+		height: 93px;
+		border-right: 1px solid #dcf0f9;
+		text-align: center;
+		line-height: 94px;
+	}
+	#myOrder .myOrderDetail > ul .Succ{
+		border-right:1px solid #faecdc;
+	}
+	#myOrder .myOrderDetail > ul .Done{
+		border-right :1px solid #ebebeb;
+	}	
+	#myOrder .myOrderDetail > ul > li:nth-child(1){
+		width: 258px;
+		text-align: left;
+		line-height: 0px;
+	}
+	#myOrder .myOrderDetail > ul > li:nth-child(1) img{
+		width: 60px;
+		height: 60px;
+		border:1px solid #ccc;
+		float: left;
+		margin: 17px 0 0 20px;
+		margin-right: 10px;
+	}
+	#myOrder .myOrderDetail > ul > li:nth-child(2),.myOrderDetail ul li:nth-child(3),.myOrderDetail ul li:nth-child(4){
+		width: 147px;
+	}
+	#myOrder .myOrderDetail > ul > li:nth-child(3){
+		padding-top: 40px;
+	}
+	.myOrderDetail > ul > li:nth-child(3) p{
+		line-height: 10px;
+	}
+	#myOrder .myOrderDetail > ul > li:nth-child(5){
+		width: 240px;
+	}
+	#myOrder .myOrderDetail > ul{
+		margin:0;
+		padding:0;
+	}
+	#myOrder p.UserName{
+		margin-top: 20px;
+		line-height: 16px;
+	}
+	#myOrder .queren{
+		padding: 6px 24px;
+		outline: none;
+	}
+	#myOrder .myOrderContent{
+		background: #f5f5f5;
+		padding: 15px;
+	}
+	#myOrder .myOrderContent p:nth-child(2){
+		color: #999999;
+		line-height: 24px;
+	}
+	#myOrder .myOrderContent img{
+		width: 58px;
+		height: 58px;
+		border:1px solid #dcdcde;
+		margin-right: 10px;
+	}
+	#myOrder .ngdialog.ngdialog-theme-default .ngdialog-content{
+		line-height: 390px;
+		width: 560px;
+		opacity: 0.5px!important;
+		 background: rgba(255,255,255,0.5);
+	}
+	html.ngdialog-open,
+	body.ngdialog-open {
+	  overflow:visible ;
+	}

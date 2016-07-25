@@ -1,5 +1,5 @@
 <style type="text/css">
-	.glyphicon{
+/*	.glyphicon{
 		cursor: pointer;
 	}
 	.navbar-static-top{
@@ -164,8 +164,9 @@
 	html.ngdialog-open,
 	body.ngdialog-open {
 	  overflow:visible ;
-	}
+	}*/
 </style>
+<div id="myOrder">
 <nav class="navbar  navbar-static-top">
   <div class="myOrderBox">
     <ul class="nav navbar-nav myOrderUl">
@@ -181,15 +182,15 @@
   </div>
   <div class="myOrderBody">
 	<div class="myOrderList">
-		<div class="myOrderHead">
-			<div class="myOrderId"><p>订单号: 33032151214514</p><p>下单时间: 2016-02-30 14:40</p></div>
+		<div class="myOrderHead myOrderSucc">
+			<div class="myOrderId orderSucc"><p>订单号: 33032151214514</p><p>下单时间: 2016-02-30 14:40</p></div>
 			<div class="myOrderDetail">
 				<ul>
-					<li><img src="images/headerImg/headPic.png" alt=""><p class="UserName">李易峰</p></li>
-					<li><p>小时工</p></li>
-					<li><p>订单金额：50元</p></li>
-					<li>已接单<span class="glyphicon glyphicon-menu-down" ng-click="toggleOrder()"></span></li>
-					<li><button type="button" class="btn btn-warning queren" ng-click="openUseExternalTemplate()">确认完成</button></li>
+					<li class="Succ"><img src="images/headerImg/headPic.png" alt=""><p class="UserName">李易峰</p></li>
+					<li class="Succ"><p>小时工</p></li>
+					<li class="Succ"><p>订单金额：50元</p></li>
+					<li class="Succ">已接单<span class="glyphicon glyphicon-menu-down" ng-click="toggleOrder()"></span></li>
+					<li class="Succ"><button type="button" class="btn btn-warning queren" ng-click="openUseExternalTemplate()">确认完成</button></li>
 				</ul>
 			</div>
 		</div>
@@ -223,15 +224,15 @@
 		</div>
 	</div>
 	<div class="myOrderList">
-		<div class="myOrderHead">
-			<div class="myOrderId"><p>订单号: 33032151214514</p><p>下单时间: 2016-02-30 14:40</p></div>
+		<div class="myOrderHead myOrderDone">
+			<div class="myOrderId orderDone"><p>订单号: 33032151214514</p><p>下单时间: 2016-02-30 14:40</p></div>
 			<div class="myOrderDetail">
 				<ul>
-					<li><img src="images/headerImg/headPic.png" alt=""><p class="UserName">李易峰</p></li>
-					<li><p>小时工</p></li>
-					<li><p>订单金额：50元</p><p style="color:red;"></p></li>
-					<li>服务完成<span class="glyphicon glyphicon-menu-down" ng-click="toggleOrder($index)"></span></li>
-					<li><button type="button" class="btn btn-info queren" ng-click="openUseExternalTemplate2()">评论</button></li>
+					<li class="Done"><img src="images/headerImg/headPic.png" alt=""><p class="UserName">李易峰</p></li>
+					<li class="Done"><p>小时工</p></li>
+					<li class="Done"><p>订单金额：50元</p><p style="color:red;"></p></li>
+					<li class="Done">服务完成<span class="glyphicon glyphicon-menu-down" ng-click="toggleOrder($index)"></span></li>
+					<li class="Done"><button type="button" class="btn btn-info queren" ng-click="openUseExternalTemplate2()">评论</button></li>
 				</ul>
 			</div>
 		</div>
@@ -245,6 +246,7 @@
 	</div>
   </div>
 </nav>
+</div>
 <script type="text/javascript">
 $(function(){
 	$('.myOrderUl li').click(function(){
