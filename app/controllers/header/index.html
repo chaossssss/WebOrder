@@ -1,5 +1,5 @@
 <style type="text/css">
-	.topbar {
+/*	.topbar {
 		border-bottom: 1px solid #ccc;
 	}	
 	.topbar-box {
@@ -15,7 +15,7 @@
 	}
 	.nav-header > li{
 		/*height: inherit;*/
-		text-align: center;
+/*		text-align: center;
 		margin-left: 50px;
 		float: left;
 	}
@@ -54,39 +54,41 @@
 		float:right;
 		margin-top:20px;
 		margin-right:10px;
-	}
+	}*/
 </style>
-<nav class="topbar">
-  <div class="topbar-box">
-	<img class="logo poi" src="images/headerImg/zhujiaLogo.png" alt=""> 
-    <div class="mt25 inb poi" ng-click="openUseExternalTemplate()">
-		<img class="ml20" src="images/headerImg/position.png" alt="">
-		<span class="f12 fc19b6ff">杭州市萧山区</span>	
-		<br>
-		<span class="fc999 ml24 f12">[切换]</span>  	
-  	</div>
-	<ul class="nav nav-header">
-		<li><a ui-sref="main" href="javascript:;">首页</a></li>
-		<li><a class="active" ui-sref="abstract.aside.myOrder" href="javascript:;">我的订单</a></li>
-		<li><a href="javascript:;">下载APP</a></li>
-	</ul>
-	<div class="dropdown" >		
-		<p class="fc424242 f14"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-			家奶和鲁大八个字
-			<span class="glyphicon glyphicon-menu-down fc999"></span>
-		</p>
-		<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-			<li><a ui-sref="abstract.aside.myOrder" href="javascript:;">我的订单</a></li>
-			<li><a ui-sref="abstract.aside.love" href="javascript:;">我的收藏</a></li>
-			<li><a ui-sref="abstract.aside.manage" href="javascript:;">账户管理</a></li>
-			<li><a ui-sref="abstract.aside.record" href="javascript:;">消息设置</a></li>
-			<li><a ui-sref="abstract.aside.setUp" href="javascript:;">帐号设置</a></li>
-			<li><a href="javascript:;"><i class="glyphicon glyphicon-log-in"></i>&nbsp;退出</a></li>
+<div id="header">
+	<nav class="topbar">
+	  <div class="topbar-box">
+		<img class="logo poi" src="images/headerImg/zhujiaLogo.png" alt=""> 
+	    <div class="mt25 inb poi" ng-click="openUseExternalTemplate()">
+			<img class="ml20" src="images/headerImg/position.png" alt="">
+			<span class="f12 fc19b6ff">杭州市萧山区</span>	
+			<br>
+			<span class="fc999 ml24 f12">[切换]</span>  	
+	  	</div>
+		<ul class="nav nav-header">
+			<li><a ui-sref="main" href="javascript:;">首页</a></li>
+			<li><a class="active" ui-sref="abstract.aside.myOrder" href="javascript:;">我的订单</a></li>
+			<li><a href="javascript:;">下载APP</a></li>
 		</ul>
-	</div>
-	<img class="headPic" src="images/headerImg/headPic.png" alt="">
-  </div>
-</nav>
+		<div class="dropdown" >		
+			<p class="fc424242 f14"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				家奶和鲁大八个字
+				<span class="glyphicon glyphicon-menu-down fc999"></span>
+			</p>
+			<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				<li><a ui-sref="abstract.aside.myOrder" href="javascript:;">我的订单</a></li>
+				<li><a ui-sref="abstract.aside.love" href="javascript:;">我的收藏</a></li>
+				<li><a ui-sref="abstract.aside.manage" href="javascript:;">账户管理</a></li>
+				<li><a ui-sref="abstract.aside.record" href="javascript:;">消息设置</a></li>
+				<li><a ui-sref="abstract.aside.setUp" href="javascript:;">帐号设置</a></li>
+				<li><a href="javascript:;"><i class="glyphicon glyphicon-log-in"></i>&nbsp;退出</a></li>
+			</ul>
+		</div>
+		<img class="headPic" src="images/headerImg/headPic.png" alt="">
+	  </div>
+	</nav>
+</div>
 <script type="text/javascript">
 	// $(function(){
 	// 	$('.navbar-nav li a').click(function(){

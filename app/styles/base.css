@@ -1,3 +1,4 @@
+/* asideIndex css */	
 	#aside .asideBox{
 		width: 1140px;
 		margin: 0 auto;
@@ -48,6 +49,7 @@
 	}
 
 
+/* myOrderIndex css */
 	#myOrder .glyphicon{
 		cursor: pointer;
 	}
@@ -231,4 +233,63 @@
 	html.ngdialog-open,
 	body.ngdialog-open {
 	  overflow:visible ;
+	}
+
+
+/* headerIndex css */
+	#header .topbar {
+		border-bottom: 1px solid #ccc;
+	}	
+	#header .topbar-box {
+		width: 1100px;
+		height: 88px;
+		margin:0 auto;
+	}
+	#header .logo {
+		vertical-align: top;
+	}
+	#header .nav-header {
+		display: inline-block;
+	}
+	#header .nav-header > li{
+		/*height: inherit;*/
+		text-align: center;
+		margin-left: 50px;
+		float: left;
+	}
+	#header .nav-header > li > a{
+		height: inherit;
+		font-size: 18px;
+		outline: none;
+		color: #666;
+	}
+	#header .nav-header > li > a:focus,
+	#header .nav-header > li > a:hover,
+	#header .active{		
+		color: #19b6ff!important;
+		background-color: #fff;
+	}
+	#header .dropdown{
+		float:right;
+		margin-top:33px;
+		cursor: pointer;
+	}
+	#header .open > .dropdown-menu{
+		left: -30px;
+		background: url('../images/headerImg/dropdownBg.png') no-repeat;
+		background-position: top -1px left -4px;
+		background-size: 104% 102%;
+		border:none;
+		padding-top: 15px;
+	}
+	#header .dropdown-menu {
+		z-index:10000;
+	}
+	#header .dropdown-menu li{
+		height: 35px;
+	}
+	#header .headPic{
+		float:right;
+		margin-top:20px;
+		margin-right:10px;
 	}
