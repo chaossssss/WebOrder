@@ -1,7 +1,7 @@
 <style type="text/css">
-	::-webkit-input-placeholder { color: #cccccc; } 
-	:-moz-placeholder {/* Firefox 18- */ color: #cccccc; } 
-	::-moz-placeholder{/* Firefox 19+ */ color: #cccccc; } 
+/*	::-webkit-input-placeholder { color: #cccccc; } 
+	:-moz-placeholder {/* Firefox 18- *//* color: #cccccc; } 
+	::-moz-placeholder{/* Firefox 19+ *//* color: #cccccc; } 
 	:-ms-input-placeholder { color: #cccccc; }
 	.setUp{
 		position: relative;
@@ -16,10 +16,10 @@
 		border-radius: 4px;
 		background: #4dc0f6;
 		background: -webkit-linear-gradient(#67ceff, #3bb6ef); /* Safari 5.1 - 6.0 */
-	    background: -o-linear-gradient(#67ceff, #3bb6ef); /* Opera 11.1 - 12.0 */
-	    background: -moz-linear-gradient(#67ceff, #3bb6ef);* Firefox 3.6 - 15 */
+/*	    background: -o-linear-gradient(#67ceff, #3bb6ef); /* Opera 11.1 - 12.0 */
+/*	    background: -moz-linear-gradient(#67ceff, #3bb6ef);*//*Firefox 3.6 - 15 *//*
 	    background: linear-gradient(#67ceff, #3bb6ef); /* 标准的语法（必须放在最后） */
-	}
+/*	}
 	.imgBox{
 		float: left;
 		width: 132px;
@@ -117,32 +117,34 @@
 		margin: 18px 0 0 20px;
 		color: #999;
 	}
-	.fl{float: left;}
+	.fl{float: left;}*/
 </style>
-<div class="setUp">
-	<div class="setUpHead">
-		<div class="imgBox">
-			<img src="images/setUp/changepw.png" alt="">
-			<div class="changeBox" ng-click='openUseExternalTemplate()'><p>更换头像</p></div>
-		</div>
-		<p class="userName" ng-show='toggle'>家奶和鲁大订单十个字 <img ng-click='changeName()' src="images/setUp/changeName.png" alt=""></p>
-		<p class="changeName" ng-show='!toggle'><input type="text" name="" value="" placeholder="昵称最多十个字..."><span ng-click='changeName()'>保存</span></p>
+<div id="setUp">
+	<div class="setUp">
+		<div class="setUpHead">
+			<div class="imgBox">
+				<img src="images/setUp/changepw.png" alt="">
+				<div class="changeBox" ng-click='openUseExternalTemplate()'><p>更换头像</p></div>
+			</div>
+			<p class="userName" ng-show='toggle'>家奶和鲁大订单十个字 <img ng-click='changeName()' src="images/setUp/changeName.png" alt=""></p>
+			<p class="changeName" ng-show='!toggle'><input type="text" name="" value="" placeholder="昵称最多十个字..."><span ng-click='changeName()'>保存</span></p>
 
-		<img class="qrcode" src="images/setUp/changephone.png" alt="">
-		<img class="qrcodeBottom" src="images/setUp/myQrcode.png" alt="">
-	</div>
-	<div class="setUpBody fl">
-		<div class="phoneBox fl">
-			<img class="fl" src="images/setUp/changephone.png">
-			<p class="telephone fl">手机:<span>19151515215</span>
-			<span ui-sref="abstract.newPhone" class="changePhone">修改手机号</span></p>
-			<p class="fl telephonetext">您可以享有手机登录、信息提醒等功能</p>
+			<img class="qrcode" src="images/setUp/changephone.png" alt="">
+			<img class="qrcodeBottom" src="images/setUp/myQrcode.png" alt="">
 		</div>
-		<div class="passwordBox fl">
-			<img  class="fl" src="images/setUp/changepw.png">
-			<p class="telephone fl">登录密码:<span>19151515215</span>
-			<span ui-sref="abstract.newPassword" class="changePhone">修改登录密码</span></p>
-			<p class="fl telephonetext">保障您的账户安全</p>
+		<div class="setUpBody fl">
+			<div class="phoneBox fl">
+				<img class="fl" src="images/setUp/changephone.png">
+				<p class="telephone fl">手机:<span>19151515215</span>
+				<span ui-sref="abstract.newPhone" class="changePhone">修改手机号</span></p>
+				<p class="fl telephonetext">您可以享有手机登录、信息提醒等功能</p>
+			</div>
+			<div class="passwordBox fl">
+				<img  class="fl" src="images/setUp/changepw.png">
+				<p class="telephone fl">登录密码:<span>19151515215</span>
+				<span ui-sref="abstract.newPassword" class="changePhone">修改登录密码</span></p>
+				<p class="fl telephonetext">保障您的账户安全</p>
+			</div>
 		</div>
 	</div>
 </div>

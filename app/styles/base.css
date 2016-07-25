@@ -598,3 +598,215 @@ body .ngdialog-open {
   #popCharge .popDiv button{width:102px;height: 30px;line-height: 30px;position: absolute;border: none;bottom: 50px;color: #fff;border-radius: 4px;}
   #popCharge .popConfirm{left: 138px;background-color: #32beff;cursor: pointer;}
   #popCharge .popCancel{left: 360px;background-color: #cccccc;cursor: pointer;}
+
+/* setUpIndex css */
+	::-webkit-input-placeholder { color: #cccccc; } 
+	:-moz-placeholder {/* Firefox 18- */ color: #cccccc; } 
+	::-moz-placeholder{/* Firefox 19+ */ color: #cccccc; } 
+	:-ms-input-placeholder { color: #cccccc; }
+	#setUp .setUp{
+		position: relative;
+		width: 940px;
+		margin: 0 auto;
+		top:-260px;
+		left: 80px;
+	}
+	#setUp .setUpHead{
+		width: 100%;
+		height: 140px;
+		border-radius: 4px;
+		background: #4dc0f6;
+		background: -webkit-linear-gradient(#67ceff, #3bb6ef); /* Safari 5.1 - 6.0 */
+	    background: -o-linear-gradient(#67ceff, #3bb6ef); /* Opera 11.1 - 12.0 */
+	    background: -moz-linear-gradient(#67ceff, #3bb6ef);* Firefox 3.6 - 15 */
+	    background: linear-gradient(#67ceff, #3bb6ef); /* 标准的语法（必须放在最后） */
+	}
+	#setUp .imgBox{
+		float: left;
+		width: 132px;
+		height: 132px;
+	    background: #edf2f4;
+	    border-radius: 4px;
+	    margin-top: 48px;
+	    margin-left: 30px;
+	    position: relative;
+	}
+	#setUp .imgBox img{
+		width: 118px;
+		height: 118px;
+		border:1px solid #ccc;
+		border-radius: 4px;
+		margin:6px 0 0 6px;
+	}
+	#setUp .changeBox{
+		width: 118px;
+		height: 30px;
+		background: #fff;
+		position: absolute;
+		left: 6px;
+		bottom: 9px;
+		opacity: 0.5;
+		text-align: center;
+		line-height: 30px;
+		cursor: pointer;
+	}
+	#setUp .userName{
+		position: absolute;
+		left: 180px;
+		bottom: 0;
+		font-size: 20px;
+		color: #fff;
+	}
+	#setUp .userName img{
+		cursor: pointer;
+		vertical-align: -3px;
+	}
+	#setUp .changeName{
+		position: absolute;
+		left: 180px;
+		bottom: 0;
+		color: #fff;
+		cursor: pointer;
+	}
+	#setUp .changeName input{
+		width: 214px;
+		height: 36px;
+		padding-left: 5px;
+		color: #000;
+	}
+	#setUp .changeName span{
+		margin-left: 5px;
+		vertical-align: text-top;
+	}
+	#setUp .qrcode{
+		width: 72px;
+		height: 72px;
+		border-radius: 4px;
+		position: absolute;
+		right: 48px;
+		top: 22px;
+	}
+	#setUp .qrcodeBottom{
+		position: absolute;
+		right: 40px;
+		top: 95px;
+	}
+	#setUp .setUpBody{
+		width: 100%;
+	}
+	#setUp .phoneBox{
+		width: 50%;
+	}
+	#setUp .phoneBox img{
+		margin:25px 0 0 50px;
+	}
+	#setUp .telephone{
+		margin: 25px 0 0 20px
+	}
+	#setUp .passwordBox{
+		width: 50%;
+	}
+	#setUp .passwordBox img{
+		margin:25px 0 0 50px;
+	}
+	#setUp .changePhone{
+		margin-left: 10px;
+		cursor: pointer;
+		color: #32beff;
+	}
+	#setUp .telephonetext{
+		margin: 18px 0 0 20px;
+		color: #999;
+	}
+	.fl{float: left;}
+
+
+/* newPassword css */
+	#newPassword .newPassword {
+		margin-top: 167px;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		min-width: 768px;
+	}
+	#newPassword .stepBox {
+		position: relative;	
+		display: inline-block;
+		width: 88px
+		height:55px;
+		padding-top: 36px;
+	}
+	#newPassword .stepBox > img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -15px; 
+	}
+	#newPassword .stepBox > span {
+		display: inline-block;
+		font-size: 12px;
+		color: #424242;
+		margin-top: 5px;
+	}
+	#newPassword .newPassword .line {
+		display: inline-block;
+		border-top: 1px solid #32beff;
+		width: 250px;
+		margin-bottom: 39px; 
+	}
+	#newPassword .newPassword > form {
+		margin-top: 50px;
+	}
+	#newPassword .newPassword > form > .group {
+		margin-top: 10px;
+	}
+	#newPassword .newPassword > form > .group > label {
+		color: #999;
+		font-size: 14px;
+	}
+	#newPassword .newPassword > form > .group > input {
+		border: 1px solid #999;
+		width: 258px;
+		height: 38px;
+		border-top-width: 2px;
+		padding-left: 10px;
+		color: #424242;
+	}
+	#newPassword .newPassword > form > .group > input:focus{
+		outline:  0;
+	}
+	#newPassword .newPassword > form > .button {
+		margin-top: 60px;
+	} 
+	#newPassword .newPassword > form > .button > p {
+		margin-left: 55px;
+		font-size: 12px;
+		color:#f50a0a;
+	}
+	#newPassword .newPassword > form > .button > .btn{
+		width: 110px;
+		background-color: #32beff;
+		font-size: 16px;
+		color:#fff;
+	} 
+	.f12 {
+		font-size: 12px;
+	}
+	.f24 {
+		font-size: 24px;
+	}
+	.ml25 {
+		margin-left: 25px;
+	}
+	#newPassword .PsdSuccess {
+		margin-top: 
+	}
+	#newPassword .newPassword .setSuccess > p {
+		margin-top: 29px;
+		font-size: 16px;
+		color: #424242;
+	}
+	#newPassword .newPassword .setSuccess > span {
+		color: #19b6ff;
+		font-size: 12px;
+	}
