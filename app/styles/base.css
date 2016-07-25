@@ -1577,3 +1577,220 @@ body .ngdialog-open {
 		background-color: #32beff;
 		margin-right: 100px;
 	}
+
+
+/* OrderBossIndex */
+	#bossOrder label {
+		font-style: normal;
+	}
+	#bossOrder span {
+		font-style: normal;
+	}
+	#bossOrder .btn {
+		font-style: normal;
+	}
+	#bossOrder #order {
+		position: relative;
+	}
+	#bossOrder .orderBox {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		top: 118px;
+		width: 910px;
+		height: 100%;
+	}
+	#bossOrder .orderBox .header {
+		height: 165px;
+		border: 3px solid rgb(235,235,235);
+		border-radius: 6px;
+		padding: 20px 30px;
+	}
+	#bossOrder #order .headerBox {
+		padding-left: 137px;
+		color: #999;
+	}
+	#bossOrder #order .headerBox img {
+		position: absolute;
+		top: 20px;
+		left: 30px;
+		width: 120px;
+		height: 120px;
+		border: 1px solid #ccc;
+	}
+	#bossOrder #order .headerBox p {
+		margin-bottom: 0;
+	}
+	#bossOrder #order .headerBox > p {
+		font-weight: bold;
+		font-size: 18px;
+		margin-bottom: 7px;
+		line-height: 18px;
+		color: rgb(66,66,66);
+	}
+	#bossOrder #order .headerBox > span {	
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	#bossOrder #order .headerFooter {
+		margin-top: 30px;
+	}
+	#bossOrder .headerFooter i {
+		margin: 0;
+	}
+	#bossOrder #order .headerFooter  div {
+		display: inline-block;
+	}
+	#bossOrder #order .headerFooter  div:not(:last-child) {
+		border-right:1px solid #ccc; 
+	}
+	#bossOrder .headerFooter > div:first-child {
+		width: 300px;
+	}
+	#bossOrder #order .headerFooter .btn {
+		width: 88px;
+		height: 20px;
+		padding: 0 5px;
+		font-size: 12px;
+		background-color: #32beff;
+	}
+	#bossOrder .headerFooter > div:nth-child(2) {
+		width: 205px;
+		text-align: center;
+	}
+	#bossOrder .headerFooter > div:last-child {
+		text-align: center;
+		padding-left: 40px;
+	}
+	/*温馨提醒*/
+	#bossOrder .reminder {
+		margin-top: 30px;
+		color: #999;
+	}
+	#bossOrder .reminder > span {
+		font-size: 16px;
+		color: rgb(25,182,255);
+	}
+	#bossOrder .reminder > p {
+		border-top: 1px solid rgb(25,182,255);
+		height: 125px;
+	}
+	/*服务内容*/
+	#bossOrder .serviceBox {
+		margin-top: 30px;
+		color: #999;
+	}
+	#bossOrder .serviceBox > span {
+		font-size: 16px;
+		color: rgb(25,182,255);
+	}
+	#bossOrder .serviceClass {
+		border-top:1px solid rgb(25,182,255);
+	}
+	#bossOrder .inb {
+		display: inline-block;
+	}
+	#bossOrder .serviceClass > div > div {
+		margin-left: 30px;
+	}
+	#bossOrder .serviceAmount {
+		margin-top: 20px;
+	}
+	#bossOrder .serviceAmount > div > input {
+		width: 98px;
+		height: 30px;
+		margin-left: 30px;
+	}
+	#bossOrder .serviceBox textarea {
+		width: 100%;
+		margin-top: 20px;
+		height: 130px;
+		outline: none;
+	}
+	#bossOrder .serviceBox > div:last-child > img:not(:first-child) {
+		margin-left: 8px;
+	}
+	/*支付方式*/
+	#bossOrder .paymentBox {
+		margin-top: 38px;
+	}
+	#bossOrder .paymentBox > span {
+		font-size: 16px;
+		color: rgb(25,182,255);
+	}
+	#bossOrder .payment {
+		border-top:1px solid rgb(25,182,255);
+		padding: 30px 20px;
+		color: #999;
+	}
+	#bossOrder .payment > div:first-child > i {
+		color: rgb(255,136,0);
+	}
+	#bossOrder .black {
+		color: rgb(66,66,66);
+	}
+	#bossOrder .payment > div:nth-child(2) {
+		margin-top: 20px;
+		margin-left: 35px;
+	}
+	#bossOrder .payment > div:nth-child(2) > input {
+		color: rgb(58,193,255);
+		border-color: rgb(58,193,255);
+		outline: none;
+	}
+	#bossOrder .payment > div:nth-child(3) {
+		margin-top: 25px;
+	}
+	#bossOrder .orange {
+		color: rgb(255,136,0);
+	}
+	#bossOrder .roseRed {
+		color: rgb(244,78,78);
+	}
+	/*剩余金额支付方式*/
+	#bossOrder .payFor {
+		margin-top: 30px;
+		border-top: 5px solid rgb(204,204,204);
+	}
+	#bossOrder .payFor > span {
+		margin-top: 15px;
+	}
+	#bossOrder .payFor > div {
+		margin-left: 35px;
+		border: 1px solid #ccc;
+		height: 50px;
+		width: 798px;
+		border-radius: 4px;
+		margin-top: 10px;
+		font-size: 20px;
+	}
+	#bossOrder .payFor > div > input {
+		display: inline-block;
+		float: left;
+		margin:18px 10px 18px 10px;
+		outline: none;
+	}
+	#bossOrder .payFor > div > i {
+		display: inline-block;
+		margin-top: 13px;
+		margin-bottom: 13px;
+		margin-right: 0;
+	}
+	#bossOrder .payFor > div > label {
+		display: inline-block;
+		margin-top: 11px;
+		margin-bottom: 11px;
+	}
+	/*按钮*/
+	#bossOrder .btnFooter {
+		text-align: center;
+	}
+	#bossOrder .btnFooter .btn {	
+		width: 118px;
+		height: 40px;
+		font-size: 20px;
+	}
+	#bossOrder .btnFooter .btn:first-child {
+		background-color: #32beff;
+		margin-right: 100px;
+	}
