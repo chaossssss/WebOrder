@@ -937,3 +937,643 @@ body .ngdialog-open {
 		color: #19b6ff;
 		font-size: 12px;
 	}
+
+
+/* workerIndex css */
+	.cen{margin: 0 auto;}
+	.fl{float: left;}
+	.fr{float:right;}
+	.f12{font-size: 12px;}
+	#worker .workerBox{width: 1130px;margin-top:10px!important; }
+	#worker .headerBox{width: 100%;height: 510px;}
+	#worker .headerPic{width: 318px;height: 318px;border:1px solid #ccc;margin-top: 30px;}
+	#worker .headerPic img{width: 100%;height: 100;}
+	#worker .headerDetail{width: 760px;height: 318px;margin:30px 0 0 20px;}
+	#worker .userNameBox{width: 100%;}
+	#worker p.userName{font-size: 18px;color: #424242;font-weight: bold;margin-right: 20px;}
+	#worker p.userInfo{border-right:1px solid #999;color: #999;font-size: 12px;padding: 0 10px;margin-top: 3px;}
+	#worker .shoreBox{width: 100%;height: 56px;}
+	#worker .shoreBox p{margin-top: 8px;cursor: pointer;}
+	#worker .shoreBox p:nth-child(1){margin-left: 217px;margin-right: 10px;}
+	#worker .headerbottom{width: 100%;height: 86px;border:1px solid #ccc;border-radius: 4px;}
+	#worker .headerbottom p{color: #32beff;margin: 8px 0 0 8px;}
+	#worker .headerbottom img{width: 30px;height: 30px;border:1px solid #ccc;border-radius: 4px;cursor: pointer;}
+	#worker .renzhenBox{position: relative;margin-top: 15px;margin-left: 8px; }
+	#worker .talkBox{width: 66px;height: 27px;background: url('../images/worker/talkBg.png');position: absolute;left: 10px;top: 33px;font-size: 12px;text-align:center;line-height: 34px;}
+	#worker .workerService{width: 100%;margin-top: 10px;}
+	#worker .workerService_l{border-right:1px solid #e5e5e5;padding-right: 25px;}
+	#worker p.serviceItem{color: #808080;margin-top: 5px;}
+	#worker .pingfen{margin-top: 22px;}
+	#worker p.pingfen span{padding:0 10px 0 2px;vertical-align: -2px;color: #999;}
+	#worker .workerService_r{padding-left: 30px;}
+	#worker p.rankBox{color: #808080;margin-bottom: 22px;margin-top: 5px;}
+	#worker p.rankBox span{}
+	#worker p.rankBox img{margin: 0 2px 0 8px;vertical-align: 0px;}
+	#worker .prince{width: 256px;height: 43px;border-radius: 4px;background: #32beff;}
+	#worker p.princetext{font-size: 14px;color: #fff; margin: 10px 0 0 20px;border-right: 1px solid #fff;padding-right: 10px;}
+	#worker p.princetext span{font-size: 18px;}
+	#worker .prince input{border:none;background: #32beff;color: #fff;font-size: 20px;outline: none;margin: 6px 0 0 36px;}
+	#worker p.telephone{color: #808080;margin: 10px 0 0 25px;}
+	#worker p.telephone span{background: #808080;color: #fff;padding: 5px;border-radius: 4px;cursor: pointer;}
+	#worker .slideBox{width: 100%;height: 119px;/*background: red;*/margin-top: 25px;}
+	/* 效果CSS开始 */
+	#worker .slideBox #zsgun{position:relative;height:inherit; width:100%; margin:auto;overflow: hidden;}
+	#worker .slideBox a.hScrollPane_leftarrow{top:0px; cursor:pointer; display:block; width:14px; height:119px; background:url('../images/worker/left.png') no-repeat;left:0px; position:absolute;border:1px solid #ccc;}
+	
+	#worker .slideBox a.hScrollPane_rightarrow{ top:0px; cursor:pointer; display:block; width:14px; height:119px; background:url('../images/worker/right.png') no-repeat; right:0px; position:absolute;border:1px solid #ccc;}
+	#worker .slideBox #gundiv{ width:97%; position:relative; margin-left:-12px; padding-top:22px; float:left; display:inline;height:119px; overflow:hidden;}
+	#worker .slideBox #gundiv ul {height:117px;position: absolute; width:10000px;bottom:-8px;}
+	#worker .slideBox #gundiv li{ width:117; height:117; overflow:hidden; float:left; margin-right:17px;position:relative; border:1px solid #ccc;}
+	
+	/* 效果CSS结束 */
+
+	.contentBox{width: 100%;}
+	.contentBox .content{width: 850px;}
+	.contentBox .map{width: 300px;}
+	.contentFirst{position: relative;}
+	.workerTab{width: 100%;height: 50px;border-bottom:1px solid #32beff;}
+	.workerUl{margin: 0;padding:0;list-style: none;}
+	.workerUl li{float: left;width: 180px;height: 50px;text-align: center;line-height: 50px;cursor: pointer;color: #000;font-size: 16px;}
+	.active1{background-color: #32beff;color: #fff!important;}
+	/*评论上图样式*/
+	.contentFirst .popDiv{height: 300px!important;width: 850px!important;background:#f9fbf6;margin-top:15px;}
+	.popDiv .headPic{width:59px;height:59px;border:1px solid #ccc;position:absolute;top:4px;left:20px;}
+	.popDivuserName{width:59px;position:absolute;top:85px;left:22px;color:#32beff;}
+	.contentFirst .popDiv button{width:102px;height: 36px;line-height: 36px;border: none;color: #fff;border-radius: 4px;}
+	.contentFirst .popConfirm{background-color: #32beff;cursor: pointer;margin:160px 20px 0 0;}
+  	.contentFirst .setScore ul{list-style: none;position: relative;height: 20px;width: 170px; top:23px;left:100px;}
+  	.contentFirst .setScore ul li{width: 23px;height: 16px; float: left;background: url('../images/myOrder/star.png') no-repeat 0 -16px;}
+  	.contentFirst .star{background: url('../images/myOrder/star.png') no-repeat 0 0px!important;}
+  	.contentFirst .setScore span:nth-child(1){position:absolute;top:20px;left: 100px; }
+  	.contentFirst .content-title{position:absolute;top:100px;left: 50px; }
+  	.contentFirst .setScore p{position:absolute;top:20px;left: 260px;color: #fd718e; }
+  	.contentFirst .content-area{width:750px;height:120px;position: absolute;top: 55px;left:96px; padding: 10px;resize: none; font: none!important;line-height: normal;overflow: visible;outline: none;}
+
+  	.contentFirst #imgesFilesAuto{width:auto;height:98px; margin:160px 0 0 96px;float:left;}
+  	.contentFirst #imagesBox{width:auto;height:98px;float:left;cursor: pointer;}
+  	.contentFirst #imagesBox img{width:98px;height:98px;float:left;cursor: pointer;border:1px solid #ccc;margin-right: 6px;}
+  	.contentFirst #imgesFiles{width:98px;height:98px;float:left;position:relative;border:1px dashed #ccc;cursor: pointer;}
+  	.contentFirst #imgesFiles span{position:absolute;font-size:80px;display:block;width:98px;text-align:center;height:98px;color:#CCC;cursor: pointer;line-height: 87px;font-weight: lighter;}
+  	.popDiv1{background:#f9fbf6;}
+  	.contentBody{overflow:hidden;border-bottom:1px solid #ccc;padding:20px 0 30px 0;}
+  	.contentBodyLeft{width:80px;}
+  	.contentBodyLeft .headPic1{width:59px;height:59px;border:1px solid #ccc;margin-left:20px;}
+  	.contentBodyLeft .popDivuserName1{width:59px;color:#32beff;margin-left:20px;}
+  	.contentBodyRight{width:770px;padding-left:20px;}
+  	.contentBodyRight .setScore1 ul{list-style: none;height: 20px;width: 170px; margin:3px 0 0 -42px;}
+  	.contentBodyRight .setScore1 ul li{width: 23px;height: 16px; float: left;background: url('../images/myOrder/star.png') no-repeat 0 0px;}
+  	.contentBodyRight .setScore1 p{color: #fd718e; padding-right:60px;}
+  	.contentBodyRight .setScore1 p span{color:#999;}
+  	.contentBodyRight .reply{width:100%;background:#f5f5f5;padding:20px;}
+  	.contentBodyRight .reply p span{color:#52a5cc;}
+  	.contentBodyRight .replayPic{}
+  	.workerInfo{width:850px;}
+  	.workerInfo .biaoge{width:850px;margin-top:30px;}
+  	.workerInfo .detailInfo h4{border-bottom:5px solid #a6e3ff;padding-bottom:5px;}
+  	.workerInfo .detailInfo p{padding:5px 0 5px 0;border-bottom:1px solid #f0f0f0;font-weight:bold;}
+  	.workerInfo .detailInfo p span{font-weight:normal;}
+
+
+
+/* bossIndex css */
+	.cen{margin: 0 auto;}
+	.fl{float: left;}
+	.fr{float:right;}
+	.f12{font-size: 12px;}
+	#bossIndex .workerBox{width: 1130px;margin-top:88px!important; }
+	#bossIndex .headerBox{width: 100%;height: 510px;}
+	#bossIndex .headerPic{width: 318px;height: 318px;border:1px solid #ccc;margin-top: 30px;}
+	#bossIndex .headerPic img{width: 100%;height: 100;}
+	#bossIndex .headerDetail{width: 760px;height: 318px;margin:30px 0 0 20px;}
+	#bossIndex .userNameBox{width: 100%;}
+	#bossIndex p.userName{font-size: 18px;color: #424242;font-weight: bold;margin-right: 20px;}
+	#bossIndex p.userInfo{border-right:1px solid #999;color: #999;font-size: 12px;padding: 0 10px;margin-top: 3px;}
+	#bossIndex .shoreBox{width: 100%;height: 56px;}
+	#bossIndex .shoreBox p{margin-top: 8px;cursor: pointer;}
+	#bossIndex .shoreBox p:nth-child(1){margin-left: 217px;margin-right: 10px;}
+	#bossIndex .headerbottom{width: 100%;height: 86px;border:1px solid #ccc;border-radius: 4px;}
+	#bossIndex .headerbottom p{color: #32beff;margin: 8px 0 0 8px;}
+	#bossIndex .headerbottom img{width: 30px;height: 30px;border:1px solid #ccc;border-radius: 4px;cursor: pointer;}
+	#bossIndex .renzhenBox{position: relative;margin-top: 15px;margin-left: 8px; }
+	#bossIndex .talkBox{width: 66px;height: 27px;background: url('../images/worker/talkBg.png');position: absolute;left: 10px;top: 33px;font-size: 12px;text-align:center;line-height: 34px;}
+	#bossIndex .workerService{width: 100%;margin-top: 10px;}
+	#bossIndex .workerService_l{border-right:1px solid #e5e5e5;padding-right: 25px;}
+	#bossIndex p.serviceItem{color: #808080;margin-top: 5px;}
+	#bossIndex .pingfen{margin-top: 22px;}
+	#bossIndex p.pingfen span{padding:0 10px 0 2px;vertical-align: -2px;color: #999;}
+	#bossIndex .workerService_r{padding-left: 30px;}
+	#bossIndex p.rankBox{color: #808080;margin-bottom: 22px;margin-top: 5px;}
+	#bossIndex p.rankBox span{}
+	#bossIndex p.rankBox img{margin: 0 2px 0 8px;vertical-align: 0px;}
+	#bossIndex .prince{width: 147px;height: 43px;border-radius: 4px;background: #32beff;color:#fff;font-size:18px;line-height:43px;text-align:center;cursor:pointer;}
+	#bossIndex p.princetext{font-size: 14px;color: #fff; margin: 10px 0 0 20px;border-right: 1px solid #fff;padding-right: 10px;}
+	#bossIndex p.princetext span{font-size: 18px;}
+	
+	#bossIndex p.telephone{color: #808080;margin: 10px 0 0 25px;}
+	#bossIndex p.telephone span{background: #808080;color: #fff;padding: 5px;border-radius: 4px;cursor: pointer;}
+	#bossIndex .slideBox{width: 100%;height: 119px;/*background: red;*/margin-top: 25px;}
+	/* 效果CSS开始 */
+	#bossIndex .slideBox #zsgun{position:relative;height:inherit; width:100%; margin:auto;overflow: hidden;}
+	#bossIndex .slideBox a.hScrollPane_leftarrow{top:0px; cursor:pointer; display:block; width:14px; height:119px; background:url('../images/worker/left.png') no-repeat;left:0px; position:absolute;border:1px solid #ccc;}
+	
+	#bossIndex .slideBox a.hScrollPane_rightarrow{ top:0px; cursor:pointer; display:block; width:14px; height:119px; background:url('../images/worker/right.png') no-repeat; right:0px; position:absolute;border:1px solid #ccc;}
+	#bossIndex .slideBox #gundiv{ width:97%; position:relative; margin-left:-12px; padding-top:22px; float:left; display:inline;height:119px; overflow:hidden;}
+	#bossIndex .slideBox #gundiv ul {height:117px;position: absolute; width:10000px;bottom:-8px;}
+	#bossIndex .slideBox #gundiv li{ width:117; height:117; overflow:hidden; float:left; margin-right:17px;position:relative; border:1px solid #ccc;}
+	
+	/* 效果CSS结束 */
+
+	#bossIndex .contentBox{width: 100%;}
+	#bossIndex .contentBox .content{width: 850px;}
+	#bossIndex .contentBox .map{width: 300px;}
+	#bossIndex .contentBox .serviceControduce{width:850;}
+	#bossIndex .serviceControduce .services{width:31.8%;height:300px;margin:15px 6px 0 6px;border-bottom:1px solid #ccc;}
+	#bossIndex .serviceControduce .services img{width:100%;height:150px;border:1px solid #ccc;}
+	#bossIndex .serviceControduce .services p:nth-child(2){margin-top:10px;font-size:16px;}
+	#bossIndex .serviceControduce .services p:nth-child(3){color:#999;}
+	#bossIndex .serviceControduce .services p:nth-child(4){color:#32beff;}
+	#bossIndex .serviceControduce .services p:nth-child(4) span{font-size:22px;}
+	#bossIndex .contentFirst{position: relative;}
+	#bossIndex .workerTab{width: 100%;height: 50px;border-bottom:1px solid #32beff;}
+	#bossIndex .workerUl{margin: 0;padding:0;list-style: none;}
+	#bossIndex .workerUl li{float: left;width: 180px;height: 50px;text-align: center;line-height: 50px;cursor: pointer;color: #000;font-size: 16px;}
+	#bossIndex .active1{background-color: #32beff;color: #fff!important;}
+	/*评论上图样式*/
+	#bossIndex .contentFirst .popDiv{height: 300px!important;width: 850px!important;background:#f9fbf6;margin-top:15px;}
+	#bossIndex .popDiv .headPic{width:59px;height:59px;border:1px solid #ccc;position:absolute;top:4px;left:20px;}
+	#bossIndex .popDivuserName{width:59px;position:absolute;top:85px;left:22px;color:#32beff;}
+	#bossIndex .contentFirst .popDiv button{width:102px;height: 36px;line-height: 36px;border: none;color: #fff;border-radius: 4px;}
+	#bossIndex .contentFirst .popConfirm{background-color: #32beff;cursor: pointer;margin:160px 20px 0 0;}
+  	#bossIndex .contentFirst .setScore ul{list-style: none;position: relative;height: 20px;width: 170px; top:23px;left:100px;}
+  	#bossIndex .contentFirst .setScore ul li{width: 23px;height: 16px; float: left;background: url('../images/myOrder/star.png') no-repeat 0 -16px;}
+  	#bossIndex .contentFirst .star{background: url('../images/myOrder/star.png') no-repeat 0 0px!important;}
+  	#bossIndex .contentFirst .setScore span:nth-child(1){position:absolute;top:20px;left: 100px; }
+  	#bossIndex .contentFirst .content-title{position:absolute;top:100px;left: 50px; }
+  	#bossIndex .contentFirst .setScore p{position:absolute;top:20px;left: 260px;color: #fd718e; }
+  	#bossIndex .contentFirst .content-area{width:750px;height:120px;position: absolute;top: 55px;left:96px; padding: 10px;resize: none; font: none!important;line-height: normal;overflow: visible;outline: none;}
+
+  	#bossIndex .contentFirst #imgesFilesAuto{width:auto;height:98px; margin:160px 0 0 96px;float:left;}
+  	#bossIndex .contentFirst #imagesBox{width:auto;height:98px;float:left;cursor: pointer;}
+  	#bossIndex .contentFirst #imagesBox img{width:98px;height:98px;float:left;cursor: pointer;border:1px solid #ccc;margin-right: 6px;}
+  	#bossIndex .contentFirst #imgesFiles{width:98px;height:98px;float:left;position:relative;border:1px dashed #ccc;cursor: pointer;}
+  	#bossIndex .contentFirst #imgesFiles span{position:absolute;font-size:80px;display:block;width:98px;text-align:center;height:98px;color:#CCC;cursor: pointer;line-height: 87px;font-weight: lighter;}
+  	#bossIndex .popDiv1{background:#f9fbf6;}
+  	#bossIndex .contentBody{overflow:hidden;border-bottom:1px solid #ccc;padding:20px 0 30px 0;}
+  	#bossIndex .contentBodyLeft{width:80px;}
+  	#bossIndex .contentBodyLeft .headPic1{width:59px;height:59px;border:1px solid #ccc;margin-left:20px;}
+  	#bossIndex .contentBodyLeft .popDivuserName1{width:59px;color:#32beff;margin-left:20px;}
+  	#bossIndex .contentBodyRight{width:770px;padding-left:20px;}
+  	#bossIndex .contentBodyRight .setScore1 ul{list-style: none;height: 20px;width: 170px; margin:3px 0 0 -42px;}
+  	#bossIndex .contentBodyRight .setScore1 ul li{width: 23px;height: 16px; float: left;background: url('../images/myOrder/star.png') no-repeat 0 0px;}
+  	#bossIndex .contentBodyRight .setScore1 p{color: #fd718e; padding-right:60px;}
+  	#bossIndex .contentBodyRight .setScore1 p span{color:#999;}
+  	#bossIndex .contentBodyRight .reply{width:100%;background:#f5f5f5;padding:20px;}
+  	#bossIndex .contentBodyRight .reply p span{color:#52a5cc;}
+  	#bossIndex .contentBodyRight .replayPic{}
+  	#bossIndex .workerInfo{width:850px;}
+  	#bossIndex .workerInfo .biaoge{width:850px;margin-top:30px;}
+  	#bossIndex .workerInfo .detailInfo h4{border-bottom:5px solid #a6e3ff;padding-bottom:5px;}
+  	#bossIndex .workerInfo .detailInfo p{padding:5px 0 5px 0;border-bottom:1px solid #f0f0f0;font-weight:bold;}
+  	#bossIndex .workerInfo .detailInfo p span{font-weight:normal;}
+
+
+  /* bossDetail css */
+	#bossDetail #boss {
+		position: relative;	
+	}
+	#bossDetail .bossBox {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		top: 118px;
+		width: 1100px;
+		height: 100%;
+	}
+	#bossDetail .leftBox {
+		float: left;
+	}
+	#bossDetail .titleLeft {
+		position: relative;
+		padding-left: 320px;
+		width: 768px;
+		height: 212px;
+	}
+	#bossDetail .titleLeft img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 300px;
+		height: 182px;
+	}
+	#bossDetail .titleLeft > span {
+		font-size: 24px;
+	}
+	#bossDetail .titleLeft p {
+		font-size: 12px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	#bossDetail .titleLeft .btn {
+		position: absolute;
+		bottom: 30px;
+		width: 256px;
+		height: 42px;
+		background-color: rgb(50,190,255);
+		text-align: left;
+	}
+	#bossDetail .titleLeft .btn > span:first-child {
+		display: inline-block;
+		line-height: 16px;
+		font-size: 16px;
+		border-right:1px solid #fff;
+		padding-right: 16px;
+	}
+	#bossDetail .titleLeft .btn > span:last-child {
+		display: inline-block;
+		line-height: 16px;
+		font-size: 16px;
+		padding-left: 45px; 
+	}	
+	#bossDetail .titleLeft .btn > span:first-child::before {
+		content: "¥ ";
+		font-size: 14px;
+		padding-left: 5px;
+	}
+	#bossDetail .titleLeft .btn > span:first-child::after {
+		content: "/小时";
+		font-size: 14px;
+	}
+	#bossDetail .admitInfo {
+		border: 1px solid #ebebeb;
+		border-radius: 4px;
+		width: 768px;
+		max-height: 128px;
+		padding: 10px;
+		color: rgb(92,199,255);
+	}
+
+	#bossDetail .tab-content .tab-panel > img{
+		
+	}
+	#bossDetail .rightBox {
+		float: right;
+	}
+	#bossDetail .titleRight {
+		position: relative;
+		padding:20px 20px 20px 120px;
+		width: 298px;
+		height: 298px;
+		border:1px solid #ccc;
+	}
+	#bossDetail .titleRight > div:first-child > img {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		width: 88px;
+		height: 88px;
+	}
+	#bossDetail .titleRight > div:first-child > span {
+		color: #424242;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: bold;
+	}
+	#bossDetail .titleRight > div:first-child > p {
+		color: #999;
+		font-size: 12px;
+		line-height: 20px;
+		margin-top: 16px;
+	}
+	#bossDetail .titleRight > div:last-child {
+		position: absolute;
+		top: 158px;
+		left: 20px;
+	}
+	#bossDetail .titleRight > div:last-child  div {
+		text-align: center;
+		width: 99px;
+		display: inline-block;
+	}
+	#bossDetail .titleRight > div:last-child  > div > span:first-child {
+		color:rgb(25,182,255);
+		font-size: 26px;
+	}
+	#bossDetail .titleRight > div:last-child  > div > p {
+		color: #424242;
+		font-size: 14px;
+	}
+	/*地图样式*/
+	#bossDetail .mapRight {
+		margin-top: 60px;
+	}
+	#bossDetail .mapRight > p:first-child {
+		border-bottom: 1px solid #ccc;
+		font-size: 20px;
+		margin-bottom: 20px;
+		padding-bottom: 10px;
+	}
+	#bossDetail .mapRight > p:nth-child(3) {
+		color: #19b6ff;
+		font-size: 14px;
+	}
+	#bossDetail .mapRight > p:nth-child(4),
+	#bossDetail .mapRight > p:nth-child(5) {
+		color:#808080;
+		font-size: 12px;
+	}
+	#bossDetail .mapRight > p:nth-child(4) > span,
+	#bossDetail .mapRight > p:nth-child(5) > span {
+		color: #424242;
+		font-size: 12px;
+	}
+	#bossDetail #bossmap {
+		border: 1px solid #ccc;
+		margin-bottom: 20px;
+	}
+	.ml-20 {
+		margin-left: -20px;
+	}
+	.mr-20 {
+		margin-right: -20px;
+	}
+	.mr2 {
+		margin-right: 2px;
+	}
+	#bossDetail .lookBigMap {
+		width: 100%;
+		height:50px;
+		background-color: rgba(242,247,240,0.9);
+		text-align: center;
+		color: rgb(179,179,179);
+		padding-top: 8px;
+	}
+	/*导航栏内容*/
+	#bossDetail .tab-content > .tab-panel:first-child {
+		margin-top: 30px;
+	}
+	#bossDetail .tab-content > .tab-panel:last-child {
+		margin-top: 10px;
+	}
+	#bossDetail .tab-panel > img {
+		width: 770px;
+		height: 300px;
+	}
+	#bossDetail .bossActive {
+		background-color: #32beff;
+		color: #fff!important;
+	}
+	.fl {
+		float: left;
+	}
+	.fr {
+		float: right;
+	}
+	/*用户评价*/
+	#bossDetail .contentFirst{position: relative;}
+	#bossDetail .contentFirst .popDiv{height: 300px!important;width: 770px!important;background:#f9fbf6;}
+	#bossDetail .popDiv .headPic{width:59px;height:59px;border:1px solid #ccc;position:absolute;}
+	#bossDetail .popDivuserName{width:59px;position:absolute;top:85px;color:#32beff;}
+	#bossDetail .contentFirst .popDiv button{width:102px;height: 36px;line-height: 36px;border: none;color: #fff;border-radius: 4px;}
+	#bossDetail .contentFirst .popConfirm{background-color: #32beff;cursor: pointer;margin:160px 20px 0 0;}
+  	#bossDetail .contentFirst .setScore ul{list-style: none;position: relative;height: 20px;width: 170px; top:23px;left:73px;}
+  	#bossDetail .contentFirst .setScore ul li{width: 23px;height: 16px; float: left;background: url('../images/myOrder/star.png') no-repeat 0 -16px;}
+  	#bossDetail .contentFirst .star{background: url('../images/myOrder/star.png') no-repeat 0 0px!important;}
+  	#bossDetail .contentFirst .setScore span:nth-child(1){position:absolute;top:20px;left: 73px; }
+  	#bossDetail .contentFirst .content-title{position:absolute;top:100px;left: 50px; }
+  	#bossDetail .contentFirst .setScore p{position:absolute;top:20px;left: 237px;color: #fd718e; }
+  	#bossDetail .contentFirst .content-area{width:698px;height:120px;position: absolute;top: 55px;left:73px; padding: 10px;resize: none; font: none!important;line-height: normal;overflow: visible;outline: none;}
+
+  	#bossDetail .contentFirst #imgesFilesAuto{width:auto;height:98px; margin:160px 0 0 73px;float:left;}
+  	#bossDetail .contentFirst #imagesBox{width:auto;height:98px;float:left;cursor: pointer;}
+  	#bossDetail .contentFirst #imagesBox img{width:98px;height:98px;float:left;cursor: pointer;border:1px solid #ccc;margin-right: 6px;}
+  	#bossDetail .contentFirst #imgesFiles{width:98px;height:98px;float:left;position:relative;border:1px dashed #ccc;cursor: pointer;}
+  	#bossDetail .contentFirst #imgesFiles span{position:absolute;font-size:80px;display:block;width:98px;text-align:center;height:98px;color:#CCC;cursor: pointer;line-height: 87px;font-weight: lighter;}
+  	#bossDetail .popDiv1{background:#f9fbf6;}
+  	#bossDetail .contentBody{overflow:hidden;border-bottom:1px solid #ccc;padding:20px 0 30px 0;}
+  	#bossDetail .contentBodyLeft{width:73px;}
+  	#bossDetail .contentBodyLeft .headPic1{width:59px;height:59px;border:1px solid #ccc;}
+  	#bossDetail .contentBodyLeft .popDivuserName1{width:59px;color:#32beff;}
+  	#bossDetail .contentBodyRight{width:698px;}
+  	#bossDetail .contentBodyRight .setScore1 ul{list-style: none;height: 20px;width: 170px; margin:3px 0 0 -42px;}
+  	#bossDetail .contentBodyRight .setScore1 ul li{width: 23px;height: 16px; float: left;background: url('../images/myOrder/star.png') no-repeat 0 0px;}
+  	#bossDetail .contentBodyRight .setScore1 p{color: #fd718e; padding-right:20px;}
+  	#bossDetail .contentBodyRight .setScore1 p span{color:#999;}
+  	#bossDetail .contentBodyRight .reply{width:100%;background:#f5f5f5;padding:20px;}
+  	#bossDetail .contentBodyRight .reply p span{color:#52a5cc;}
+
+
+/* orderIndex css */
+	#order label {
+		font-style: normal;
+	}
+	#order span {
+		font-style: normal;
+	}
+	#order .btn {
+		font-style: normal;
+	}
+	#order {
+		position: relative;
+	}
+	#order .orderBox {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		top: 118px;
+		width: 910px;
+		height: 100%;
+	}
+	#order .orderBox .header {
+		height: 165px;
+		border: 3px solid rgb(235,235,235);
+		border-radius: 6px;
+		padding: 20px 30px;
+	}
+	#order .headerBox {
+		padding-left: 137px;
+		color: #999;
+	}
+	#order .headerBox img {
+		position: absolute;
+		top: 20px;
+		left: 30px;
+		width: 120px;
+		height: 120px;
+		border: 1px solid #ccc;
+	}
+	#order .headerBox p {
+		margin-bottom: 0;
+	}
+	#order .headerBox > p {
+		font-weight: bold;
+		font-size: 18px;
+		margin-bottom: 7px;
+		line-height: 18px;
+		color: rgb(66,66,66);
+	}
+	#order .headerBox > span {	
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	#order .headerFooter {
+		margin-top: 30px;
+	}
+	.headerFooter i {
+		margin: 0;
+	}
+	#order .headerFooter  div {
+		display: inline-block;
+	}
+	#order .headerFooter  div:not(:last-child) {
+		border-right:1px solid #ccc; 
+	}
+	#order .headerFooter > div:first-child {
+		width: 300px;
+	}
+	#order .headerFooter .btn {
+		width: 88px;
+		height: 20px;
+		padding: 0 5px;
+		font-size: 12px;
+		background-color: #32beff;
+	}
+	#order .headerFooter > div:nth-child(2) {
+		width: 205px;
+		text-align: center;
+	}
+	#order .headerFooter > div:last-child {
+		text-align: center;
+		padding-left: 40px;
+	}
+	/*温馨提醒*/
+	#order .reminder {
+		margin-top: 30px;
+		color: #999;
+	}
+	#order .reminder > span {
+		font-size: 16px;
+		color: rgb(25,182,255);
+	}
+	#order .reminder > p {
+		border-top: 1px solid rgb(25,182,255);
+		height: 125px;
+	}
+	/*服务内容*/
+	#order .serviceBox {
+		margin-top: 30px;
+		color: #999;
+	}
+	#order .serviceBox > span {
+		font-size: 16px;
+		color: rgb(25,182,255);
+	}
+	#order .serviceClass {
+		border-top:1px solid rgb(25,182,255);
+	}
+	#order .inb {
+		display: inline-block;
+	}
+	#order .serviceClass > div > div {
+		margin-left: 30px;
+	}
+	#order .serviceAmount {
+		margin-top: 20px;
+	}
+	#order .serviceAmount > div > input {
+		width: 98px;
+		height: 30px;
+		margin-left: 30px;
+	}
+	#order .serviceBox textarea {
+		width: 100%;
+		margin-top: 20px;
+		height: 130px;
+		outline: none;
+	}
+	#order .serviceBox > div:last-child > img:not(:first-child) {
+		margin-left: 8px;
+	}
+	/*支付方式*/
+	#order .paymentBox {
+		margin-top: 38px;
+	}
+	#order .paymentBox > span {
+		font-size: 16px;
+		color: rgb(25,182,255);
+	}
+	#order .payment {
+		border-top:1px solid rgb(25,182,255);
+		padding: 30px 20px;
+		color: #999;
+	}
+	#order .payment > div:first-child > i {
+		color: rgb(255,136,0);
+	}
+	#order .black {
+		color: rgb(66,66,66);
+	}
+	#order .payment > div:nth-child(2) {
+		margin-top: 20px;
+		margin-left: 35px;
+	}
+	#order .payment > div:nth-child(2) > input {
+		color: rgb(58,193,255);
+		border-color: rgb(58,193,255);
+		outline: none;
+	}
+	#order .payment > div:nth-child(3) {
+		margin-top: 25px;
+	}
+	#order .orange {
+		color: rgb(255,136,0);
+	}
+	#order .roseRed {
+		color: rgb(244,78,78);
+	}
+	/*剩余金额支付方式*/
+	#order .payFor {
+		margin-top: 30px;
+		border-top: 5px solid rgb(204,204,204);
+	}
+	#order .payFor > span {
+		margin-top: 15px;
+	}
+	#order .payFor > div {
+		margin-left: 35px;
+		border: 1px solid #ccc;
+		height: 50px;
+		width: 798px;
+		border-radius: 4px;
+		margin-top: 10px;
+		font-size: 20px;
+	}
+	#order .payFor > div > input {
+		display: inline-block;
+		float: left;
+		margin:18px 10px 18px 10px;
+		outline: none;
+	}
+	#order .payFor > div > i {
+		display: inline-block;
+		margin-top: 13px;
+		margin-bottom: 13px;
+		margin-right: 0;
+	}
+	#order .payFor > div > label {
+		display: inline-block;
+		margin-top: 11px;
+		margin-bottom: 11px;
+	}
+	/*按钮*/
+	#order .btnFooter {
+		text-align: center;
+	}
+	#order .btnFooter .btn {	
+		width: 118px;
+		height: 40px;
+		font-size: 20px;
+	}
+	#order .btnFooter .btn:first-child {
+		background-color: #32beff;
+		margin-right: 100px;
+	}
