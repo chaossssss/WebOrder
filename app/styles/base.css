@@ -575,3 +575,26 @@
 	body.ngdialog-open {
 	  overflow:visible ;
 	}
+
+
+/* popcharge css */
+  body .ngdialog.ngdialog-theme-default .ngdialog-content{
+    line-height: 0px;
+    width: 630px;
+    background: rgba(255,255,255,0.5);    
+  }
+html .ngdialog-open,
+body .ngdialog-open {
+  overflow:visible ;
+}
+  #popCharge .popDiv{height: 514px!important;width: 600px!important;background-color: #fff;border-top: 5px solid #32beff;border-top-left-radius: 4px;border-top-right-radius: 4px;padding: 0 15px;}
+  #popCharge .popDiv h3{text-align: center;}
+  #popCharge .popDiv h4{margin-top: 30px;}
+  #popCharge .popDiv h5{color: #ff2727;font-size: 13px;}
+  #popCharge .contriduce{line-height: 22px;text-indent:2em;color: #808080;font-size: 12px;}
+  #popCharge .service{margin-left: 40px;line-height: 20px;}
+  #popCharge .pay{float: left;margin-right: 90px;}
+
+  #popCharge .popDiv button{width:102px;height: 30px;line-height: 30px;position: absolute;border: none;bottom: 50px;color: #fff;border-radius: 4px;}
+  #popCharge .popConfirm{left: 138px;background-color: #32beff;cursor: pointer;}
+  #popCharge .popCancel{left: 360px;background-color: #cccccc;cursor: pointer;}
