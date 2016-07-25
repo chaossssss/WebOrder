@@ -1,5 +1,5 @@
 <style type="text/css">
-.navbar-static-top{
+/*.navbar-static-top{
 	position: relative;
 	width:1170px;
 	margin: 0 auto;
@@ -169,78 +169,79 @@
 	html.ngdialog-open,
 	body.ngdialog-open {
 	  overflow:visible ;
-	}
+	}*/
 </style>
-<nav class="navbar  navbar-static-top">
-  <div class="container myManage">
-   	<p class="yue">账户余额:</p>
-   	<p class="money">500.00 <span>元</span><input class="btnCharge" type="button" name="" ng-click="openUseExternalTemplate()" value="立即充值"></p>
-  </div>
-  <div class="container myManageBody">
-  	<div class="myManageTab">
-  		<ul class="manageUl">
-		  	<li class="active1">余额变量明细</li>
-		  	<li>消费记录</li>
-	   	</ul>	  
-  	</div>
-	<div class="timeBox">
-	 	<p>时间：<input id="d4311" class="Wdate" type="text" onFocus="WdatePicker({maxDate:'#F{$dp.$D(\'d4312\')||\'2020-10-01\'}'})"/>  -  <input id="d4312" class="Wdate" type="text" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'d4311\')}',maxDate:'2020-10-01'})"/></p>
-	 	<input class="search" type="button" name="" value="搜索">
-	 	<table class="table">
-		   <thead>
-		      <tr>
-		         <th>交易时间</th>
-		         <th>消费类别</th>
-		         <th>支付对象</th>
-		         <th>消费金额</th>
-		         <th>交易方式</th>
-		         <th>状态</th>
-		      </tr>
-		   </thead>
-		   <tbody>
-		      <tr >
-		         <td style="background:#f7f7f7;">2015-02-03 13:30</td>
-		         <td>
-			         <span style="display:block;line-height:50px;">订单支付</span>
-			         <span style="display:block;line-height:0px;">(3303215415214152)</span>
-		         </td>
-		         <td style="background:#f7f7f7;">工人:王鑫</td>
-		         <td>100.00元</td>
-		         <td style="background:#f7f7f7;">账户余额</td>
-		         <td>交易成功</td>
-		      </tr>
-		      <tr >
-		         <td style="background:#f7f7f7;">2015-02-03 13:30</td>
-		         <td>
-			         <span style="display:block;line-height:50px;">订单支付</span>
-			         <span style="display:block;line-height:0px;">(3303215415214152)</span>
-		         </td>
-		         <td style="background:#f7f7f7;">工人:王鑫</td>
-		         <td>100.00元</td>
-		         <td style="background:#f7f7f7;">账户余额</td>
-		         <td>交易成功</td>
-		      </tr>
-		   </tbody>
-		</table>
-		<span style="font-size:12px;display:block;">总共10条记录</span>
-		<ul class="pagination">
-		  <li ><a href=""style="">&laquo;上一页</a></li>
-		  <li><a href="">1</a></li>
-		  <li><a href="">2</a></li>
-		  <li><a href="">3</a></li>
-		  <li><a href="">4</a></li>
-		  <li><a href="">5</a></li>
-		  <li><a href="">6</a></li>
-		  <li><a href="">7</a></li>
-		  <li><a href="">8</a></li>
-		  <li><a href="">9</a></li>
-		  <li><a href="">10</a></li>
-		  <li style="background:#fff;"><a href="">下一页&raquo;</a></li>
-		</ul>	  	
- 	 </div>
-  </div>
-  
-</nav>
+<div id="manage">
+	<nav class="navbar  navbar-static-top">
+	  <div class="container myManage">
+	   	<p class="yue">账户余额:</p>
+	   	<p class="money">500.00 <span>元</span><input class="btnCharge" type="button" name="" ng-click="openUseExternalTemplate()" value="立即充值"></p>
+	  </div>
+	  <div class="container myManageBody">
+	  	<div class="myManageTab">
+	  		<ul class="manageUl">
+			  	<li class="active1">余额变量明细</li>
+			  	<li>消费记录</li>
+		   	</ul>	  
+	  	</div>
+		<div class="timeBox">
+		 	<p>时间：<input id="d4311" class="Wdate" type="text" onFocus="WdatePicker({maxDate:'#F{$dp.$D(\'d4312\')||\'2020-10-01\'}'})"/>  -  <input id="d4312" class="Wdate" type="text" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'d4311\')}',maxDate:'2020-10-01'})"/></p>
+		 	<input class="search" type="button" name="" value="搜索">
+		 	<table class="table">
+			   <thead>
+			      <tr>
+			         <th>交易时间</th>
+			         <th>消费类别</th>
+			         <th>支付对象</th>
+			         <th>消费金额</th>
+			         <th>交易方式</th>
+			         <th>状态</th>
+			      </tr>
+			   </thead>
+			   <tbody>
+			      <tr >
+			         <td style="background:#f7f7f7;">2015-02-03 13:30</td>
+			         <td>
+				         <span style="display:block;line-height:50px;">订单支付</span>
+				         <span style="display:block;line-height:0px;">(3303215415214152)</span>
+			         </td>
+			         <td style="background:#f7f7f7;">工人:王鑫</td>
+			         <td>100.00元</td>
+			         <td style="background:#f7f7f7;">账户余额</td>
+			         <td>交易成功</td>
+			      </tr>
+			      <tr >
+			         <td style="background:#f7f7f7;">2015-02-03 13:30</td>
+			         <td>
+				         <span style="display:block;line-height:50px;">订单支付</span>
+				         <span style="display:block;line-height:0px;">(3303215415214152)</span>
+			         </td>
+			         <td style="background:#f7f7f7;">工人:王鑫</td>
+			         <td>100.00元</td>
+			         <td style="background:#f7f7f7;">账户余额</td>
+			         <td>交易成功</td>
+			      </tr>
+			   </tbody>
+			</table>
+			<span style="font-size:12px;display:block;">总共10条记录</span>
+			<ul class="pagination">
+			  <li ><a href=""style="">&laquo;上一页</a></li>
+			  <li><a href="">1</a></li>
+			  <li><a href="">2</a></li>
+			  <li><a href="">3</a></li>
+			  <li><a href="">4</a></li>
+			  <li><a href="">5</a></li>
+			  <li><a href="">6</a></li>
+			  <li><a href="">7</a></li>
+			  <li><a href="">8</a></li>
+			  <li><a href="">9</a></li>
+			  <li><a href="">10</a></li>
+			  <li style="background:#fff;"><a href="">下一页&raquo;</a></li>
+			</ul>	  	
+	 	 </div>
+	  </div>
+	</nav>
+</div>
 <script type="text/javascript">
 $(function(){
 	$('.manageUl li').click(function(){
