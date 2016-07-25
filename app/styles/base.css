@@ -810,3 +810,130 @@ body .ngdialog-open {
 		color: #19b6ff;
 		font-size: 12px;
 	}
+
+
+/* newPhone css */
+	#newPhone .newPhone {
+		margin-top: 167px;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		min-width: 768px;
+	}
+	#newPhone .stepBox {
+		position: relative;	
+		display: inline-block;
+		width: 88px
+		height:55px;
+		padding-top: 36px;
+	}
+	#newPhone .stepBox > img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -15px; 
+	}
+	#newPhone .stepBox > span {
+		display: inline-block;
+		font-size: 12px;
+		color: #424242;
+		margin-top: 5px;
+	}
+	#newPhone .newPhone .line {
+		display: inline-block;
+		border-top: 1px solid #32beff;
+		width: 250px;
+		margin-bottom: 39px; 
+	}
+	#newPhone .newPhone > form {
+		margin-top: 50px;
+	}
+	#newPhone .newPhone > form > p {
+		color: #999;
+		font-size: 14px;
+		margin-left: -182px;
+		margin-bottom: 22px;
+	}
+	#newPhone .newPhone > form > p > span {
+		color: #32beff;
+		font-size: 16px;
+	}
+	#newPhone .newPhone > form > .group {
+		margin-top: 10px;
+	}
+	#newPhone .newPhone > form > .group > label {
+		color: #999;
+		font-size: 14px;
+	}
+	#newPhone .newPhone > form > .group > input {
+		border: 1px solid #999;
+		width: 156px;
+		height: 38px;
+		/*border-bottom-width: 2px;*/
+		padding-left: 10px;
+		color: #424242;
+	}
+	#newPhone .newPhone > form > .group1 > label {
+		color: #999;
+		font-size: 14px;
+		margin-left: -9px;
+	}
+	#newPhone .newPhone > form > .group1 > input {
+		border: 1px solid #999;
+		width: 258px;
+		height: 38px;
+		padding-left: 10px;
+		color: #424242;
+	}
+	#newPhone .newPhone > form > .group > .btn {
+		margin-left: 10px;
+		width: 110px;
+		height: 36px;
+		background-color: #32beff;
+		font-size: 12px;
+		color: #fff;
+	}
+	#newPhone .newPhone > form > .group > input:focus{
+		outline:  0;
+	}
+	#newPhone .newPhone > form > .group1 > input:focus{
+		outline:  0;
+	}
+	#newPhone .newPhone > form > .button {
+		margin-top: 60px;
+	} 
+	#newPhone .newPhone > form > .button > p {
+		margin-left: 55px;
+		font-size: 12px;
+		color:#f50a0a;
+	}
+	#newPhone .newPhone > form > .button > .btn{
+		width: 110px;
+		background-color: #32beff;
+		font-size: 16px;
+		color:#fff;
+	} 
+	.f12 {
+		font-size: 12px;
+	}
+	.f14 {
+		font-size: 14px;
+	}
+	.f24 {
+		font-size: 24px;
+	}
+	.ml25 {
+		margin-left: 25px;
+	}
+	#newPhone .PsdSuccess {
+		margin-top: 
+	}
+	#newPhone .newPhone .setSuccess > p {
+		margin-top: 29px;
+		font-size: 16px;
+		color: #424242;
+	}
+	#newPhone .newPhone .setSuccess > span {
+		color: #19b6ff;
+		font-size: 12px;
+	}
