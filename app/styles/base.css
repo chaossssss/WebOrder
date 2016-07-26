@@ -124,24 +124,24 @@
 		height: 134px;
 		border:1px solid #dcf0f9;
 	}
-	#myOrder .myOrderSucc{
+/*	#myOrder .myOrderSucc{
 		border:1px solid #faecdc;
 	}
 	#myOrder .myOrderDone{
 		border:1px solid #ebebeb;
-	}
+	}*/
 	#myOrder .myOrderId{
 		width: inherit;
 		height: 40px;
 		background: #dcf0f9;
 		line-height: 40px;
 	}
-	#myOrder .myOrderHead .orderSucc{
+/*	#myOrder .myOrderHead .orderSucc{
 		background: #fcf2e6;
 	}
 	#myOrder .myOrderHead .orderDone{
 		background: #f2f2f2;
-	}
+	}*/
 	#myOrder .myOrderId p{
 		float: left;
 		margin-left: 20px;
@@ -167,12 +167,12 @@
 		text-align: center;
 		line-height: 94px;
 	}
-	#myOrder .myOrderDetail > ul .Succ{
+/*	#myOrder .myOrderDetail > ul .Succ{
 		border-right:1px solid #faecdc;
 	}
 	#myOrder .myOrderDetail > ul .Done{
 		border-right :1px solid #ebebeb;
-	}	
+	}	*/
 	#myOrder .myOrderDetail > ul > li:nth-child(1){
 		width: 258px;
 		text-align: left;
@@ -224,21 +224,27 @@
 		border:1px solid #dcdcde;
 		margin-right: 10px;
 	}
-	#myOrder .ngdialog.ngdialog-theme-default .ngdialog-content{
+	body #myOrder .ngdialog.ngdialog-theme-default .ngdialog-content{
 		line-height: 390px;
 		width: 560px;
 		opacity: 0.5px!important;
 		 background: rgba(255,255,255,0.5);
 	}
-	html.ngdialog-open,
-	body.ngdialog-open {
-	  overflow:visible ;
+	html .ngdialog-open,
+	html .ngdialog-open {
+	  overflow:visible !important ;
 	}
 
 
 /* headerIndex css */
 	#header .topbar {
 		border-bottom: 1px solid #ccc;
+		width: 1100px;
+		height: 88px;
+		margin-right: auto;
+  		margin-left: auto;
+		padding-right: 15px;
+  		padding-left: 15px;
 	}	
 	#header .topbar-box {
 		width: 1100px;
@@ -578,7 +584,7 @@
 
 
 /* popcharge css */
-  body .ngdialog.ngdialog-theme-default .ngdialog-content{
+  body #popCharge .ngdialog.ngdialog-theme-default .ngdialog-content{
     line-height: 0px;
     width: 630px;
     background: rgba(255,255,255,0.5);    
